@@ -10,3 +10,6 @@ logs*.lognpm-debug.log*
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+#App 不做源代码管理
+.env*
