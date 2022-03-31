@@ -6,18 +6,16 @@ import {getPosts} from './post.service';
  * 内容列表
  */
 // 导出  处理器
-export const index = (
+export const index = async (
   //指出参数的类型
   request: Request,
   response: Response,
   next: NextFunction,
 ) => {
-  if( request.headers.authorization !=='SECRET'){
-    return next(new Error());
-  }
- 
-  const posts = getPosts();
+  // if( request.headers.authorization !=='SECRET'){
+  //   return next(new Error());
+  // }
+
+  const posts = await getPosts();
   response.send(posts);
 };
-
-
