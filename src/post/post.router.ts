@@ -7,7 +7,7 @@ const router = express.Router();
 router.get('/posts', requestUrl, PostController.index);
 
 export default router;
-
+//存储内容的接口
 router.post('/posts', PostController.store);
-
+//更新内容的接口
 router.patch('/posts/:postId',PostController.update);

@@ -1,4 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
+import _ from 'lodash';
 //接口处理器参数需要的类型
 import { getPosts, createPost, updatePost } from './post.service';
 
@@ -51,10 +52,10 @@ export const update = async (
   next:NextFunction
 ) => {
     const {postId} =request.params;
-    const {title,content} = request.body;
+    const post = _.pick(request.body,['title','content']);
 
     try{
-      const data = await updatePost(parseInt(postId,10), {title,content});
+      const data = await updatePost(parseInt(postId,10), post);
       response.send(data);
     }catch(error){
       next(error);
