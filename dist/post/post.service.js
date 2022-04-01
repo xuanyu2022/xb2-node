@@ -34,4 +34,12 @@ exports.updatePost = async (postId, post) => {
     const [data] = await mysql_1.connection.promise().query(statement, [post, postId]);
     return data;
 };
+exports.deletePost = async (postId) => {
+    const statement = `
+    DELETE FROM post
+    WHERE id=?
+  `;
+    const [data] = await mysql_1.connection.promise().query(statement, postId);
+    return data;
+};
 //# sourceMappingURL=post.service.js.map

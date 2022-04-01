@@ -11,3 +11,7 @@ export default router;
 router.post('/posts', PostController.store);
 //更新内容的接口
 router.patch('/posts/:postId',PostController.update);
+
+//**删除内容的接口 */
+
+router.delete('/posts/:postId',PostController.destroy);

@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import _ from 'lodash';
 //接口处理器参数需要的类型
-import { getPosts, createPost, updatePost } from './post.service';
+import { getPosts, createPost, updatePost, deletePost } from './post.service';
 
 /**
  * 内容列表
@@ -60,4 +60,21 @@ export const update = async (
     }catch(error){
       next(error);
     }
+};
+
+//** 定义删除内容的处理器 */
+
+export const destroy = async (
+  request:Request,
+  response:Response,
+  next:NextFunction
+) =>{
+  const {postId}=request.params;
+
+  try{
+    const data = await deletePost(parseInt(postId,10));
+    response.send(data);
+  }catch(error){
+    next(error);
+  }
 };

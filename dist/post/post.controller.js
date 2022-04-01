@@ -35,4 +35,14 @@ exports.update = async (request, response, next) => {
         next(error);
     }
 };
+exports.destroy = async (request, response, next) => {
+    const { postId } = request.params;
+    try {
+        const data = await post_service_1.deletePost(parseInt(postId, 10));
+        response.send(data);
+    }
+    catch (error) {
+        next(error);
+    }
+};
 //# sourceMappingURL=post.controller.js.map
