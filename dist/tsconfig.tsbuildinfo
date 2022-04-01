@@ -557,8 +557,12 @@
         "version": "c16396529a0bf9b4b5b90487d811d1ac58147891420280845376b9a2e1160e71",
         "signature": "f56b6491cfca65542186d6b0c6700583afeabad419df0fc566235770bfd654e6"
       },
+      "../src/user/user.middleware.ts": {
+        "version": "bad1df424e2aad9a741bc58b6f5d30bc2f30345fb78b16c7c8767c000fcd4f4d",
+        "signature": "e88abe34d0bac9381ed6c663b1cbd5eaff1457ca39e0941bf8d465648fd9b450"
+      },
       "../src/user/user.router.ts": {
-        "version": "4ff6b89d56884051a5d4f678cbf9d5eca795187e17b64ba7a3c3959cc66b7833",
+        "version": "4f95090bf26ba7b0e88a3612800b3c5b5df7d14339d133b98b1278cc3d490aa7",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
       },
       "../src/app/index.ts": {
@@ -567,10 +571,6 @@
       },
       "../src/main.ts": {
         "version": "942826d0703640ebf89d5142c0cb55994437efa8f51b5e3c7b8272e4943191e0",
-        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
-      },
-      "../src/user/user.middleware.ts": {
-        "version": "9b034aabaede81c1ff876f210a5ceb4d4d60625a26ac868fd42d623b815de277",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
       }
     },
@@ -1403,9 +1403,15 @@
         "../src/user/user.service.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../src/user/user.middleware.ts": [
+        "../node_modules/@types/express/index.d.ts",
+        "../src/user/user.service.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../src/user/user.router.ts": [
         "../node_modules/@types/express/index.d.ts",
         "../src/user/user.controller.ts",
+        "../src/user/user.middleware.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
       "../src/app/index.ts": [
@@ -1419,11 +1425,6 @@
         "../src/app/index.ts",
         "../src/app/app.config.ts",
         "../src/app/database/mysql.ts",
-        "../node_modules/@types/node/util.d.ts"
-      ],
-      "../src/user/user.middleware.ts": [
-        "../node_modules/@types/express/index.d.ts",
-        "../src/user/user.service.ts",
         "../node_modules/@types/node/util.d.ts"
       ]
     },
@@ -2228,6 +2229,10 @@
       ],
       "../src/app/index.ts": [
         "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts"
+      ],
+      "../src/user/user.middleware.ts": [
+        "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts",
+        "../node_modules/@types/express/index.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -2368,12 +2373,12 @@
       "../src/app/app.middleware.ts",
       "../src/post/post.router.ts",
       "../src/user/user.model.ts",
+      "../src/user/user.service.ts",
       "../src/user/user.controller.ts",
-      "../src/user/user.router.ts",
       "../src/app/index.ts",
       "../src/main.ts",
       "../src/user/user.middleware.ts",
-      "../src/user/user.service.ts"
+      "../src/user/user.router.ts"
     ]
   },
   "version": "3.8.3"
