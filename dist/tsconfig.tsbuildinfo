@@ -538,7 +538,7 @@
         "signature": "d822ee632f7b6f0ff1aa1b9e1bda826b64a5c0727acb35bf385f13dfcf760574"
       },
       "../src/app/app.middleware.ts": {
-        "version": "43943f96cbff579d97741646e4327824ca7fb7c467fed59dcfdc5dda66b74034",
+        "version": "d834a6cc963184179231927aab37f137f15e359d5f1cd7ea54dfdc328b383cc8",
         "signature": "5c1bd11274d9d2803893c03bdf54785e6b649ff47cef39e6979e1fb2c73f4832"
       },
       "../src/post/post.router.ts": {
@@ -550,16 +550,16 @@
         "signature": "c0c4f6e95c87e2adb92ab955bf7156bfa015433ec41ebfe889c40ceedcdfdc6a"
       },
       "../src/user/user.service.ts": {
-        "version": "40fefdcce4f73caa4b0b066ba127d7e9e5002db1c2507868f050edb971589bc3",
-        "signature": "fdb2d9ef12968eff6f8ff2216fbfa8bea2af5ca53e467f5b12c212753020f30e"
+        "version": "b6fb8cab77398559fdd906117dac4c111ff6b24764d3905bd6f73858315be54f",
+        "signature": "a4d24ae1f7e8524984fce6839a97663634d4d5d633ff3f4700fa3e7af94de6a6"
       },
       "../src/user/user.controller.ts": {
         "version": "c16396529a0bf9b4b5b90487d811d1ac58147891420280845376b9a2e1160e71",
         "signature": "f56b6491cfca65542186d6b0c6700583afeabad419df0fc566235770bfd654e6"
       },
       "../src/user/user.middleware.ts": {
-        "version": "bad1df424e2aad9a741bc58b6f5d30bc2f30345fb78b16c7c8767c000fcd4f4d",
-        "signature": "e88abe34d0bac9381ed6c663b1cbd5eaff1457ca39e0941bf8d465648fd9b450"
+        "version": "597feb7283b87595cf8c86f818a92f9250df69ec5f878734857384087e655701",
+        "signature": "70ab1497b2c3e92e7fbc16e7ede838bd949a62a7caba8507a2871041b8901da2"
       },
       "../src/user/user.router.ts": {
         "version": "4f95090bf26ba7b0e88a3612800b3c5b5df7d14339d133b98b1278cc3d490aa7",
@@ -2372,13 +2372,13 @@
       "../src/post/post.controller.ts",
       "../src/post/post.router.ts",
       "../src/user/user.model.ts",
-      "../src/user/user.service.ts",
-      "../src/user/user.controller.ts",
-      "../src/user/user.middleware.ts",
-      "../src/user/user.router.ts",
       "../src/app/index.ts",
       "../src/main.ts",
-      "../src/app/app.middleware.ts"
+      "../src/app/app.middleware.ts",
+      "../src/user/user.service.ts",
+      "../src/user/user.middleware.ts",
+      "../src/user/user.router.ts",
+      "../src/user/user.controller.ts"
     ]
   },
   "version": "3.8.3"
