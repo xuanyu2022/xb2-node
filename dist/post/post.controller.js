@@ -10,4 +10,14 @@ exports.index = async (request, response, next) => {
         next(error);
     }
 };
+exports.store = async (request, response, next) => {
+    const { title, content } = request.body;
+    try {
+        const data = await post_service_1.createPost({ title, content });
+        response.status(201).send(data);
+    }
+    catch (error) {
+        next(error);
+    }
+};
 //# sourceMappingURL=post.controller.js.map

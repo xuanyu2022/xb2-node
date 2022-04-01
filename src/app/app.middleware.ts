@@ -24,10 +24,10 @@ export const defaultErrorHandler = (
   response: Response,
   next: NextFunction,
 ) => {
- if(error.message){
-   console.log('黄色警告', error.message);
- }
- 
+  if (error.message) {
+    console.log('黄色警告', error.message);
+  }
+
   let statusCode: number, message: string;
   //处理异常
   switch (error.message) {

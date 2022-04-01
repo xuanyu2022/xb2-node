@@ -473,20 +473,24 @@
         "version": "461c5b4c15a9151530db2b238c0d50a484cdbb66aa88d580fa9317986957e95c",
         "signature": "95f454c087dff868c3775a63e79cd2f4a5ca0f68495e7b2ab486a3a39723c609"
       },
+      "../src/post/post.model.ts": {
+        "version": "c3f1cf45ba2be465f900394698eb28fee2a5430ec99671c34057e248af363a0e",
+        "signature": "66fe907feec7a0b7873f9e255ccb6433255a141fa3ff5e537688607b8e0871e2"
+      },
       "../src/post/post.service.ts": {
-        "version": "a877b233fd393eb9779223c3f2fc1bb1e29f4ec76d7d2a08e3e3d07255fab71f",
-        "signature": "e77533992e115840d3c58dd6461cf98a831accafea9d76b77a22dcaa071e1929"
+        "version": "9f279f3e726767da92cad2dcda57ad4d2ab5012bf3b9f0b4bb784dea2b97e6f9",
+        "signature": "aa75bea7b19f9f0b6edb2aa482d600643836fa7155ab1bbf2f97619991cc68c2"
       },
       "../src/post/post.controller.ts": {
-        "version": "c44ab3bd85aac11b39af895927b94c8c2ff1118629fe886a348af4a6e4c98c00",
-        "signature": "7de790d59063726642235f172c9651b90260fb165fe2037ba293ca46395494b3"
+        "version": "5ecee52cf75c74b31a991ac86e73ec66a5f3275adc3b411af8821cb4e4395a6d",
+        "signature": "047856b4a03e68dd0c1e3ceb19294165db1ebc8b0f2b2aca548f0c1564bf458d"
       },
       "../src/app/app.middleware.ts": {
-        "version": "a2fb52143198dc2e5fa1a8f55238648f83714f6aa6e2ebecd695a1adf4785b85",
+        "version": "17e235698733e51ae4886dcda294811f71394c84d0225267afd79829ba41c05b",
         "signature": "5c1bd11274d9d2803893c03bdf54785e6b649ff47cef39e6979e1fb2c73f4832"
       },
       "../src/post/post.router.ts": {
-        "version": "bb32fdda8a3238596f8cf2313e26796551a9d8b9374a8860024740e9ca8365a5",
+        "version": "4cc205aadac439ebf8aac961f7c61fb3e645ae4a9c65c4344e63ecc08d6ddf28",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
       },
       "../src/app/index.ts": {
@@ -1094,8 +1098,12 @@
         "../src/app/app.config.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../src/post/post.model.ts": [
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../src/post/post.service.ts": [
         "../src/app/database/mysql.ts",
+        "../src/post/post.model.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
       "../src/post/post.controller.ts": [
@@ -1703,7 +1711,8 @@
       "../src/post/post.service.ts": [
         "../node_modules/@types/mysql/lib/protocol/packets/rowdatapacket.d.ts",
         "../node_modules/@types/mysql/lib/protocol/packets/okpacket.d.ts",
-        "../node_modules/@types/mysql/lib/protocol/packets/resultsetheader.d.ts"
+        "../node_modules/@types/mysql/lib/protocol/packets/resultsetheader.d.ts",
+        "../src/post/post.model.ts"
       ],
       "../src/post/post.controller.ts": [
         "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts",
@@ -1839,12 +1848,13 @@
       "../node_modules/dotenv/types/index.d.ts",
       "../src/app/app.config.ts",
       "../src/app/database/mysql.ts",
-      "../src/post/post.controller.ts",
-      "../src/app/app.middleware.ts",
-      "../src/post/post.router.ts",
       "../src/app/index.ts",
       "../src/main.ts",
-      "../src/post/post.service.ts"
+      "../src/post/post.model.ts",
+      "../src/post/post.service.ts",
+      "../src/post/post.controller.ts",
+      "../src/post/post.router.ts",
+      "../src/app/app.middleware.ts"
     ]
   },
   "version": "3.8.3"

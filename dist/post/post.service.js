@@ -17,4 +17,12 @@ exports.getPosts = async () => {
     const [data] = await mysql_1.connection.promise().query(statement);
     return data;
 };
+exports.createPost = async (post) => {
+    const statement = `
+              INSERT INTO post
+              SET?
+            `;
+    const [data] = await mysql_1.connection.promise().query(statement, post);
+    return data;
+};
 //# sourceMappingURL=post.service.js.map
