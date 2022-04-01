@@ -1,19 +1,17 @@
 import express from 'express';
 import postRouter from '../post/post.router';
-import {defaultErrorHandler } from './app.middleware';
-
+import { defaultErrorHandler } from './app.middleware';
 
 //创建应用
- 
+
 const app = express();
 
-
 // 处理json
- app.use(express.json());
+app.use(express.json());
 //路由
- app.use(postRouter);
+app.use(postRouter);
 //默认异常处理器
- app.use(defaultErrorHandler);
+app.use(defaultErrorHandler);
 /**
  * 导出应用
  */

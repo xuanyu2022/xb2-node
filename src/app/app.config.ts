@@ -7,9 +7,7 @@ dotenv.config();
  */
 
 //用解构的方法, 从process.env 导出APP_PORT的值
-export const { 
-  APP_PORT 
-} = process.env;
+export const { APP_PORT } = process.env;
 
 //数据仓库配置
 export const {

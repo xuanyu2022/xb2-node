@@ -5,6 +5,9 @@ exports.requestUrl = (request, response, next) => {
     next();
 };
 exports.defaultErrorHandler = (error, request, response, next) => {
+    if (error.message) {
+        console.log('黄色警告', error.message);
+    }
     let statusCode, message;
     switch (error.message) {
         default:

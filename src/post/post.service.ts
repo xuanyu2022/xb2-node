@@ -26,8 +26,7 @@ export const getPosts = async () => {
                        LEFT JOIN user
                        ON user.id = post.userId     
      `;
-       const [data] = 
-            await connection.promise().query(statement);
+       const [data] = await connection.promise().query(statement);
        
        return data;
 };
