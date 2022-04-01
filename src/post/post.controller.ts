@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 //接口处理器参数需要的类型
-import { getPosts, createPost } from './post.service';
+import { getPosts, createPost, updatePost } from './post.service';
 
 /**
  * 内容列表
@@ -40,4 +40,23 @@ export const store = async (
   } catch (error) {
     next(error);
   }
+};
+
+
+//**定义接口的处理器(更新内容-12章) */
+
+export const update = async (
+  request: Request,
+  response:Response,
+  next:NextFunction
+) => {
+    const {postId} =request.params;
+    const {title,content} = request.body;
+
+    try{
+      const data = await updatePost(parseInt(postId,10), {title,content});
+      response.send(data);
+    }catch(error){
+      next(error);
+    }
 };

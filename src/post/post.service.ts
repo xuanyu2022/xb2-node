@@ -44,3 +44,17 @@ export const createPost = async (post: PostModel) => {
 
   return data;
 };
+
+
+
+//**创建内容: 定义存储用的服务(更新) */
+
+export const updatePost = async (postId:number,post:PostModel) => {
+  const statement = `
+    UPDATE post
+    SET ?
+    WHERE id=?
+  `;
+  const [data] = await connection.promise().query(statement,[post,postId]);
+  return data;
+};

@@ -17,4 +17,5 @@ const router = express_1.default.Router();
 router.get('/posts', app_middleware_1.requestUrl, PostController.index);
 exports.default = router;
 router.post('/posts', PostController.store);
+router.patch('/posts/:postId', PostController.update);
 //# sourceMappingURL=post.router.js.map

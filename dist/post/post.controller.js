@@ -20,4 +20,15 @@ exports.store = async (request, response, next) => {
         next(error);
     }
 };
+exports.update = async (request, response, next) => {
+    const { postId } = request.params;
+    const { title, content } = request.body;
+    try {
+        const data = await post_service_1.updatePost(parseInt(postId, 10), { title, content });
+        response.send(data);
+    }
+    catch (error) {
+        next(error);
+    }
+};
 //# sourceMappingURL=post.controller.js.map

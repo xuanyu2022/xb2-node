@@ -25,4 +25,13 @@ exports.createPost = async (post) => {
     const [data] = await mysql_1.connection.promise().query(statement, post);
     return data;
 };
+exports.updatePost = async (postId, post) => {
+    const statement = `
+    UPDATE post
+    SET ?
+    WHERE id=?
+  `;
+    const [data] = await mysql_1.connection.promise().query(statement, [post, postId]);
+    return data;
+};
 //# sourceMappingURL=post.service.js.map
