@@ -557,12 +557,16 @@
         "version": "c16396529a0bf9b4b5b90487d811d1ac58147891420280845376b9a2e1160e71",
         "signature": "f56b6491cfca65542186d6b0c6700583afeabad419df0fc566235770bfd654e6"
       },
+      "../node_modules/@types/bcryptjs/index.d.ts": {
+        "version": "9dfe431ab1485e17a6055e186c49da9d23af74b965f2e99f8acc6c958778608f",
+        "signature": "9dfe431ab1485e17a6055e186c49da9d23af74b965f2e99f8acc6c958778608f"
+      },
       "../src/user/user.middleware.ts": {
-        "version": "597feb7283b87595cf8c86f818a92f9250df69ec5f878734857384087e655701",
-        "signature": "70ab1497b2c3e92e7fbc16e7ede838bd949a62a7caba8507a2871041b8901da2"
+        "version": "5f8aaad13f5ee2d024151f56d59af4f34e5a78ed9fe89a956114917c99cd183b",
+        "signature": "8663892c27e039fc1fbd011d498bbc706756945eca3f317f6b6354cf1ca78be9"
       },
       "../src/user/user.router.ts": {
-        "version": "4f95090bf26ba7b0e88a3612800b3c5b5df7d14339d133b98b1278cc3d490aa7",
+        "version": "f918216bacf8b18c2c701558f39aa7c18d7e5fabbc4ab8eedb9c5f3e1cf4d076",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
       },
       "../src/app/index.ts": {
@@ -1403,9 +1407,13 @@
         "../src/user/user.service.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../node_modules/@types/bcryptjs/index.d.ts": [
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../src/user/user.middleware.ts": [
         "../node_modules/@types/express/index.d.ts",
         "../src/user/user.service.ts",
+        "../node_modules/@types/bcryptjs/index.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
       "../src/user/user.router.ts": [
@@ -2233,6 +2241,9 @@
       ],
       "../src/app/index.ts": [
         "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts"
+      ],
+      "../node_modules/@types/bcryptjs/index.d.ts": [
+        "../node_modules/@types/node/util.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -2370,15 +2381,16 @@
       "../src/post/post.model.ts",
       "../src/post/post.service.ts",
       "../src/post/post.controller.ts",
+      "../src/app/app.middleware.ts",
       "../src/post/post.router.ts",
       "../src/user/user.model.ts",
+      "../src/user/user.service.ts",
+      "../src/user/user.controller.ts",
       "../src/app/index.ts",
       "../src/main.ts",
-      "../src/app/app.middleware.ts",
-      "../src/user/user.service.ts",
+      "../node_modules/@types/bcryptjs/index.d.ts",
       "../src/user/user.middleware.ts",
-      "../src/user/user.router.ts",
-      "../src/user/user.controller.ts"
+      "../src/user/user.router.ts"
     ]
   },
   "version": "3.8.3"

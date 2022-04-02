@@ -1,9 +1,9 @@
 import express from 'express';
 import * as userController from './user.controller';
-import {validateUserData} from './user.middleware';
+import {validateUserData,hashpassword} from './user.middleware';
   const router = express.Router();
   export default router;
 
 
   //**创建用户的接口 */
-  router.post('/users',validateUserData,userController.store);
+  router.post('/users',validateUserData, hashpassword,userController.store);

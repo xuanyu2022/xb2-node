@@ -1,6 +1,6 @@
 import {Request,Response,NextFunction} from 'express';
 import * as userService from './user.service';
-
+import bcryptjs from 'bcryptjs';
 export const validateUserData = async (
   request:Request,
   response:Response,
@@ -18,3 +18,12 @@ export const validateUserData = async (
   next();
 };
 
+export const hashpassword = async (
+  request:Request,
+  Response:Response,
+  next:NextFunction
+) => {
+  const {password} = request.body;
+  request.body.password = await bcryptjs.hash(password,10);
+  next();
+};
