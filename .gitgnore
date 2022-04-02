@@ -13,3 +13,4 @@ logs*.lognpm-debug.log*
 
 #App 不做源代码管理
 .env*
+config/*.key

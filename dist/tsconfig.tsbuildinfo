@@ -538,7 +538,7 @@
         "signature": "d822ee632f7b6f0ff1aa1b9e1bda826b64a5c0727acb35bf385f13dfcf760574"
       },
       "../src/app/app.middleware.ts": {
-        "version": "1343aa38a223b18e91c338f5655595c2d1b156b1d08db4329335ba7bc67e9a8a",
+        "version": "9a81d6bb9aaf364db9a6347cecb573d54f38ba013e9d901a11d4eabaee5a213b",
         "signature": "5c1bd11274d9d2803893c03bdf54785e6b649ff47cef39e6979e1fb2c73f4832"
       },
       "../src/post/post.router.ts": {
@@ -554,11 +554,15 @@
         "signature": "c0c4f6e95c87e2adb92ab955bf7156bfa015433ec41ebfe889c40ceedcdfdc6a"
       },
       "../src/user/user.service.ts": {
-        "version": "b6fb8cab77398559fdd906117dac4c111ff6b24764d3905bd6f73858315be54f",
-        "signature": "a4d24ae1f7e8524984fce6839a97663634d4d5d633ff3f4700fa3e7af94de6a6"
+        "version": "5397834fccb5d57905ecacb3bf365757678c971bbb373a03817fad564d62217a",
+        "signature": "462203b87bbbdef909957cbcb212e0b2d5c4353a9ab82d83f6321fdd06027f99"
+      },
+      "../node_modules/@types/bcryptjs/index.d.ts": {
+        "version": "9dfe431ab1485e17a6055e186c49da9d23af74b965f2e99f8acc6c958778608f",
+        "signature": "9dfe431ab1485e17a6055e186c49da9d23af74b965f2e99f8acc6c958778608f"
       },
       "../src/auth/auth.middleware.ts": {
-        "version": "0e707aa11fcb2021ebbff9f5fdaf7d13305fc10a846ed0d6067e343ced890038",
+        "version": "5ea297545a06a31483bc6db67904d72bce6acb21341b002f0d5d8d5ebb3d86ba",
         "signature": "95be3af468a8f4f74224791a77b25c99974c938f71349be9970f341104580e68"
       },
       "../src/auth/auth.router.ts": {
@@ -568,10 +572,6 @@
       "../src/user/user.controller.ts": {
         "version": "c16396529a0bf9b4b5b90487d811d1ac58147891420280845376b9a2e1160e71",
         "signature": "f56b6491cfca65542186d6b0c6700583afeabad419df0fc566235770bfd654e6"
-      },
-      "../node_modules/@types/bcryptjs/index.d.ts": {
-        "version": "9dfe431ab1485e17a6055e186c49da9d23af74b965f2e99f8acc6c958778608f",
-        "signature": "9dfe431ab1485e17a6055e186c49da9d23af74b965f2e99f8acc6c958778608f"
       },
       "../src/user/user.middleware.ts": {
         "version": "5f8aaad13f5ee2d024151f56d59af4f34e5a78ed9fe89a956114917c99cd183b",
@@ -1421,9 +1421,14 @@
         "../src/user/user.model.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../node_modules/@types/bcryptjs/index.d.ts": [
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../src/auth/auth.middleware.ts": [
         "../node_modules/@types/express/index.d.ts",
         "../src/user/user.service.ts",
+        "../node_modules/@types/bcryptjs/index.d.ts",
+        "../node_modules/dotenv/types/index.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
       "../src/auth/auth.router.ts": [
@@ -1436,9 +1441,6 @@
         "../node_modules/@types/express/index.d.ts",
         "../src/user/user.model.ts",
         "../src/user/user.service.ts",
-        "../node_modules/@types/node/util.d.ts"
-      ],
-      "../node_modules/@types/bcryptjs/index.d.ts": [
         "../node_modules/@types/node/util.d.ts"
       ],
       "../src/user/user.middleware.ts": [
@@ -2267,6 +2269,9 @@
         "../node_modules/@types/mysql/lib/protocol/packets/resultsetheader.d.ts",
         "../src/user/user.model.ts"
       ],
+      "../node_modules/@types/bcryptjs/index.d.ts": [
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../src/auth/auth.middleware.ts": [
         "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts",
         "../node_modules/@types/express/index.d.ts"
@@ -2277,9 +2282,6 @@
       "../src/user/user.controller.ts": [
         "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts",
         "../node_modules/@types/express/index.d.ts"
-      ],
-      "../node_modules/@types/bcryptjs/index.d.ts": [
-        "../node_modules/@types/node/util.d.ts"
       ],
       "../src/user/user.middleware.ts": [
         "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts",
@@ -2432,15 +2434,15 @@
       "../src/auth/auth.controller.ts",
       "../src/user/user.model.ts",
       "../src/user/user.service.ts",
-      "../src/auth/auth.middleware.ts",
-      "../src/user/user.controller.ts",
       "../node_modules/@types/bcryptjs/index.d.ts",
+      "../src/auth/auth.router.ts",
+      "../src/user/user.controller.ts",
       "../src/user/user.middleware.ts",
       "../src/user/user.router.ts",
       "../src/app/index.ts",
       "../src/main.ts",
       "../src/auth/auth.service.ts",
-      "../src/auth/auth.router.ts"
+      "../src/auth/auth.middleware.ts"
     ]
   },
   "version": "3.8.3"
