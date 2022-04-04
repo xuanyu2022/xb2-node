@@ -13,7 +13,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const authController = __importStar(require("./auth.controller"));
 const auth_middleware_1 = require("./auth.middleware");
+const auth_middleware_2 = require("./auth.middleware");
 const router = express_1.default.Router();
-exports.default = router;
 router.post('/login', auth_middleware_1.validateLoginData, authController.login);
+router.post('/auth/validate', auth_middleware_2.authGuard, authController.validate);
+exports.default = router;
 //# sourceMappingURL=auth.router.js.map
