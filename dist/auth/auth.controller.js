@@ -13,6 +13,7 @@ exports.login = async (request, response, next) => {
     }
 };
 exports.validate = (request, response, next) => {
+    console.log(request.user);
     response.sendStatus(200);
 };
 //# sourceMappingURL=auth.controller.js.map

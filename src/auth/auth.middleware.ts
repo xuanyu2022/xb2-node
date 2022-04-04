@@ -4,6 +4,8 @@ import {PUBLIC_KEY} from '../app/app.config';
 import * as userService from '../user/user.service';
 import bcryptjs from 'bcryptjs';
 import { config } from 'dotenv/types';
+import { TokenPayload } from './auth.interface';
+
 
 export const validateLoginData = async (
   request:Request,
@@ -32,23 +34,15 @@ export const validateLoginData = async (
    next();
 };
 
-
  /****   验证登录   **  (用户身份) */
 
-
-
-   
- 
- 
  export const authGuard = (
   request:Request,
   response:Response,
   next:NextFunction
  ) => {
    console.log('验证用户身份');
-  
-  
-   try {
+    try {
 
     const authorization = request.header('Authorization');
       if(!authorization) throw new Error();
@@ -56,8 +50,13 @@ export const validateLoginData = async (
     const token = authorization.replace('Bearer ', '');
       if(!token) throw new Error();
        // console.log(token);
-    jwt.verify (token,PUBLIC_KEY,{ algorithms:['RS256'] });
-      next();
+       
+       //验证令牌
+   const decoded = jwt.verify (token,PUBLIC_KEY,{ algorithms:['RS256'] });
+   //在请求里添加当前用户
+   request.user = decoded as TokenPayload;
+
+     next();
    } catch(error){
      next( new Error('UNAUTHORIZED'));
    }
