@@ -14,6 +14,7 @@ const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const app_config_1 = require("../app/app.config");
 const userService = __importStar(require("../user/user.service"));
 const bcryptjs_1 = __importDefault(require("bcryptjs"));
+const auth_service_1 = require("./auth.service");
 exports.validateLoginData = async (request, response, next) => {
     const { name, password } = request.body;
     if (!name)
@@ -48,5 +49,30 @@ exports.authGuard = (request, response, next) => {
     catch (error) {
         next(new Error('UNAUTHORIZED'));
     }
+};
+exports.accessControl = (options) => {
+    return async (request, response, next) => {
+        console.log('访问控制');
+        const { possession } = options;
+        const { id: userId } = request.user;
+        if (userId == 1)
+            return next();
+        const resourceIdParam = Object.keys(request.params)[0];
+        const resourceType = resourceIdParam.replace('Id', '');
+        const resourceId = parseInt(request.params[resourceIdParam], 10);
+        console.log(resourceType);
+        if (possession) {
+            try {
+                const ownResource = await auth_service_1.possess({ resourceId, resourceType, userId });
+                if (!ownResource) {
+                    return next(new Error('USER_DOES_NOT_OWN_RESOURCE'));
+                }
+            }
+            catch (error) {
+                return next(error);
+            }
+        }
+        next();
+    };
 };
 //# sourceMappingURL=auth.middleware.js.map

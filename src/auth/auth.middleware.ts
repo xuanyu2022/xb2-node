@@ -5,7 +5,7 @@ import * as userService from '../user/user.service';
 import bcryptjs from 'bcryptjs';
 import { config } from 'dotenv/types';
 import { TokenPayload } from './auth.interface';
-
+import {possess} from './auth.service';
 
 export const validateLoginData = async (
   request:Request,
@@ -34,7 +34,9 @@ export const validateLoginData = async (
    next();
 };
 
- /****   验证登录   **  (用户身份) */
+ /****   
+  * 验证登录  
+   */
 
  export const authGuard = (
   request:Request,
@@ -50,7 +52,7 @@ export const validateLoginData = async (
     const token = authorization.replace('Bearer ', '');
       if(!token) throw new Error();
        // console.log(token);
-       
+
        //验证令牌
    const decoded = jwt.verify (token,PUBLIC_KEY,{ algorithms:['RS256'] });
    //在请求里添加当前用户
@@ -62,3 +64,41 @@ export const validateLoginData = async (
    }
  };
  
+/** 
+ * 访问控制
+ *  */ 
+ interface AccessControlOptions{
+    possession?: boolean;
+ }
+
+ export const accessControl = (options:AccessControlOptions) => {
+   return async (
+     request:Request,
+     response:Response,
+     next:NextFunction
+     ) =>{
+        console.log('访问控制');
+        const { possession } = options;
+        const {id:userId} = request.user;
+       // console.log( {id:userId});
+        if (userId==1) return next();
+
+        const resourceIdParam = Object.keys(request.params)[0];
+        const resourceType = resourceIdParam.replace('Id','');
+        const resourceId = parseInt(request.params[resourceIdParam],10);
+        console.log(resourceType);
+        //检查资源拥有权
+        if(possession){
+          try{
+            const ownResource = await possess({resourceId,resourceType,userId});
+            if(!ownResource){
+              return next(new Error('USER_DOES_NOT_OWN_RESOURCE'))
+            }
+          }catch(error){
+             return next(error);
+          }
+        }
+        //下一步
+      next();
+   };
+ };

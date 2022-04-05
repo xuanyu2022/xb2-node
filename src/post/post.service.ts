@@ -1,8 +1,8 @@
 import { connection } from '../app/database/mysql';
 import { PostModel } from './post.model';
-/**
- * 获取内容列表
- */
+
+
+/** * 获取内容列表  */
 export const getPosts = async () => {
   // const data = [
   //   {

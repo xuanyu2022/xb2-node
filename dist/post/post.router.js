@@ -18,6 +18,6 @@ const router = express_1.default.Router();
 router.get('/posts', app_middleware_1.requestUrl, PostController.index);
 exports.default = router;
 router.post('/posts', auth_middleware_1.authGuard, PostController.store);
-router.patch('/posts/:postId', PostController.update);
-router.delete('/posts/:postId', PostController.destroy);
+router.patch('/posts/:postId', auth_middleware_1.authGuard, auth_middleware_1.accessControl({ possession: true }), PostController.update);
+router.delete('/posts/:postId', auth_middleware_1.authGuard, auth_middleware_1.accessControl({ possession: true }), PostController.destroy);
 //# sourceMappingURL=post.router.js.map

@@ -11,6 +11,7 @@ export const store = async (
 
   try{
     const data = await userService.createUser({name,password});
+    
     response.status(201).send(data);
   }catch(error){
     next(error);
