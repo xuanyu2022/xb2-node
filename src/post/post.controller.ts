@@ -26,7 +26,7 @@ export const index = async (
   }
 };
 
-//**定义接口的处理器 */
+//**创建内容  */
 
 export const store = async (
   request: Request,
@@ -34,9 +34,9 @@ export const store = async (
   next: NextFunction,
 ) => {
   const { title, content } = request.body;
-
+  const {id:userId } = request.user;
   try {
-    const data = await createPost({ title, content });
+    const data = await createPost({ title, content,userId});
     response.status(201).send(data);
   } catch (error) {
     next(error);
@@ -44,7 +44,7 @@ export const store = async (
 };
 
 
-//**定义接口的处理器(更新内容-12章) */
+//**更新内容-  12章 */
 
 export const update = async (
   request: Request,
@@ -62,7 +62,7 @@ export const update = async (
     }
 };
 
-//** 定义删除内容的处理器 */
+//** 删除内容*/
 
 export const destroy = async (
   request:Request,

@@ -32,7 +32,7 @@ export const getPosts = async () => {
   return data;
 };
 
-/** 创建内容: 定义存储用的服务 */
+/** 创建内容:                                                           定义存储用的服务 */
 //createPost 执行把存储到post中
 export const createPost = async (post: PostModel) => {
   const statement = `
@@ -47,7 +47,7 @@ export const createPost = async (post: PostModel) => {
 
 
 
-//**创建内容: 定义存储用的服务(更新) */
+//**更新内容                                                            : 定义存储用的服务(更新) */
 
 export const updatePost = async (postId:number,post:PostModel) => {
   const statement = `
