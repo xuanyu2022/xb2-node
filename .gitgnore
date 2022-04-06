@@ -5,7 +5,9 @@
 logs*.lognpm-debug.log*
 # OS
 .DS_Store
-# IDE - VSCode.vscode/*
+# IDE - +  VSCode
+.vscode/*
+!.vscode/*.code-snippets
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
@@ -14,3 +16,4 @@ logs*.lognpm-debug.log*
 #App 不做源代码管理
 .env*
 config/*.key
+/uploads
