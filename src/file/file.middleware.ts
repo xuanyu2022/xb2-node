@@ -8,3 +8,8 @@ import multer from 'multer';
 const fileUpload = multer ({
   dest:'upload/',
 });
+
+/** 文件拦截器 */
+export const fileInterceptor = fileUpload.single('file');
+
+
