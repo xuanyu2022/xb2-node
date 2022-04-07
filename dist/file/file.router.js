@@ -16,5 +16,6 @@ const auth_middleware_1 = require("../auth/auth.middleware");
 const file_middleware_1 = require("./file.middleware");
 const router = express_1.default.Router();
 router.post('/files', auth_middleware_1.authGuard, file_middleware_1.fileInterceptor, fileController.store);
+router.get('/files/:fileId/serve', fileController.serve);
 exports.default = router;
 //# sourceMappingURL=file.router.js.map

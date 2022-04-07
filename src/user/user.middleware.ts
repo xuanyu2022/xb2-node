@@ -27,3 +27,4 @@ export const hashpassword = async (
   request.body.password = await bcryptjs.hash(password,10);
   next();
 };
+

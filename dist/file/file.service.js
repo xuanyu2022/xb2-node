@@ -9,4 +9,12 @@ exports.createFile = async (file) => {
     const [data] = await mysql_1.connection.promise().query(statement, file);
     return data;
 };
-//# sourceMappingURL=service.js.map
+exports.findFileById = async (fileId) => {
+    const statement = `
+      SELECT * FROM file
+        WHERE id = ?
+  `;
+    const [data] = await mysql_1.connection.promise().query(statement, fileId);
+    return data[0];
+};
+//# sourceMappingURL=file.service.js.map

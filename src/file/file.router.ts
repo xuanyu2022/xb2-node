@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.post ('/files',authGuard,fileInterceptor,fileController.store);
 
-
+router.get ('/files/:fileId/serve',fileController.serve);
 
 
 

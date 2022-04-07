@@ -60,7 +60,6 @@ exports.accessControl = (options) => {
         const resourceIdParam = Object.keys(request.params)[0];
         const resourceType = resourceIdParam.replace('Id', '');
         const resourceId = parseInt(request.params[resourceIdParam], 10);
-        console.log(resourceType);
         if (possession) {
             try {
                 const ownResource = await auth_service_1.possess({ resourceId, resourceType, userId });

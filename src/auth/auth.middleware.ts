@@ -86,7 +86,6 @@ export const validateLoginData = async (
         const resourceIdParam = Object.keys(request.params)[0];
         const resourceType = resourceIdParam.replace('Id','');
         const resourceId = parseInt(request.params[resourceIdParam],10);
-        console.log(resourceType);
         //检查资源拥有权
         if(possession){
           try{

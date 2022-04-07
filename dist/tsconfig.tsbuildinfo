@@ -570,7 +570,7 @@
         "signature": "5ebd32cdcfe59a18ccee6d0e01330486e8dd8a4bceedb20236c280389605092f"
       },
       "../src/auth/auth.middleware.ts": {
-        "version": "67f62423b7012d006d07890f28a165ee1f0998b2cfb7ca5fc1789ec68c23e1c4",
+        "version": "c5c81a41a205519d1b61d8d70143a03c72c39c7c77c93de8b0ee1d37e59cb7ef",
         "signature": "825fbc1e20dd377637db0b710389460da5ba4e80b426216dae99c8d803b9bf1b"
       },
       "../src/post/post.router.ts": {
@@ -590,16 +590,24 @@
         "signature": "f56b6491cfca65542186d6b0c6700583afeabad419df0fc566235770bfd654e6"
       },
       "../src/user/user.middleware.ts": {
-        "version": "5f8aaad13f5ee2d024151f56d59af4f34e5a78ed9fe89a956114917c99cd183b",
+        "version": "19490c2ccb07c41cea6e6143b5feee41e4e3b22df4dae920a953d6cd78794793",
         "signature": "8663892c27e039fc1fbd011d498bbc706756945eca3f317f6b6354cf1ca78be9"
       },
       "../src/user/user.router.ts": {
         "version": "f918216bacf8b18c2c701558f39aa7c18d7e5fabbc4ab8eedb9c5f3e1cf4d076",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
       },
+      "../src/file/file.model.ts": {
+        "version": "12037bae741fb95aad18edfefcaeb25e6905789d48684980f2892a80786071b4",
+        "signature": "c30c762c7307aee4a500d05262e369cdc46dc6f0f691235ba15286e172f18e9b"
+      },
+      "../src/file/file.service.ts": {
+        "version": "e1392569e73ba9384d639f64df30c27dac9491b94b21132048fff46706bbc5c8",
+        "signature": "28ebfc04b8d10ed9808bb4340a061da679fbb2222d09a6dca44526b114ad072e"
+      },
       "../src/file/file.controller.ts": {
-        "version": "4aaf1429a7eb92b4af29bf6d8acdb1322bdd75deaa4bbe7b5aa39d1f09db0fd5",
-        "signature": "f56b6491cfca65542186d6b0c6700583afeabad419df0fc566235770bfd654e6"
+        "version": "f408add4ecca0a4029a05c6f9a5ef2722dcae822e388f8125c2276dc8058bc94",
+        "signature": "79b73e7a6b0e61640a95528d35c665d504538db73838296f43624233f46ce20a"
       },
       "../node_modules/@types/multer/index.d.ts": {
         "version": "054c16c6ed7d4284d0346f87d0572cd5aad26fea25648fdd821002eca7b7a404",
@@ -610,7 +618,7 @@
         "signature": "2810f0f20dd05d8339b1d947e1daba4b2e67a1af172027cffa2e402704f74f33"
       },
       "../src/file/file.router.ts": {
-        "version": "a5b1cd8070af28a5f2af88db8f45bd2ba8c1bb66270eba92d32ae6af851d599c",
+        "version": "53adff102a00c14b9b474620d6d5f9e7e02bf879027851fc6754ff44dfb5e7a9",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
       },
       "../src/app/index.ts": {
@@ -619,10 +627,6 @@
       },
       "../src/main.ts": {
         "version": "942826d0703640ebf89d5142c0cb55994437efa8f51b5e3c7b8272e4943191e0",
-        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
-      },
-      "../src/file/service.ts": {
-        "version": "6e7eeb37ea6de55aafb6376d84dc7ebc455975cdc4deafb97b25175c80c10d70",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
       }
     },
@@ -1510,8 +1514,18 @@
         "../src/user/user.middleware.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../src/file/file.model.ts": [
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../src/file/file.service.ts": [
+        "../src/app/database/mysql.ts",
+        "../src/file/file.model.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../src/file/file.controller.ts": [
         "../node_modules/@types/express/index.d.ts",
+        "../node_modules/@types/lodash/index.d.ts",
+        "../src/file/file.service.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
       "../node_modules/@types/multer/index.d.ts": [
@@ -1542,10 +1556,6 @@
       "../src/main.ts": [
         "../src/app/index.ts",
         "../src/app/app.config.ts",
-        "../src/app/database/mysql.ts",
-        "../node_modules/@types/node/util.d.ts"
-      ],
-      "../src/file/service.ts": [
         "../src/app/database/mysql.ts",
         "../node_modules/@types/node/util.d.ts"
       ]
@@ -2375,6 +2385,12 @@
       "../src/user/user.router.ts": [
         "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts"
       ],
+      "../src/file/file.service.ts": [
+        "../node_modules/@types/mysql/lib/protocol/packets/rowdatapacket.d.ts",
+        "../node_modules/@types/mysql/lib/protocol/packets/okpacket.d.ts",
+        "../node_modules/@types/mysql/lib/protocol/packets/resultsetheader.d.ts",
+        "../src/file/file.model.ts"
+      ],
       "../src/file/file.controller.ts": [
         "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts",
         "../node_modules/@types/express/index.d.ts"
@@ -2537,20 +2553,21 @@
       "../src/user/user.service.ts",
       "../node_modules/@types/bcryptjs/index.d.ts",
       "../src/auth/auth.service.ts",
-      "../src/auth/auth.middleware.ts",
       "../src/post/post.router.ts",
       "../src/auth/auth.controller.ts",
       "../src/auth/auth.router.ts",
       "../src/user/user.controller.ts",
       "../src/user/user.middleware.ts",
       "../src/user/user.router.ts",
+      "../src/file/file.model.ts",
+      "../src/file/file.service.ts",
       "../src/file/file.controller.ts",
       "../node_modules/@types/multer/index.d.ts",
       "../src/file/file.middleware.ts",
+      "../src/file/file.router.ts",
       "../src/app/index.ts",
       "../src/main.ts",
-      "../src/file/service.ts",
-      "../src/file/file.router.ts"
+      "../src/auth/auth.middleware.ts"
     ]
   },
   "version": "3.8.3"
