@@ -32,4 +32,15 @@ exports.serve = async (request, response, next) => {
         next(error);
     }
 };
+exports.metadata = async (request, response, next) => {
+    const { fileId } = request.params;
+    try {
+        const file = await file_service_1.findFileById(parseInt(fileId, 10));
+        const data = lodash_1.default.pick(file, ['id', 'size', 'width', 'height', 'metadata']);
+        response.send(data);
+    }
+    catch (error) {
+        next(error);
+    }
+};
 //# sourceMappingURL=file.controller.js.map
