@@ -10,7 +10,7 @@ exports.store = async (request, response, next) => {
     const { post: postId } = request.query;
     const fileinfo = lodash_1.default.pick(request.file, ['originalname', 'mimetype', 'filename', 'size',]);
     try {
-        const data = await file_service_1.createFile(Object.assign(Object.assign({}, fileinfo), { userId, postId: parseInt(`${postId}`, 10) }));
+        const data = await file_service_1.createFile(Object.assign(Object.assign(Object.assign({}, fileinfo), { userId, postId: parseInt(`${postId}`, 10) }), request.fileMetaData));
         response.status(201).send(data);
     }
     catch (error) {
