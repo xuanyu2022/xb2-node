@@ -7,7 +7,7 @@ const multer_1 = __importDefault(require("multer"));
 const jimp_1 = __importDefault(require("jimp"));
 const file_service_1 = require("./file.service");
 const fileUpload = multer_1.default({
-    dest: 'upload/',
+    dest: 'uploads/',
 });
 exports.fileInterceptor = fileUpload.single('file');
 exports.fileProcessor = async (request, response, next) => {

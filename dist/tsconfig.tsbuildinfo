@@ -546,7 +546,7 @@
         "signature": "d822ee632f7b6f0ff1aa1b9e1bda826b64a5c0727acb35bf385f13dfcf760574"
       },
       "../src/app/app.middleware.ts": {
-        "version": "44a84015259da85f17a2525ec086926c7a69726d5a5525914923f38de070a9a4",
+        "version": "c5358a026146370926c9ef825cc78d622bbe1bed25a37ee7285eca245e78d01e",
         "signature": "5c1bd11274d9d2803893c03bdf54785e6b649ff47cef39e6979e1fb2c73f4832"
       },
       "../node_modules/@types/jsonwebtoken/index.d.ts": {
@@ -746,7 +746,7 @@
         "signature": "38f2788026a5867cbdf7631499f2fbd469b9d12dfd59a8b25bf3a8692c0847d4"
       },
       "../src/file/file.controller.ts": {
-        "version": "25ad75ad3380b5494b1e42b32d4a0a4c0d5b2ec9ecf5831c90908ae1d44003ad",
+        "version": "81c4fe2a6669d1a967bb66f50bdc00529122ac70d5d1ea8e2e08452871b75a87",
         "signature": "5f6752ed97697df553a10292d12863a61aea863822dc8cdd661ecda3022916ba"
       },
       "../node_modules/@types/multer/index.d.ts": {
@@ -754,7 +754,7 @@
         "signature": "78ef4bca5de9d31366a12c6707458b858e6e1abf1505777e5ebf50be21be1209"
       },
       "../src/file/file.middleware.ts": {
-        "version": "f58d4d1e73d135808c17cf7c04432b7d8d96bf50b96771433a6d009d4c437add",
+        "version": "168cdee6ec0575e28b3b127d16ea00e6085ffb208fa8488224133e2cfc5ed061",
         "signature": "55e068183211e6b8694efb68e172361b891f2f35606e7580c88d2eb588297dcb"
       },
       "../src/file/file.router.ts": {
@@ -1836,6 +1836,8 @@
         "../node_modules/@types/node/util.d.ts"
       ],
       "../src/file/file.controller.ts": [
+        "../node_modules/@types/node/path.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/express/index.d.ts",
         "../node_modules/@types/lodash/index.d.ts",
         "../src/file/file.service.ts",
@@ -3084,12 +3086,12 @@
       "../node_modules/jimp/types/ts3.1/index.d.ts",
       "../src/file/file.model.ts",
       "../src/file/file.service.ts",
-      "../src/file/file.controller.ts",
       "../node_modules/@types/multer/index.d.ts",
+      "../src/file/file.middleware.ts",
       "../src/file/file.router.ts",
       "../src/app/index.ts",
       "../src/main.ts",
-      "../src/file/file.middleware.ts"
+      "../src/file/file.controller.ts"
     ]
   },
   "version": "3.8.3"

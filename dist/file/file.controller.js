@@ -3,6 +3,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const path_1 = __importDefault(require("path"));
+const fs_1 = __importDefault(require("fs"));
 const lodash_1 = __importDefault(require("lodash"));
 const file_service_1 = require("./file.service");
 exports.store = async (request, response, next) => {
@@ -21,8 +23,23 @@ exports.serve = async (request, response, next) => {
     const { fileId } = request.params;
     try {
         const file = await file_service_1.findFileById(parseInt(fileId, 10));
-        response.sendFile(file.filename, {
-            root: 'upload',
+        const { size } = request.query;
+        let filename = file.filename;
+        let root = 'uploads';
+        let resized = 'resized';
+        if (size) {
+            const imageSize = ['large', 'medium', 'thumbnail'];
+            if (!imageSize) {
+                throw new Error('FILE_NOT_FOUND');
+            }
+            const fileExist = fs_1.default.existsSync(path_1.default.join(root, resized, `${filename}-${size}`));
+            if (fileExist) {
+                filename = `${filename}-${size}`;
+                root = path_1.default.join(root, resized);
+            }
+        }
+        response.sendFile(filename, {
+            root,
             header: {
                 'content-type': file.mimetype,
             },

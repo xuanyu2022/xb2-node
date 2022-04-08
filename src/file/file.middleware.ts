@@ -4,14 +4,14 @@ import Jimp from 'jimp';
 import { imageResizer } from './file.service';
 
 /**
- * 创建一个Multer
+ * 创建一个Multer,  multer()创建了一个multer, 可以理解为文件上传器, 属性dest是地址参数,即目录所在位置. 
  */
 
 const fileUpload = multer ({
-  dest:'upload/',
+  dest:'uploads/',
 });
 
-/** 文件拦截器 */
+/** 文件拦截器 *///  通过single()方法, 吧文件储藏在uploads目录里, 并在request里添加file这个属性
 export const fileInterceptor = fileUpload.single('file');
 
 /**
