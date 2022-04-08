@@ -170,8 +170,8 @@
         "signature": "f852baed7c0a5efc697045443f02a2950920e41f6517a42cb3b834428913919f"
       },
       "../types/express.d.ts": {
-        "version": "ed90fb85c0641f438dc37ecac06bc6c73f5008292d937f8f75444a2ba7d13216",
-        "signature": "ed90fb85c0641f438dc37ecac06bc6c73f5008292d937f8f75444a2ba7d13216"
+        "version": "d7a1b49882822eeb871c6a4718effc6db5dacbcc541a0274825ce60f1343ab5a",
+        "signature": "d7a1b49882822eeb871c6a4718effc6db5dacbcc541a0274825ce60f1343ab5a"
       },
       "../node_modules/@types/node/assert.d.ts": {
         "version": "97c107ffe3dc48bd82a03711334b92966c3e2370014ef440e4d2a7b301533f9b",
@@ -598,15 +598,15 @@
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
       },
       "../src/file/file.model.ts": {
-        "version": "12037bae741fb95aad18edfefcaeb25e6905789d48684980f2892a80786071b4",
-        "signature": "c30c762c7307aee4a500d05262e369cdc46dc6f0f691235ba15286e172f18e9b"
+        "version": "a973b3f1242b4184f8abcbb05dc2c102852f3fee5925c37644fc389b9e2e3057",
+        "signature": "1d8124fd41ad3dec94cb5bdc3aebd0a5aa84411e156f17f2f24559990dcd6010"
       },
       "../src/file/file.service.ts": {
         "version": "e1392569e73ba9384d639f64df30c27dac9491b94b21132048fff46706bbc5c8",
         "signature": "28ebfc04b8d10ed9808bb4340a061da679fbb2222d09a6dca44526b114ad072e"
       },
       "../src/file/file.controller.ts": {
-        "version": "7650e5086145db626fd313ca18f2131d1e45e18f075da99e0240de150e32ee3f",
+        "version": "086634263098597ea3d42d610004d2d4536a67a61777f77dcb95c30e2fe1b845",
         "signature": "79b73e7a6b0e61640a95528d35c665d504538db73838296f43624233f46ce20a"
       },
       "../node_modules/@types/multer/index.d.ts": {
@@ -754,7 +754,7 @@
         "signature": "762539fa7b805a2ca94de8b9587db0dfe12ae440848678d028707b70f31acced"
       },
       "../src/file/file.middleware.ts": {
-        "version": "0c065918c2182d667e769134aee73a768c3649bf64609bcf68c72a030f60cd8c",
+        "version": "d650727c4c72a9c4d659080cdd2d66f3c7a1ddc1e7f9966e028790e80d329cb1",
         "signature": "55e068183211e6b8694efb68e172361b891f2f35606e7580c88d2eb588297dcb"
       },
       "../src/file/file.router.ts": {
@@ -3085,19 +3085,7 @@
       "../src/file/file.router.ts",
       "../src/app/index.ts",
       "../src/main.ts",
-      [
-        "../src/file/file.controller.ts",
-        [
-          {
-            "file": "../src/file/file.controller.ts",
-            "start": 542,
-            "length": 12,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'fileMetaData' does not exist on type 'Request<ParamsDictionary>'."
-          }
-        ]
-      ]
+      "../src/file/file.controller.ts"
     ]
   },
   "version": "3.8.3"

@@ -18,7 +18,12 @@ exports.fileProcessor = async (request, response, next) => {
     catch (error) {
         return next(error);
     }
-    console.log(image);
+    const { imageSize, tags } = image['_exif'];
+    request.fileMetaData = {
+        width: imageSize.width,
+        height: imageSize.height,
+        metadata: JSON.stringify(tags)
+    };
     next();
 };
 //# sourceMappingURL=file.middleware.js.map

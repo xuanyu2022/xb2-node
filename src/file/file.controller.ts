@@ -16,7 +16,12 @@ export const store= async (
   const fileinfo = _.pick (request.file, ['originalname','mimetype','filename','size',]);
 
   try {
-    const data = await createFile( {...fileinfo,userId, postId:parseInt(`${postId}`,10),...request.fileMetaData,});
+    const data = await createFile( {
+      ...fileinfo, 
+      userId, 
+      postId:parseInt(`${postId}`,10), 
+      ...request.fileMetaData,
+    });
     response.status(201).send(data);
 
   } catch (error) {

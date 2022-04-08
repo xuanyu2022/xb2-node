@@ -5,5 +5,6 @@ export class FileModel {
   filename: string;
   size: number;
   userId: number;
-  postId?: number;
+  postId: number;
+
 }

@@ -13,7 +13,9 @@ const fileUpload = multer ({
 /** 文件拦截器 */
 export const fileInterceptor = fileUpload.single('file');
 
-/** 文件处理器*/
+/**
+ *  文件处理器
+ * */
 
 export const fileProcessor= async (
   request:Request,
@@ -23,11 +25,21 @@ export const fileProcessor= async (
  const {path} = request.file;
  let image: Jimp;
  try {
+   //读取图像文件
    image = await Jimp.read(path);
 
  }catch (error){
    return next(error);
  }
- console.log(image);
+ //准备文件数据
+    const {imageSize,tags} = image['_exif'];
+   //在请求中添加文件数据
+    request.fileMetaData = {
+              width:imageSize.width,
+              height:imageSize.height,
+              metadata: JSON.stringify(tags)
+    };
+
+//下一步
  next();
 };
