@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const multer_1 = __importDefault(require("multer"));
 const jimp_1 = __importDefault(require("jimp"));
+const file_service_1 = require("./file.service");
 const fileUpload = multer_1.default({
     dest: 'upload/',
 });
@@ -22,8 +23,9 @@ exports.fileProcessor = async (request, response, next) => {
     request.fileMetaData = {
         width: imageSize.width,
         height: imageSize.height,
-        metadata: JSON.stringify(tags)
+        metadata: JSON.stringify(tags),
     };
+    file_service_1.imageResizer(image, request.file);
     next();
 };
 //# sourceMappingURL=file.middleware.js.map

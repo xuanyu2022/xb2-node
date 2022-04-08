@@ -597,22 +597,6 @@
         "version": "49ac1aa3cfd92ebd288c1a91cd34e46355d3200189efdb69a73873c38bc200a6",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
       },
-      "../src/file/file.model.ts": {
-        "version": "a973b3f1242b4184f8abcbb05dc2c102852f3fee5925c37644fc389b9e2e3057",
-        "signature": "1d8124fd41ad3dec94cb5bdc3aebd0a5aa84411e156f17f2f24559990dcd6010"
-      },
-      "../src/file/file.service.ts": {
-        "version": "e1392569e73ba9384d639f64df30c27dac9491b94b21132048fff46706bbc5c8",
-        "signature": "28ebfc04b8d10ed9808bb4340a061da679fbb2222d09a6dca44526b114ad072e"
-      },
-      "../src/file/file.controller.ts": {
-        "version": "25ad75ad3380b5494b1e42b32d4a0a4c0d5b2ec9ecf5831c90908ae1d44003ad",
-        "signature": "5f6752ed97697df553a10292d12863a61aea863822dc8cdd661ecda3022916ba"
-      },
-      "../node_modules/@types/multer/index.d.ts": {
-        "version": "78ef4bca5de9d31366a12c6707458b858e6e1abf1505777e5ebf50be21be1209",
-        "signature": "78ef4bca5de9d31366a12c6707458b858e6e1abf1505777e5ebf50be21be1209"
-      },
       "../node_modules/@jimp/core/types/jimp.d.ts": {
         "version": "11e31384d7e5e16179c37c0382c80f3736fb7c51c1a258283925b42d5f58f24c",
         "signature": "11e31384d7e5e16179c37c0382c80f3736fb7c51c1a258283925b42d5f58f24c"
@@ -753,8 +737,24 @@
         "version": "762539fa7b805a2ca94de8b9587db0dfe12ae440848678d028707b70f31acced",
         "signature": "762539fa7b805a2ca94de8b9587db0dfe12ae440848678d028707b70f31acced"
       },
+      "../src/file/file.model.ts": {
+        "version": "a973b3f1242b4184f8abcbb05dc2c102852f3fee5925c37644fc389b9e2e3057",
+        "signature": "1d8124fd41ad3dec94cb5bdc3aebd0a5aa84411e156f17f2f24559990dcd6010"
+      },
+      "../src/file/file.service.ts": {
+        "version": "78cd2193701d866e344fd31f81aa58df7932e85a433a53fff119d1ac72334c29",
+        "signature": "38f2788026a5867cbdf7631499f2fbd469b9d12dfd59a8b25bf3a8692c0847d4"
+      },
+      "../src/file/file.controller.ts": {
+        "version": "25ad75ad3380b5494b1e42b32d4a0a4c0d5b2ec9ecf5831c90908ae1d44003ad",
+        "signature": "5f6752ed97697df553a10292d12863a61aea863822dc8cdd661ecda3022916ba"
+      },
+      "../node_modules/@types/multer/index.d.ts": {
+        "version": "78ef4bca5de9d31366a12c6707458b858e6e1abf1505777e5ebf50be21be1209",
+        "signature": "78ef4bca5de9d31366a12c6707458b858e6e1abf1505777e5ebf50be21be1209"
+      },
       "../src/file/file.middleware.ts": {
-        "version": "d650727c4c72a9c4d659080cdd2d66f3c7a1ddc1e7f9966e028790e80d329cb1",
+        "version": "f58d4d1e73d135808c17cf7c04432b7d8d96bf50b96771433a6d009d4c437add",
         "signature": "55e068183211e6b8694efb68e172361b891f2f35606e7580c88d2eb588297dcb"
       },
       "../src/file/file.router.ts": {
@@ -1654,24 +1654,6 @@
         "../src/user/user.middleware.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
-      "../src/file/file.model.ts": [
-        "../node_modules/@types/node/util.d.ts"
-      ],
-      "../src/file/file.service.ts": [
-        "../src/app/database/mysql.ts",
-        "../src/file/file.model.ts",
-        "../node_modules/@types/node/util.d.ts"
-      ],
-      "../src/file/file.controller.ts": [
-        "../node_modules/@types/express/index.d.ts",
-        "../node_modules/@types/lodash/index.d.ts",
-        "../src/file/file.service.ts",
-        "../node_modules/@types/node/util.d.ts"
-      ],
-      "../node_modules/@types/multer/index.d.ts": [
-        "../node_modules/@types/express/index.d.ts",
-        "../node_modules/@types/node/util.d.ts"
-      ],
       "../node_modules/@jimp/core/types/jimp.d.ts": [
         "../node_modules/@jimp/core/types/etc.d.ts",
         "../node_modules/@types/node/util.d.ts"
@@ -1843,10 +1825,31 @@
         "../node_modules/@jimp/plugins/index.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../src/file/file.model.ts": [
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../src/file/file.service.ts": [
+        "../node_modules/@types/node/path.d.ts",
+        "../node_modules/jimp/types/ts3.1/index.d.ts",
+        "../src/app/database/mysql.ts",
+        "../src/file/file.model.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../src/file/file.controller.ts": [
+        "../node_modules/@types/express/index.d.ts",
+        "../node_modules/@types/lodash/index.d.ts",
+        "../src/file/file.service.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@types/multer/index.d.ts": [
+        "../node_modules/@types/express/index.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../src/file/file.middleware.ts": [
         "../node_modules/@types/express/index.d.ts",
         "../node_modules/@types/multer/index.d.ts",
         "../node_modules/jimp/types/ts3.1/index.d.ts",
+        "../src/file/file.service.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
       "../src/file/file.router.ts": [
@@ -2697,20 +2700,6 @@
       "../src/user/user.router.ts": [
         "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts"
       ],
-      "../src/file/file.service.ts": [
-        "../node_modules/@types/mysql/lib/protocol/packets/rowdatapacket.d.ts",
-        "../node_modules/@types/mysql/lib/protocol/packets/okpacket.d.ts",
-        "../node_modules/@types/mysql/lib/protocol/packets/resultsetheader.d.ts",
-        "../src/file/file.model.ts"
-      ],
-      "../src/file/file.controller.ts": [
-        "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts",
-        "../node_modules/@types/express/index.d.ts"
-      ],
-      "../node_modules/@types/multer/index.d.ts": [
-        "../node_modules/@types/express/index.d.ts",
-        "../node_modules/@types/node/util.d.ts"
-      ],
       "../node_modules/@jimp/core/types/jimp.d.ts": [
         "../node_modules/@jimp/core/types/etc.d.ts",
         "../node_modules/@types/node/util.d.ts"
@@ -2882,6 +2871,21 @@
         "../node_modules/@jimp/plugins/index.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../src/file/file.service.ts": [
+        "../node_modules/@types/mysql/lib/protocol/packets/rowdatapacket.d.ts",
+        "../node_modules/@types/mysql/lib/protocol/packets/okpacket.d.ts",
+        "../node_modules/@types/mysql/lib/protocol/packets/resultsetheader.d.ts",
+        "../src/file/file.model.ts",
+        "../node_modules/jimp/types/ts3.1/index.d.ts"
+      ],
+      "../src/file/file.controller.ts": [
+        "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts",
+        "../node_modules/@types/express/index.d.ts"
+      ],
+      "../node_modules/@types/multer/index.d.ts": [
+        "../node_modules/@types/express/index.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../src/file/file.middleware.ts": [
         "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts",
         "../node_modules/@types/express/index.d.ts"
@@ -3042,10 +3046,7 @@
       "../src/auth/auth.router.ts",
       "../src/user/user.controller.ts",
       "../src/user/user.middleware.ts",
-      "../src/file/file.model.ts",
-      "../src/file/file.service.ts",
-      "../src/file/file.controller.ts",
-      "../node_modules/@types/multer/index.d.ts",
+      "../src/user/user.router.ts",
       "../node_modules/@jimp/core/types/jimp.d.ts",
       "../node_modules/@jimp/core/types/etc.d.ts",
       "../node_modules/@jimp/core/types/functions.d.ts",
@@ -3081,11 +3082,14 @@
       "../node_modules/@jimp/plugin-threshold/index.d.ts",
       "../node_modules/@jimp/plugins/index.d.ts",
       "../node_modules/jimp/types/ts3.1/index.d.ts",
-      "../src/file/file.middleware.ts",
+      "../src/file/file.model.ts",
+      "../src/file/file.service.ts",
+      "../src/file/file.controller.ts",
+      "../node_modules/@types/multer/index.d.ts",
       "../src/file/file.router.ts",
       "../src/app/index.ts",
       "../src/main.ts",
-      "../src/user/user.router.ts"
+      "../src/file/file.middleware.ts"
     ]
   },
   "version": "3.8.3"
