@@ -542,11 +542,11 @@
         "signature": "c9f78ed1fdd460859a3c22e362a2ad9d7d16e4bc328db15c4eb3e704256e3b90"
       },
       "../src/post/post.controller.ts": {
-        "version": "f7db624c7447bea3f007373f3991f9a4d94b726698d495d7e74708d7acc791b3",
-        "signature": "d822ee632f7b6f0ff1aa1b9e1bda826b64a5c0727acb35bf385f13dfcf760574"
+        "version": "e55d4e360f03654a604ba66ffccc77f7facca85a9adb35280467fc256ecd344b",
+        "signature": "42785829389f4f578d6025d138e74315ce0cd47368a46cf24a0255d31ccd6ec7"
       },
       "../src/app/app.middleware.ts": {
-        "version": "c5358a026146370926c9ef825cc78d622bbe1bed25a37ee7285eca245e78d01e",
+        "version": "08e21d4f7ffe292fcf57bd763a9009fec4ff281327c78b8d45a7085cef950d65",
         "signature": "5c1bd11274d9d2803893c03bdf54785e6b649ff47cef39e6979e1fb2c73f4832"
       },
       "../node_modules/@types/jsonwebtoken/index.d.ts": {
@@ -761,12 +761,20 @@
         "version": "145046446831f39b69931c2e5208546fdbfb404f751f6da28bfb5d43683b8f44",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
       },
+      "../src/tag/tag.model.ts": {
+        "version": "9f09c40eba4af6642e1166e928cce7a082c390633640517f813ef25dfd2e4356",
+        "signature": "c01631b9920083f16dbbfc9b0b3dd51214706ad9b08a16d70907a1c06034c2cd"
+      },
+      "../src/tag/tag.service.ts": {
+        "version": "6c6233498afbeae0ac01bc55a52b7f350d16ed6adde5aff9bb9d053a73c513ed",
+        "signature": "cd1601ced3c58db277c6cb88a31c6977bcd5bf397d218cfbfc86a8802bf9ff82"
+      },
       "../src/tag/tag.controller.ts": {
-        "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        "version": "7bc0ae97002de9ae1e5d9cc6f9d392d92854fe1e6110c39760aadb5ead7b9a3f",
+        "signature": "f56b6491cfca65542186d6b0c6700583afeabad419df0fc566235770bfd654e6"
       },
       "../src/tag/tag.router.ts": {
-        "version": "b78eca042404cfb5ba11d0d3d40a9130ed75cd8602219aae91a2707a35a18391",
+        "version": "9e5646262b738041c8eab672ec90c19c2fd5d55fe7fa10fa2260795e5e1d3531",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
       },
       "../src/app/index.ts": {
@@ -779,10 +787,6 @@
       },
       "../src/tag/tag.middleware.ts": {
         "version": "fa3b54a7cdaea9898a47e60c69304e641b87b612f062d08f40607e6e41c30206",
-        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
-      },
-      "../src/tag/tag.service.ts": {
-        "version": "9f668ebe59de187d7bb8188d36ee7b707233cc5cb1796bd511058a4166353aec",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
       }
     },
@@ -1595,6 +1599,7 @@
       "../src/post/post.controller.ts": [
         "../node_modules/@types/express/index.d.ts",
         "../node_modules/@types/lodash/index.d.ts",
+        "../src/app/database/mysql.ts",
         "../src/post/post.service.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
@@ -1877,11 +1882,23 @@
         "../src/file/file.middleware.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../src/tag/tag.model.ts": [
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../src/tag/tag.service.ts": [
+        "../src/app/database/mysql.ts",
+        "../src/tag/tag.model.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../src/tag/tag.controller.ts": [
+        "../node_modules/@types/express/index.d.ts",
+        "../src/tag/tag.service.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
       "../src/tag/tag.router.ts": [
         "../node_modules/@types/express/index.d.ts",
+        "../src/auth/auth.middleware.ts",
+        "../src/tag/tag.controller.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
       "../src/app/index.ts": [
@@ -1902,10 +1919,6 @@
       ],
       "../src/tag/tag.middleware.ts": [
         "../node_modules/@types/express/index.d.ts",
-        "../node_modules/@types/node/util.d.ts"
-      ],
-      "../src/tag/tag.service.ts": [
-        "../src/app/database/mysql.ts",
         "../node_modules/@types/node/util.d.ts"
       ]
     },
@@ -2690,6 +2703,9 @@
       ],
       "../src/post/post.controller.ts": [
         "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts",
+        "../node_modules/@types/mysql/lib/protocol/packets/rowdatapacket.d.ts",
+        "../node_modules/@types/mysql/lib/protocol/packets/okpacket.d.ts",
+        "../node_modules/@types/mysql/lib/protocol/packets/resultsetheader.d.ts",
         "../node_modules/@types/express/index.d.ts"
       ],
       "../src/app/app.middleware.ts": [
@@ -2927,6 +2943,13 @@
       "../src/file/file.router.ts": [
         "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts"
       ],
+      "../src/tag/tag.service.ts": [
+        "../src/tag/tag.model.ts"
+      ],
+      "../src/tag/tag.controller.ts": [
+        "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts",
+        "../node_modules/@types/express/index.d.ts"
+      ],
       "../src/tag/tag.router.ts": [
         "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts"
       ],
@@ -3070,7 +3093,6 @@
       "../src/app/database/mysql.ts",
       "../src/post/post.model.ts",
       "../src/post/post.service.ts",
-      "../src/post/post.controller.ts",
       "../src/app/app.middleware.ts",
       "../node_modules/@types/jsonwebtoken/index.d.ts",
       "../src/user/user.model.ts",
@@ -3078,7 +3100,6 @@
       "../node_modules/@types/bcryptjs/index.d.ts",
       "../src/auth/auth.service.ts",
       "../src/auth/auth.middleware.ts",
-      "../src/post/post.router.ts",
       "../src/auth/auth.controller.ts",
       "../src/auth/auth.router.ts",
       "../src/user/user.controller.ts",
@@ -3125,24 +3146,15 @@
       "../node_modules/@types/multer/index.d.ts",
       "../src/file/file.middleware.ts",
       "../src/file/file.router.ts",
+      "../src/tag/tag.model.ts",
+      "../src/tag/tag.service.ts",
       "../src/tag/tag.controller.ts",
-      [
-        "../src/tag/tag.router.ts",
-        [
-          {
-            "file": "../src/tag/tag.router.ts",
-            "start": 63,
-            "length": 18,
-            "messageText": "File 'C:/Users/Alex/desktop/xb2-node/src/tag/tag.controller.ts' is not a module.",
-            "category": 1,
-            "code": 2306
-          }
-        ]
-      ],
+      "../src/tag/tag.router.ts",
+      "../src/app/index.ts",
       "../src/main.ts",
       "../src/tag/tag.middleware.ts",
-      "../src/tag/tag.service.ts",
-      "../src/app/index.ts"
+      "../src/post/post.controller.ts",
+      "../src/post/post.router.ts"
     ]
   },
   "version": "3.8.3"

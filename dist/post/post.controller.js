@@ -4,6 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const lodash_1 = __importDefault(require("lodash"));
+const mysql_1 = require("../app/database/mysql");
 const post_service_1 = require("./post.service");
 exports.index = async (request, response, next) => {
     try {
@@ -45,5 +46,21 @@ exports.destroy = async (request, response, next) => {
     catch (error) {
         next(error);
     }
+};
+exports.createPostTag = async (postId, tagId) => {
+    const statement = `
+        INSERT INTO post_tag(postId,tagId)
+        VAlues(?,?)
+    `;
+    const [data] = await mysql_1.connection.promise().query(statement, [postId, tagId]);
+    return data;
+};
+exports.postHasTag = async (postId, tagId) => {
+    const statement = `
+        SELECT * FROM post_tag
+        WHERE postId=? AND tagId=?
+    `;
+    const [data] = await mysql_1.connection.promise().query(statement, [postId, tagId]);
+    return data[0] ? true : false;
 };
 //# sourceMappingURL=post.controller.js.map
