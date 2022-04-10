@@ -3,7 +3,7 @@ import {TagModel} from './tag.model';
 
 
 /** 定义存储标签数据的功能*/
-export const NAME= async ( 
+export const createTag = async ( 
   tag:TagModel    
 ) =>{
     const statement = `
@@ -20,7 +20,7 @@ export const NAME= async (
  * 按名字查找标签
  */
 
-export const getTabByName = async (tagName:string) => {
+export const getTagByName = async (tagName:string) => {
 
         const statement = `
             SELECT id,name FROM tag
