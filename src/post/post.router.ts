@@ -16,3 +16,6 @@ router.patch('/posts/:postId',authGuard, accessControl({possession:true}), PostC
 //**删除内容 */
 
 router.delete('/posts/:postId',authGuard, accessControl({possession:true}), PostController.destroy);
+
+/**添加内容标签 */
+router.post('/posts/:postId/tag',authGuard,accessControl({possession:true}), PostController.storePostTag,);

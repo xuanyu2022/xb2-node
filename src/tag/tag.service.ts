@@ -2,7 +2,7 @@ import { connection } from '../app/database/mysql';//处理器方法接受的参
 import {TagModel} from './tag.model';
 
 
-/** 定义存储标签数据的功能*/
+/** 创建标签,         存储标签数据的功能*/
 export const createTag = async ( 
   tag:TagModel    
 ) =>{

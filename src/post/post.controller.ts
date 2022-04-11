@@ -1,8 +1,10 @@
 import { Request, Response, NextFunction } from 'express';
 import _ from 'lodash';
 import { connection } from '../app/database/mysql';
+import { TagModel } from '../tag/tag.model';
+import { getTagByName,createTag } from '../tag/tag.service';
 //接口处理器参数需要的类型
-import { getPosts, createPost, updatePost, deletePost } from './post.service';
+import { getPosts, createPost, updatePost, deletePost, createPostTag, postHasTag } from './post.service';
 
 /**
  * 内容列表
@@ -80,27 +82,53 @@ export const destroy = async (
   }
 };
 
-/** 保存内容标签 的服务*/
-export const createPostTag= async (
- postId:number,tagId:number
-) =>{
-    const statement = `
-        INSERT INTO post_tag(postId,tagId)
-        VAlues(?,?)
-    `;
-    const [data] = await connection.promise().query(statement,[postId,tagId]);
-    return data;
-  };
+/**
+ * 添加内容标签接口的处理器
+ */
 
-/** 检查  内容标签   的服务*/
-export const postHasTag= async (
-postId:number,tagId:number
+/** 添加内容标签*/
+export const storePostTag= async (
+  request:Request,
+  response:Response,
+  next:NextFunction,
 ) =>{
-    const statement = `
-        SELECT * FROM post_tag
-        WHERE postId=? AND tagId=?
-    `;
-        const [data] = await connection.promise().query(statement,[postId,tagId]);
+    const { postId } = request.params;
+    const { name  } = request.body;
+    let tag: TagModel;
+   
+    //查找标签
+    try {
+      tag = await getTagByName(name);
+    } catch (error) {
+      return next(error);
+    }
+   
+    //有标签,  验证标签
+    if(tag) {
+         try {
+           const postTag = await postHasTag(parseInt(postId,10),tag.id);
+           if (postTag) return next(new Error('POST_ALREADY_HAS_THIS_TAG'));
+          } catch (error) {
+              return next(error);
+             }
+        }
+    
+        //没有标签, 创建标签
+    if(!tag){
+                try {
+                  const data = await createTag({name});
+                  tag = {id:data.insertId};
+                } catch (error) {
+                  return next(error);
+                }
+           }
+    //给内容打上标签
 
-        return data[0] ? true : false;
+        try {
+          await createPostTag(parseInt(postId,10),tag.id);
+         response.sendStatus(201);
+       } catch (error) {
+             return next(error);
+          }
+ 
 };

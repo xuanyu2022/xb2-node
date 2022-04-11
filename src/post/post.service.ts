@@ -60,7 +60,7 @@ export const updatePost = async (postId:number,post:PostModel) => {
 };
 
 
-//**删除内容 */
+//** 删除内容 */
 
 export const deletePost = async (postId:number) =>{
   const statement =`
@@ -73,36 +73,31 @@ export const deletePost = async (postId:number) =>{
 }
 
 
-/**
-* 保存内容标签
-*/
-export const createPostTag = async (postId: number, tagId:
-  number) => {
-  // 准备查询
-  const statement = `
-  INSERT INTO post_tag (postId, tagId)
-  VALUES (?, ?)
-  `;
-  // 执行查询
-  const [data] = await connection.promise().query(statement,
-  [postId, tagId]);
-  // 提供数据
-  return data;
-  };
+/** 保存内容标签 的服务*/
+export const createPostTag= async (
+  postId:number,tagId:number
+ ) =>{
+     const statement = `
+         INSERT INTO post_tag(postId,tagId)
+         VAlues(?,?)
+     `;
+     const [data] = await connection.promise().query(statement,[postId,tagId]);
+     return data;
+   };
+ 
+ /** 检查  内容标签   的服务*/
+ export const postHasTag= async (
+ postId:number,tagId:number
+ ) =>{
+     const statement = `
+         SELECT * FROM post_tag
+         WHERE postId=? AND tagId=?
+     `;
+         const [data] = await connection.promise().query(statement,[postId,tagId]);
+ 
+         return data[0] ? true : false;
+ };
+ 
 
-  /**
-* 检查内容标签
-*/
-export const postHasTag = async (postId: number, tagId: number)
-=> {
-// 准备查询
-const statement = `
-SELECT * FROM post_tag
-WHERE postId=? AND tagId=?
-`;
-// 执行查询
-const [data] = await connection.promise().query(statement,
-[postId, tagId]);
-// 提供数据
-return data[0] ? true : false;
-};
+
+
