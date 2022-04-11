@@ -550,8 +550,8 @@
         "signature": "a31e4ab56d78ca36a4b0608bc0a1bebfc0f6567096345c48a417cdabfaf2debe"
       },
       "../src/post/post.controller.ts": {
-        "version": "8202c0ed641aa36338565f91cd3b7813c8e6dd5b14829f1c10fb4f8f15d44b99",
-        "signature": "90eb5df2e112fadc5ea81459d107879f16266a85bdf26aa53477674575aa9665"
+        "version": "bbae9b1c50d0fd819a8aa50e1646257dfa2a5bb8bf38dc368519cf28f56a8771",
+        "signature": "09bd328d26faa357bf3ccebb2af330f65db2b520b0b3823d5a8cd94aae924107"
       },
       "../src/app/app.middleware.ts": {
         "version": "382e201ada7a4fac9b9ced7d311747198a51a432bd3c134ee3c2e72bac884b3c",
@@ -582,7 +582,7 @@
         "signature": "825fbc1e20dd377637db0b710389460da5ba4e80b426216dae99c8d803b9bf1b"
       },
       "../src/post/post.router.ts": {
-        "version": "6adb56e3305d3fb6ca3b5b23a944e894bff0177a034456aa0a167d345e1988dd",
+        "version": "be079f367c60d0679ff65f7ab0ac5d1493df9619d70d6a5484b6bc45ae652723",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
       },
       "../src/auth/auth.controller.ts": {
@@ -3093,6 +3093,7 @@
       "../src/tag/tag.model.ts",
       "../src/tag/tag.service.ts",
       "../src/post/post.model.ts",
+      "../src/post/post.service.ts",
       "../src/post/post.controller.ts",
       "../src/app/app.middleware.ts",
       "../node_modules/@types/jsonwebtoken/index.d.ts",
@@ -3101,7 +3102,6 @@
       "../node_modules/@types/bcryptjs/index.d.ts",
       "../src/auth/auth.service.ts",
       "../src/auth/auth.middleware.ts",
-      "../src/post/post.router.ts",
       "../src/auth/auth.controller.ts",
       "../src/auth/auth.router.ts",
       "../src/user/user.controller.ts",
@@ -3153,7 +3153,7 @@
       "../src/app/index.ts",
       "../src/main.ts",
       "../src/tag/tag.middleware.ts",
-      "../src/post/post.service.ts"
+      "../src/post/post.router.ts"
     ]
   },
   "version": "3.8.3"

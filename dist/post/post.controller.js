@@ -84,4 +84,15 @@ exports.storePostTag = async (request, response, next) => {
         return next(error);
     }
 };
+exports.destroyPostTag = async (request, response, next) => {
+    const { postId } = request.params;
+    const { tagId } = request.body;
+    try {
+        await post_service_1.deletePostTag(parseInt(postId, 10), tagId);
+        response.sendStatus(200);
+    }
+    catch (error) {
+        next(error);
+    }
+};
 //# sourceMappingURL=post.controller.js.map

@@ -4,7 +4,8 @@ import { connection } from '../app/database/mysql';
 import { TagModel } from '../tag/tag.model';
 import { getTagByName,createTag } from '../tag/tag.service';
 //接口处理器参数需要的类型
-import { getPosts, createPost, updatePost, deletePost, createPostTag, postHasTag } from './post.service';
+import { getPosts, createPost, updatePost, deletePost, createPostTag, postHasTag,deletePostTag, } from './post.service';
+
 
 /**
  * 内容列表
@@ -131,4 +132,26 @@ export const storePostTag= async (
              return next(error);
           }
  
+};
+
+
+/**
+ * 移除内容标签的接口
+ */
+
+//移除的处理器
+export const destroyPostTag= async (    
+  request:Request,
+  response:Response,
+  next:NextFunction,
+) =>{
+      const { postId } = request.params;
+      const { tagId }= request.body;
+
+      try {
+          await deletePostTag(parseInt(postId,10),tagId);
+          response.sendStatus(200)
+      } catch (error) {
+        next(error);
+      }
 };
