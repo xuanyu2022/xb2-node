@@ -66,13 +66,22 @@ exports.storePostTag = async (request, response, next) => {
         catch (error) {
             return next(error);
         }
-        if (!tag) {
-            try {
-                const data = await createTag({ name });
-            }
-            catch (error) {
-            }
+    }
+    if (!tag) {
+        try {
+            const data = await tag_service_1.createTag({ name });
+            tag = { id: data.insertId };
         }
+        catch (error) {
+            return next(error);
+        }
+    }
+    try {
+        await post_service_1.createPostTag(parseInt(postId, 10), tag.id);
+        response.sendStatus(201);
+    }
+    catch (error) {
+        return next(error);
     }
 };
 //# sourceMappingURL=post.controller.js.map

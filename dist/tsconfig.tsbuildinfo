@@ -538,7 +538,7 @@
         "signature": "c01631b9920083f16dbbfc9b0b3dd51214706ad9b08a16d70907a1c06034c2cd"
       },
       "../src/tag/tag.service.ts": {
-        "version": "6c6233498afbeae0ac01bc55a52b7f350d16ed6adde5aff9bb9d053a73c513ed",
+        "version": "8db00df88ad6c0e64c67203012870136b917ed760bf678c3eddd2f0650edff64",
         "signature": "cd1601ced3c58db277c6cb88a31c6977bcd5bf397d218cfbfc86a8802bf9ff82"
       },
       "../src/post/post.model.ts": {
@@ -546,15 +546,15 @@
         "signature": "b052e6fe7bad6bfc4c1b47a3fe023aa6aa9ac54f597cb8d61925b859fc7c9e2b"
       },
       "../src/post/post.service.ts": {
-        "version": "af77c0e305c7d009801550acbee764cbc7f3fd7733693ac2b671580d1c6457e7",
-        "signature": "943e52da7178a63ff2aa2a12783a50e7ad384180e4856c334c50e3373baee3b0"
+        "version": "2f2d13d9a6f46925896abddec1cf435b1570a527c69725f6241063125b0c24a7",
+        "signature": "a31e4ab56d78ca36a4b0608bc0a1bebfc0f6567096345c48a417cdabfaf2debe"
       },
       "../src/post/post.controller.ts": {
-        "version": "16ee0b12e330d4a91166d0086ac904ddbe9140106b2bf11a0fdcf7ec281196f6",
+        "version": "8202c0ed641aa36338565f91cd3b7813c8e6dd5b14829f1c10fb4f8f15d44b99",
         "signature": "90eb5df2e112fadc5ea81459d107879f16266a85bdf26aa53477674575aa9665"
       },
       "../src/app/app.middleware.ts": {
-        "version": "5dc3e47586de7663d2e7d054b02437d8034bcb5f514cdf406d53560945a35943",
+        "version": "382e201ada7a4fac9b9ced7d311747198a51a432bd3c134ee3c2e72bac884b3c",
         "signature": "5c1bd11274d9d2803893c03bdf54785e6b649ff47cef39e6979e1fb2c73f4832"
       },
       "../node_modules/@types/jsonwebtoken/index.d.ts": {
@@ -582,7 +582,7 @@
         "signature": "825fbc1e20dd377637db0b710389460da5ba4e80b426216dae99c8d803b9bf1b"
       },
       "../src/post/post.router.ts": {
-        "version": "11ba693f7098d676bc08d3164645a99435668ce330e853bc936117c9307076aa",
+        "version": "6adb56e3305d3fb6ca3b5b23a944e894bff0177a034456aa0a167d345e1988dd",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
       },
       "../src/auth/auth.controller.ts": {
@@ -3093,7 +3093,7 @@
       "../src/tag/tag.model.ts",
       "../src/tag/tag.service.ts",
       "../src/post/post.model.ts",
-      "../src/post/post.service.ts",
+      "../src/post/post.controller.ts",
       "../src/app/app.middleware.ts",
       "../node_modules/@types/jsonwebtoken/index.d.ts",
       "../src/user/user.model.ts",
@@ -3153,19 +3153,7 @@
       "../src/app/index.ts",
       "../src/main.ts",
       "../src/tag/tag.middleware.ts",
-      [
-        "../src/post/post.controller.ts",
-        [
-          {
-            "file": "../src/post/post.controller.ts",
-            "start": 2531,
-            "length": 9,
-            "messageText": "Cannot find name 'createTag'.",
-            "category": 1,
-            "code": 2304
-          }
-        ]
-      ]
+      "../src/post/post.service.ts"
     ]
   },
   "version": "3.8.3"

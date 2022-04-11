@@ -99,5 +99,16 @@ export const createPostTag= async (
  };
  
 
+ /**
+  * 移除  内容标签
+  */
 
+export const deletePostTag = async (postId:number,tagId:number) => {
+        const statement = `
+            DELETE FROM post_tag
+            WHERE postId=? AND tagId=?
+        `;
+        const [data] = await connection.promise().query(statement,[postId,tagId]);
+        return data;
 
+};

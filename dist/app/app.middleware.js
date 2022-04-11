@@ -48,7 +48,7 @@ exports.defaultErrorHandler = (error, request, response, next) => {
             break;
         case 'POST_ALREADY_HAS_THIS_TAG':
             statusCode = 400;
-            message = '标签已有';
+            message = 'nei标签已有';
             break;
         case 'A':
             statusCode = 400;
