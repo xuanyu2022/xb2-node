@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { createComment,isReplyComment,updateComment, } from './comment.service';
+import { createComment,isReplyComment,updateComment,deleteComment } from './comment.service';
 
 /**
 * 发表评论
@@ -88,6 +88,27 @@ export const update = async (
   try {
   // 修改评论446
   const data = await updateComment(comment);
+  // 做出响应
+  response.send(data);
+  } catch (error) {
+  next(error);
+  }
+  };
+
+
+/**
+* 删除评论
+*/
+export const destroy = async (
+  request: Request,
+  response: Response,
+  next: NextFunction,
+  ) => {
+  // 准备数据
+  const { commentId } = request.params;
+  try {
+  // 删除评论
+  const data = await deleteComment(parseInt(commentId, 10));
   // 做出响应
   response.send(data);
   } catch (error) {

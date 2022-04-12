@@ -782,15 +782,15 @@
         "signature": "a710a6e14e50680e5b5d0de7865ac67151aee47ed36823fc6d73ec06330aeb51"
       },
       "../src/comment/comment.service.ts": {
-        "version": "23b7535f886c91602183b02405a7bbadd5d2836c779787ddfeba9c7e5c294046",
-        "signature": "9e37280111a0782213f5bf0b17f4da4cafda79fb0cc36e0a5102a5fc80165a15"
+        "version": "c6f8fad525f24034f02db92efda84d483288b9040559bb55aaf6c54e5ed16b7d",
+        "signature": "838640b072380e442a7f1cea7e518ec6d8753c86a4cf9b1e65d40b3f891cbd7c"
       },
       "../src/comment/comment.controller.ts": {
-        "version": "eb3cb6e82e82161d01e7e4cdfc15572e6a10da8efb629102055f18750da67508",
-        "signature": "45aa2782812b4dc4bb07e00a1e209b08f890347a3511165eebbefc8e4ea8b088"
+        "version": "2d9c286d6a7114a4f68308f5ef451175b5f04ce2f636e5b463eb1296ac7cbbba",
+        "signature": "ad5a6a9785e2c8ae02cf6a859bcec2d4a099710fa7575193af9ed8d1a9455de9"
       },
       "../src/comment/comment.router.ts": {
-        "version": "617fa09a20cc9d554ef7d88bd9a53b5e840540ffe5ecd791b0a55d44a4b528bc",
+        "version": "acebe1fcdc5bd2f3439a2e28a8c76542fd74ca92ee39655b2f14a9925020f2a0",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
       },
       "../src/app/index.ts": {
@@ -3209,13 +3209,13 @@
       "../src/tag/tag.controller.ts",
       "../src/tag/tag.router.ts",
       "../src/comment/comment.model.ts",
-      "../src/app/index.ts",
-      "../src/main.ts",
-      "../src/tag/tag.middleware.ts",
       "../src/comment/comment.service.ts",
       "../src/comment/comment.controller.ts",
-      "../src/comment/comment.router.ts",
-      "../src/comment/comment.middleware.ts"
+      "../src/app/index.ts",
+      "../src/main.ts",
+      "../src/comment/comment.middleware.ts",
+      "../src/tag/tag.middleware.ts",
+      "../src/comment/comment.router.ts"
     ]
   },
   "version": "3.8.3"

@@ -21,4 +21,10 @@ router.post('/comments/:commentId/reply', authGuard, commentController.reply);
 /**
 * 修改评论
 */
-router.patch('/comments/:commentId', authGuard, accessControl({ possession: true }), commentController.update,);
+router.patch('/comments/:commentId', authGuard, accessControl({ possession: true }), commentController.update);
+
+
+/**
+* 删除评论
+*/
+router.delete('/comments/:commentId', authGuard, accessControl({ possession: true }), commentController.destroy,);

@@ -59,4 +59,14 @@ exports.update = async (request, response, next) => {
         next(error);
     }
 };
+exports.destroy = async (request, response, next) => {
+    const { commentId } = request.params;
+    try {
+        const data = await comment_service_1.deleteComment(parseInt(commentId, 10));
+        response.send(data);
+    }
+    catch (error) {
+        next(error);
+    }
+};
 //# sourceMappingURL=comment.controller.js.map
