@@ -554,7 +554,7 @@
         "signature": "09bd328d26faa357bf3ccebb2af330f65db2b520b0b3823d5a8cd94aae924107"
       },
       "../src/app/app.middleware.ts": {
-        "version": "113cfd1221f4a52b6f10de1ee9b6b3ddac0414fb933c8c08dea1e17bb1beef7a",
+        "version": "ea8c356312643760983349fd75ed6b9cfd05cc090f33184e19706f93157b476a",
         "signature": "5c1bd11274d9d2803893c03bdf54785e6b649ff47cef39e6979e1fb2c73f4832"
       },
       "../node_modules/@types/jsonwebtoken/index.d.ts": {
@@ -782,15 +782,15 @@
         "signature": "a710a6e14e50680e5b5d0de7865ac67151aee47ed36823fc6d73ec06330aeb51"
       },
       "../src/comment/comment.service.ts": {
-        "version": "abb642469235738f9d5d8df218d38b16adffed529a1832d2f4d7341749af706f",
-        "signature": "9b261c7cf07d28f195ccb3fca1b8704a731ffb8b6793796a98bc89ffd8df2d6a"
+        "version": "23b7535f886c91602183b02405a7bbadd5d2836c779787ddfeba9c7e5c294046",
+        "signature": "9e37280111a0782213f5bf0b17f4da4cafda79fb0cc36e0a5102a5fc80165a15"
       },
       "../src/comment/comment.controller.ts": {
-        "version": "29a919120db5e88ca3aff2f45d6c6f1d7c36f992db4a7d8c443922dee9b6f5fe",
-        "signature": "892e64530c18c33bf2e8e9b9aa7403a942ed647fd65c8313991ec98c34ec80a5"
+        "version": "eb3cb6e82e82161d01e7e4cdfc15572e6a10da8efb629102055f18750da67508",
+        "signature": "45aa2782812b4dc4bb07e00a1e209b08f890347a3511165eebbefc8e4ea8b088"
       },
       "../src/comment/comment.router.ts": {
-        "version": "845b9ef45de24186e10b4dfe92860fee5515f920e85b2524ad4f9e1c30a97405",
+        "version": "617fa09a20cc9d554ef7d88bd9a53b5e840540ffe5ecd791b0a55d44a4b528bc",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
       },
       "../src/app/index.ts": {
@@ -3209,13 +3209,13 @@
       "../src/tag/tag.controller.ts",
       "../src/tag/tag.router.ts",
       "../src/comment/comment.model.ts",
-      "../src/comment/comment.service.ts",
-      "../src/comment/comment.controller.ts",
       "../src/app/index.ts",
       "../src/main.ts",
-      "../src/comment/comment.middleware.ts",
       "../src/tag/tag.middleware.ts",
-      "../src/comment/comment.router.ts"
+      "../src/comment/comment.service.ts",
+      "../src/comment/comment.controller.ts",
+      "../src/comment/comment.router.ts",
+      "../src/comment/comment.middleware.ts"
     ]
   },
   "version": "3.8.3"

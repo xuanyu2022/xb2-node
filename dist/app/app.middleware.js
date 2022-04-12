@@ -52,7 +52,7 @@ exports.defaultErrorHandler = (error, request, response, next) => {
             break;
         case 'UNABLE_TO_REPLY_THIS_COMMENT':
             statusCode = 400;
-            message = '内容已经有这个标签了';
+            message = '无法回复这条标签';
             break;
         default:
             statusCode = 500;

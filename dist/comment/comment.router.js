@@ -17,4 +17,5 @@ const router = express_1.default.Router();
 exports.default = router;
 router.post('/comments', auth_middleware_1.authGuard, commentController.store);
 router.post('/comments/:commentId/reply', auth_middleware_1.authGuard, commentController.reply);
+router.patch('/comments/:commentId', auth_middleware_1.authGuard, auth_middleware_1.accessControl({ possession: true }), commentController.update);
 //# sourceMappingURL=comment.router.js.map
