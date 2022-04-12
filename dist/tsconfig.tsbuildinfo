@@ -554,7 +554,7 @@
         "signature": "09bd328d26faa357bf3ccebb2af330f65db2b520b0b3823d5a8cd94aae924107"
       },
       "../src/app/app.middleware.ts": {
-        "version": "382e201ada7a4fac9b9ced7d311747198a51a432bd3c134ee3c2e72bac884b3c",
+        "version": "113cfd1221f4a52b6f10de1ee9b6b3ddac0414fb933c8c08dea1e17bb1beef7a",
         "signature": "5c1bd11274d9d2803893c03bdf54785e6b649ff47cef39e6979e1fb2c73f4832"
       },
       "../node_modules/@types/jsonwebtoken/index.d.ts": {
@@ -786,11 +786,11 @@
         "signature": "9b261c7cf07d28f195ccb3fca1b8704a731ffb8b6793796a98bc89ffd8df2d6a"
       },
       "../src/comment/comment.controller.ts": {
-        "version": "620df7e4296c276c297216d02a99638863864a74f89230e61eacf82bd57fcd89",
-        "signature": "f56b6491cfca65542186d6b0c6700583afeabad419df0fc566235770bfd654e6"
+        "version": "29a919120db5e88ca3aff2f45d6c6f1d7c36f992db4a7d8c443922dee9b6f5fe",
+        "signature": "892e64530c18c33bf2e8e9b9aa7403a942ed647fd65c8313991ec98c34ec80a5"
       },
       "../src/comment/comment.router.ts": {
-        "version": "053bd9b2a6fba2e708322a1b04ab768bbf83f93b8c64228637e0fa5a6dfb3c12",
+        "version": "845b9ef45de24186e10b4dfe92860fee5515f920e85b2524ad4f9e1c30a97405",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
       },
       "../src/app/index.ts": {
@@ -3209,13 +3209,13 @@
       "../src/tag/tag.controller.ts",
       "../src/tag/tag.router.ts",
       "../src/comment/comment.model.ts",
-      "../src/comment/comment.router.ts",
+      "../src/comment/comment.service.ts",
+      "../src/comment/comment.controller.ts",
       "../src/app/index.ts",
       "../src/main.ts",
       "../src/comment/comment.middleware.ts",
       "../src/tag/tag.middleware.ts",
-      "../src/comment/comment.service.ts",
-      "../src/comment/comment.controller.ts"
+      "../src/comment/comment.router.ts"
     ]
   },
   "version": "3.8.3"

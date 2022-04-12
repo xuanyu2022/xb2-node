@@ -71,9 +71,9 @@ export const defaultErrorHandler = (
             statusCode = 400;
             message = 'nei标签已有';
             break;  
-   case 'A': 
+   case 'UNABLE_TO_REPLY_THIS_COMMENT': 
             statusCode = 400;
-            message = '标签已经存在';
+            message = '内容已经有这个标签了';
             break;  
     default:
       statusCode = 500;

@@ -12,3 +12,8 @@ export default router;
 */
 
 router.post('/comments', authGuard, commentController.store);
+
+/**
+* 回复评论
+*/
+router.post('/comments/:commentId/reply', authGuard, commentController.reply);
