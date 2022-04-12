@@ -9,4 +9,13 @@ exports.createComment = async (comment) => {
     const [data] = await mysql_1.connection.promise().query(statement, comment);
     return data;
 };
+exports.isReplyComment = async (commentId) => {
+    const statement = `
+  SELECT parentId FROM comment
+  WHERE id = ?
+  `;
+    const [data] = await mysql_1.connection.promise().query(statement, commentId);
+    437;
+    return data[0].parentId ? true : false;
+};
 //# sourceMappingURL=comment.service.js.map
