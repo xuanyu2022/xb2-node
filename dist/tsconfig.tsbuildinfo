@@ -546,11 +546,11 @@
         "signature": "b052e6fe7bad6bfc4c1b47a3fe023aa6aa9ac54f597cb8d61925b859fc7c9e2b"
       },
       "../src/post/post.provider.ts": {
-        "version": "76f302728fa4b344641eee608beff911def14c381f77c5dd08a146853961f76f",
-        "signature": "d2c4da9fe42c3ad95ce0219abddd34b53f63306d33da4ade40289ceb6115caf6"
+        "version": "66d14818625a350a7902812eb01711ab135c189cf1d0056e38f420af67a667e5",
+        "signature": "f25cfa4072a1b23191499e3a3ffd21fee56a8d466542025b33db358e1f2682e7"
       },
       "../src/post/post.service.ts": {
-        "version": "8c4af985851bf85bd33a860f5597d6283468ee14e24722082ee37de5fde88625",
+        "version": "18c39189ad52b4e2559bd0b84ab52ca782e78d68eaa2dcfda51ff5206c86b758",
         "signature": "a31e4ab56d78ca36a4b0608bc0a1bebfc0f6567096345c48a417cdabfaf2debe"
       },
       "../src/post/post.controller.ts": {

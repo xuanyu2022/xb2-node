@@ -5,29 +5,25 @@ import { sqlFragment } from './post.provider';
 
 /** * 获取内容列表  */
 export const getPosts = async () => {
-  // const data = [
-  //   {
-  //     content: '明月出天山, 苍茫云海间',
-  //   },
-  //   {
-  //     content: '会当凌绝顶,一览众山小',
-  //   },
-  //   {
-  //     content: '日出江花红似火, 春来江水绿如蓝',
-  //   },
-  // ];
+
   const statement = `SELECT 
                             post.id,
                             post.title,
                             post.content, 
-                           ${sqlFragment.user}
+                           ${sqlFragment.user},
+                           ${sqlFragment.totalComments},
+                           ${sqlFragment.file}
                        FROM post
                       ${sqlFragment.leftJoinUser} 
+                      ${sqlFragment.leftJoinOneFile}
+                      GROUP BY post.id
      `;
   const [data] = await connection.promise().query(statement);
 
   return data;
 };
+
+
 
 /** 创建内容:                                                           定义存储用的服务 */
 //createPost 执行把存储到post中

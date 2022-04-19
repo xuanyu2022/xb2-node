@@ -7,9 +7,13 @@ exports.getPosts = async () => {
                             post.id,
                             post.title,
                             post.content, 
-                           ${post_provider_1.sqlFragment.user}
+                           ${post_provider_1.sqlFragment.user},
+                           ${post_provider_1.sqlFragment.totalComments},
+                           ${post_provider_1.sqlFragment.file}
                        FROM post
                       ${post_provider_1.sqlFragment.leftJoinUser} 
+                      ${post_provider_1.sqlFragment.leftJoinOneFile}
+                      GROUP BY post.id
      `;
     const [data] = await mysql_1.connection.promise().query(statement);
     return data;
