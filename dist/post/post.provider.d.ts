@@ -4,4 +4,6 @@ export declare const sqlFragment: {
     totalComments: string;
     leftJoinOneFile: string;
     file: string;
+    leftJoinTags: string;
+    tags: string;
 };

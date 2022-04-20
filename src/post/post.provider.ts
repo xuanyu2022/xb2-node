@@ -55,6 +55,30 @@ export const sqlFragment = {
   ) AS file
   `,
 
+  leftJoinTags:`
+      LEFT JOIN post_tag
+      ON post_tag.postId = post.id
+      LEFT JOIN tag
+      ON tag.id = post_tag.tagId
+  `,
+tags:`
+     CAST(
+       IF(
+         COUNT(tag.id),
+         CONCAT(
+           '[',
+              GROUP_CONCAT(
+                DISTINCT JSON_OBJECT(
+                   'id',tag.id,
+                   'name',tag.name
+                )
+              ),
+          ']'
+         ),
+         NULL
+       )AS JSON
+     )AS tags
+`,
 
 
 

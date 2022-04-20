@@ -546,11 +546,11 @@
         "signature": "b052e6fe7bad6bfc4c1b47a3fe023aa6aa9ac54f597cb8d61925b859fc7c9e2b"
       },
       "../src/post/post.provider.ts": {
-        "version": "66d14818625a350a7902812eb01711ab135c189cf1d0056e38f420af67a667e5",
-        "signature": "f25cfa4072a1b23191499e3a3ffd21fee56a8d466542025b33db358e1f2682e7"
+        "version": "c3c0a21d02c606f348b117a803b9964105822efc07cb46e115a6cd235d7a078b",
+        "signature": "157786c6a558e92cdb420a305070e6d2f121f2a320e09647ecec22a7a158c47d"
       },
       "../src/post/post.service.ts": {
-        "version": "18c39189ad52b4e2559bd0b84ab52ca782e78d68eaa2dcfda51ff5206c86b758",
+        "version": "16e75ffeaed9b25d24c396f1ee7107809df630cbfca0653f34cf60e09d21f1d7",
         "signature": "a31e4ab56d78ca36a4b0608bc0a1bebfc0f6567096345c48a417cdabfaf2debe"
       },
       "../src/post/post.controller.ts": {
@@ -3158,7 +3158,7 @@
       "../src/tag/tag.model.ts",
       "../src/tag/tag.service.ts",
       "../src/post/post.model.ts",
-      "../src/post/post.provider.ts",
+      "../src/post/post.service.ts",
       "../src/post/post.controller.ts",
       "../src/app/app.middleware.ts",
       "../node_modules/@types/jsonwebtoken/index.d.ts",
@@ -3224,7 +3224,7 @@
       "../src/main.ts",
       "../src/comment/comment.middleware.ts",
       "../src/tag/tag.middleware.ts",
-      "../src/post/post.service.ts"
+      "../src/post/post.provider.ts"
     ]
   },
   "version": "3.8.3"
