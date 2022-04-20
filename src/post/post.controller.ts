@@ -17,13 +17,11 @@ export const index = async (
   response: Response,
   next: NextFunction,
 ) => {
-  // if( request.headers.authorization !=='SECRET'){
-  //   return next(new Error());
-  // }
+
   //如果执行异常, 就会执行catch区块里的东西.
   //next(error)指的是把遇到的异常情况交给 异常处理器 处理
   try {
-    const posts = await getPosts();
+    const posts = await getPosts({sort:request.sort});
     response.send(posts);
   } catch (error) {
     next(error);

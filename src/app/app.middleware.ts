@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 
 /**
- * 输出请求地址
+ * 输出请求地址,  这是演示用的. 22集中间件的时候取消使用他.post.router中
  */
 export const requestUrl = (
   //指出参数的类型
