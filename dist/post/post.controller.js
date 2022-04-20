@@ -8,7 +8,7 @@ const tag_service_1 = require("../tag/tag.service");
 const post_service_1 = require("./post.service");
 exports.index = async (request, response, next) => {
     try {
-        const posts = await post_service_1.getPosts({ sort: request.sort });
+        const posts = await post_service_1.getPosts({ sort: request.sort, filter: request.filter, });
         response.send(posts);
     }
     catch (error) {

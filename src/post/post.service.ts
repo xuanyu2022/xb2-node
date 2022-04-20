@@ -4,11 +4,25 @@ import { sqlFragment } from './post.provider';
 
 
 /** * 获取内容列表  */
+export interface GetPostOptionFilter {
+  name:string;
+  sql?:string;
+  //占位符的值
+  param?: string;
+}
+
 interface GetPostOptions  {
   sort?:string;
+  filter?:GetPostOptionFilter;
 }
 export const getPosts = async (options: GetPostOptions) => {
-  const {sort} =options;
+  const {sort, filter} =options;
+  //SQL参数
+  let params:Array<any>=[];
+  //设置sql参数
+  if (filter.param){
+    params = [filter.param, ...params];
+  }
   const statement = `SELECT 
                             post.id,
                             post.title,
@@ -21,10 +35,11 @@ export const getPosts = async (options: GetPostOptions) => {
                       ${sqlFragment.leftJoinUser} 
                       ${sqlFragment.leftJoinOneFile}
                       ${sqlFragment.leftJoinTags}
+                      WHERE ${filter.sql}
                       GROUP BY post.id
                       ORDER BY ${sort}
      `;
-  const [data] = await connection.promise().query(statement);
+  const [data] = await connection.promise().query(statement,params);
 
   return data;
 };

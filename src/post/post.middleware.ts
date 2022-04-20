@@ -31,3 +31,37 @@ export const sort= async (
   request.sort = sqlsort;
   next();
 };
+
+/** 
+ * 过滤列表
+*/
+export const filter= async (
+  request:Request,
+  response:Response,
+  next:NextFunction,
+) =>{
+ const { tag, user, action } = request.query;
+ 
+ //设置默认过滤
+ request.filter = {
+   name: 'defalut',
+   sql: 'post.id IS NOT NULL',
+ };
+
+  if(tag && !user && !action){
+    request.filter={
+      name:'tagName',
+      sql:'tag.name = ?',
+      param:`${tag}`,
+    };
+  }
+  if(user&& action== 'published' && !tag){
+    request.filter={
+      name:'userPublished',
+      sql: 'user.id = ?',
+      param:`${user}`,
+    };
+  }
+
+  next();
+};

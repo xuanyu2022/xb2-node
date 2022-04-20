@@ -1,5 +1,6 @@
 
 import { TokenPayload } from '../src/auth/auth.interface';
+import { GetPostOptionFilter } from '../src/post/post.service';
 
 declare global{
   namespace Express{
@@ -11,6 +12,7 @@ declare global{
         metadata?:{};
         };
       sort:string;
+      filter:GetPostOptionFilter;
     }
   }
 }
