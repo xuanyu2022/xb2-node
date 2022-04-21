@@ -1,6 +1,6 @@
 
 import { TokenPayload } from '../src/auth/auth.interface';
-import { GetPostOptionFilter } from '../src/post/post.service';
+import { GetPostOptionFilter, GetPostOptionsPagination } from '../src/post/post.service';
 
 declare global{
   namespace Express{
@@ -13,6 +13,7 @@ declare global{
         };
       sort:string;
       filter:GetPostOptionFilter;
+      pagination:GetPostOptionsPagination;
     }
   }
 }

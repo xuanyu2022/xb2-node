@@ -1,11 +1,11 @@
 import express from 'express';
 import * as PostController from './post.controller';
-import {sort,filter } from './post.middleware';
+import {sort,filter, paginate } from './post.middleware';
 import {authGuard, accessControl} from '../auth/auth.middleware';
 const router = express.Router();
 
 //内容列表               
-router.get('/posts', sort, filter, PostController.index);
+router.get('/posts', sort, filter, paginate, PostController.index);
 
 export default router;
 //创建内容                                存储内容

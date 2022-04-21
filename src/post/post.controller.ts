@@ -21,7 +21,11 @@ export const index = async (
   //如果执行异常, 就会执行catch区块里的东西.
   //next(error)指的是把遇到的异常情况交给 异常处理器 处理
   try {
-    const posts = await getPosts({sort:request.sort,filter:request.filter,});
+    const posts = await getPosts(
+      { sort:request.sort,
+        filter:request.filter,
+        pagination:request.pagination,
+      });
     response.send(posts);
   } catch (error) {
     next(error);

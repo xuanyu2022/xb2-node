@@ -4,9 +4,14 @@ export interface GetPostOptionFilter {
     sql?: string;
     param?: string;
 }
+export interface GetPostOptionsPagination {
+    limit: number;
+    offset: number;
+}
 interface GetPostOptions {
     sort?: string;
     filter?: GetPostOptionFilter;
+    pagination?: GetPostOptionsPagination;
 }
 export declare const getPosts: (options: GetPostOptions) => Promise<import("mysql/lib/protocol/packets/RowDataPacket")[] | import("mysql/lib/protocol/packets/RowDataPacket")[][] | import("mysql/lib/protocol/packets/OkPacket") | import("mysql/lib/protocol/packets/OkPacket")[] | import("mysql/lib/protocol/packets/ResultSetHeader")>;
 export declare const createPost: (post: PostModel) => Promise<import("mysql/lib/protocol/packets/RowDataPacket")[] | import("mysql/lib/protocol/packets/RowDataPacket")[][] | import("mysql/lib/protocol/packets/OkPacket") | import("mysql/lib/protocol/packets/OkPacket")[] | import("mysql/lib/protocol/packets/ResultSetHeader")>;

@@ -10,15 +10,20 @@ export interface GetPostOptionFilter {
   //占位符的值
   param?: string;
 }
+export interface GetPostOptionsPagination{
+  limit:number;
+  offset:number;
+}
 
 interface GetPostOptions  {
   sort?:string;
   filter?:GetPostOptionFilter;
+  pagination?:GetPostOptionsPagination;
 }
 export const getPosts = async (options: GetPostOptions) => {
-  const {sort, filter} =options;
-  //SQL参数
-  let params:Array<any>=[];
+  const {sort, filter,pagination:{limit,offset},} =options;
+  //SQL参数,params是给查询里的占位符准备的,可以把limit和offset放入
+  let params:Array<any>=[limit,offset];
   //设置sql参数
   if (filter.param){
     params = [filter.param, ...params];
@@ -38,6 +43,8 @@ export const getPosts = async (options: GetPostOptions) => {
                       WHERE ${filter.sql}
                       GROUP BY post.id
                       ORDER BY ${sort}
+                      LIMIT ?
+                      OFFSET ?
      `;
   const [data] = await connection.promise().query(statement,params);
 

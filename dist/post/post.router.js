@@ -15,7 +15,7 @@ const PostController = __importStar(require("./post.controller"));
 const post_middleware_1 = require("./post.middleware");
 const auth_middleware_1 = require("../auth/auth.middleware");
 const router = express_1.default.Router();
-router.get('/posts', post_middleware_1.sort, post_middleware_1.filter, PostController.index);
+router.get('/posts', post_middleware_1.sort, post_middleware_1.filter, post_middleware_1.paginate, PostController.index);
 exports.default = router;
 router.post('/posts', auth_middleware_1.authGuard, PostController.store);
 router.patch('/posts/:postId', auth_middleware_1.authGuard, auth_middleware_1.accessControl({ possession: true }), PostController.update);
