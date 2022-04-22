@@ -454,12 +454,12 @@
         "signature": "157786c6a558e92cdb420a305070e6d2f121f2a320e09647ecec22a7a158c47d"
       },
       "../src/post/post.service.ts": {
-        "version": "70d1b5843a4d93813827e3fc9fcaa902eb2fb6b5358695c2e9a9bbd29786ec28",
-        "signature": "a8db781a3094cdb70a6b35f46113b02515d3d4b9822a26b7f34d465de8e6f297"
+        "version": "297d7fb05422ba4e8339175c07cc926a64642cf16a006ae834b2f07ea39c204b",
+        "signature": "b1cc93ce18327dd01f3d3403bdfc32922d8454b2a9bdb02df33c828e23fea588"
       },
       "../types/express.d.ts": {
-        "version": "9becd3257437728f728e3298f9c43a7272a18c8be6daea53e8da1769a48ad826",
-        "signature": "9becd3257437728f728e3298f9c43a7272a18c8be6daea53e8da1769a48ad826"
+        "version": "bb1ce74066c748f1be5a821feec8dff6434d5afc9edb1da79b3c9122f855bb30",
+        "signature": "bb1ce74066c748f1be5a821feec8dff6434d5afc9edb1da79b3c9122f855bb30"
       },
       "../node_modules/@types/range-parser/index.d.ts": {
         "version": "573307732b5bc1e50e97bb06108da7492179ca56ca304c906ff4ef72feabfa79",
@@ -554,7 +554,7 @@
         "signature": "cd1601ced3c58db277c6cb88a31c6977bcd5bf397d218cfbfc86a8802bf9ff82"
       },
       "../src/post/post.controller.ts": {
-        "version": "a90beca51dbcbe2c9629af5d8acd682250c0d4174499dfced28c69fb03f40fe9",
+        "version": "493a89ef812c13cdbc7b74073446095d2d7c1c739324f188d8572be8d18373a5",
         "signature": "09bd328d26faa357bf3ccebb2af330f65db2b520b0b3823d5a8cd94aae924107"
       },
       "../src/post/post.middleware.ts": {
@@ -3150,8 +3150,6 @@
       "../src/app/database/mysql.ts",
       "../src/post/post.model.ts",
       "../src/post/post.provider.ts",
-      "../src/post/post.service.ts",
-      "../types/express.d.ts",
       "../node_modules/@types/range-parser/index.d.ts",
       "../node_modules/@types/qs/index.d.ts",
       "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts",
@@ -3175,13 +3173,14 @@
       "../node_modules/@types/lodash/index.d.ts",
       "../src/tag/tag.model.ts",
       "../src/tag/tag.service.ts",
-      "../src/post/post.controller.ts",
+      "../src/post/post.middleware.ts",
       "../node_modules/@types/jsonwebtoken/index.d.ts",
       "../src/user/user.model.ts",
       "../src/user/user.service.ts",
       "../node_modules/@types/bcryptjs/index.d.ts",
       "../src/auth/auth.service.ts",
       "../src/auth/auth.middleware.ts",
+      "../src/post/post.router.ts",
       "../src/app/app.middleware.ts",
       "../src/auth/auth.controller.ts",
       "../src/auth/auth.router.ts",
@@ -3239,8 +3238,9 @@
       "../src/main.ts",
       "../src/comment/comment.middleware.ts",
       "../src/tag/tag.middleware.ts",
-      "../src/post/post.middleware.ts",
-      "../src/post/post.router.ts"
+      "../src/post/post.service.ts",
+      "../src/post/post.controller.ts",
+      "../types/express.d.ts"
     ]
   },
   "version": "3.8.3"
