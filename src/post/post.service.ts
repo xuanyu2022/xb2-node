@@ -172,19 +172,19 @@ export const getPostsTotalCount = async (options:
   export const getPostById= async (postId:number) =>{
       const statement =`
           SELECT 
-              post.id
-              post.title
-              post.content
-              ${sqlFragment.user}
-              ${sqlFragment.totalComments}
-              ${sqlFragment.file}
-              ${sqlFragment.tags}
+              post.id,
+              post.title,
+              post.content,
+              ${sqlFragment.user},
+              ${sqlFragment.totalComments},
+              ${sqlFragment.file},
+              ${sqlFragment.tags},
               ${sqlFragment.totalLikes}
           FROM post
             ${sqlFragment.leftJoinUser}
             ${sqlFragment.leftJoinOneFile}
             ${sqlFragment.leftJoinTags}
-          WHERE postId = ?
+          WHERE post.id = ?
       `
       const [data] = await connection.promise().query(statement,postId);
 

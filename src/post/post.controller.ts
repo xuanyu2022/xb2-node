@@ -4,7 +4,17 @@ import { connection } from '../app/database/mysql';
 import { TagModel } from '../tag/tag.model';
 import { getTagByName,createTag } from '../tag/tag.service';
 //接口处理器参数需要的类型
-import { getPosts, createPost, updatePost, deletePost, createPostTag, postHasTag,deletePostTag, getPostsTotalCount, } from './post.service';
+import { 
+  getPosts, 
+  createPost,
+   updatePost,
+    deletePost,
+     createPostTag, 
+     postHasTag,
+     deletePostTag,
+      getPostsTotalCount,
+       getPostById,
+       } from './post.service';
 
 
 /**
@@ -169,4 +179,25 @@ export const destroyPostTag= async (
       } catch (error) {
         next(error);
       }
+};
+
+
+/** 
+ * 定义  '单个内容'  接口
+*/
+export const show= async (
+  request:Request,
+  response:Response,
+  next:NextFunction,
+) =>{
+ const { postId } = request.params;
+
+ try {
+       const post = await getPostById(parseInt(postId,10))  ;
+
+      response.send(post);
+ } catch (error) {
+   next(error);
+ }
+
 };

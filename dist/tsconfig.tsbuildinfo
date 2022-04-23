@@ -454,8 +454,8 @@
         "signature": "d30f43d5cec49effb38ee6d5ec30c7e668c2e588e369071c5b561b1074fd8ac9"
       },
       "../src/post/post.service.ts": {
-        "version": "99805a5f0eb2a80a52bbf6a1c1aae0875c2fe1c7d5dcaef512afef28fff1d916",
-        "signature": "d0c91cfe7407edf275f13c1f2b187d20406be367972020797538372c802467cf"
+        "version": "2e6c29a2a862303519663f66dd98a1a026adfc468ff3be91bcb934d53e479ca7",
+        "signature": "3ad15aa91bcbdb5e5253359e1c014a4765680ddd4924afab0dc19f049b372389"
       },
       "../types/express.d.ts": {
         "version": "9becd3257437728f728e3298f9c43a7272a18c8be6daea53e8da1769a48ad826",
@@ -554,8 +554,8 @@
         "signature": "cd1601ced3c58db277c6cb88a31c6977bcd5bf397d218cfbfc86a8802bf9ff82"
       },
       "../src/post/post.controller.ts": {
-        "version": "3d6a052e3808a224ccea739a2c59589973eddc7926f6df39b5b2d9377dc89963",
-        "signature": "09bd328d26faa357bf3ccebb2af330f65db2b520b0b3823d5a8cd94aae924107"
+        "version": "6a1446c8b23bd7b91ad45d15c88e02a5a0d96602e3dc85c72d772af82d7067e5",
+        "signature": "ba75363d032beaddd4fb797b528cbc5a4a9c9777ea0c7f2ef11a7cc1cfe0d4dd"
       },
       "../src/post/post.middleware.ts": {
         "version": "2ad2391725862edcce4a3fc4adc8d57c7fd301ad94fa743502ed70a90d27dd73",
@@ -586,11 +586,11 @@
         "signature": "825fbc1e20dd377637db0b710389460da5ba4e80b426216dae99c8d803b9bf1b"
       },
       "../src/post/post.router.ts": {
-        "version": "70640fcd6e9363764357e91e97eca56cfd11747d9cbdaf7d47cb300a51c8dfb7",
+        "version": "a780b78cfebbeecf25b13be5c28488b5b04028c66f140cdacbca5f2c7f11d0a8",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
       },
       "../src/app/app.middleware.ts": {
-        "version": "a4a1c61366c9c2b4d889359760f13ff5d34681fbe75bb236b2debfc9a70a0636",
+        "version": "dc93f7c0bd2de067eb60f9ec3ae16fe21e3de259b7c869e18d9605787a3337e7",
         "signature": "5c1bd11274d9d2803893c03bdf54785e6b649ff47cef39e6979e1fb2c73f4832"
       },
       "../src/auth/auth.controller.ts": {
@@ -3268,7 +3268,6 @@
       "../src/app/database/mysql.ts",
       "../src/post/post.model.ts",
       "../src/post/post.provider.ts",
-      "../src/post/post.service.ts",
       "../types/express.d.ts",
       "../node_modules/@types/range-parser/index.d.ts",
       "../node_modules/@types/qs/index.d.ts",
@@ -3293,6 +3292,7 @@
       "../node_modules/@types/lodash/index.d.ts",
       "../src/tag/tag.model.ts",
       "../src/tag/tag.service.ts",
+      "../src/post/post.controller.ts",
       "../src/post/post.middleware.ts",
       "../node_modules/@types/jsonwebtoken/index.d.ts",
       "../src/user/user.model.ts",
@@ -3367,7 +3367,7 @@
       "../src/comment/comment.middleware.ts",
       "../src/like/like.middleware.ts",
       "../src/tag/tag.middleware.ts",
-      "../src/post/post.controller.ts"
+      "../src/post/post.service.ts"
     ]
   },
   "version": "3.8.3"

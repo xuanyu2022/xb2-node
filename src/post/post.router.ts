@@ -6,7 +6,8 @@ const router = express.Router();
 
 //内容列表               
 router.get('/posts', sort, filter, paginate, PostController.index);
-
+/**单个内容 */
+router.get('/posts/:postId',PostController.show);
 export default router;
 //创建内容                                存储内容
 router.post('/posts', authGuard, PostController.store);
@@ -22,3 +23,5 @@ router.post('/posts/:postId/tag',authGuard,accessControl({possession:true}), Pos
 /** 移除内容标签 */
 
 router.delete('/posts/:postId/tag',authGuard,accessControl({possession:true}), PostController.destroyPostTag);
+
+
