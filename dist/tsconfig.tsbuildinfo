@@ -821,12 +821,16 @@
         "version": "acebe1fcdc5bd2f3439a2e28a8c76542fd74ca92ee39655b2f14a9925020f2a0",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
       },
+      "../src/like/like.service.ts": {
+        "version": "c6606ecb5271562e59a1ca843bb8aa52fd2f7e0568b0b37e4d63056665d0baf3",
+        "signature": "e74b5f2abfb0b9d713eeaf0dfc99dc46ba180b643d5114a0010f76c2249cdb9a"
+      },
       "../src/like/like.controller.ts": {
-        "version": "08784d58bc50d1fcfb1dd6351b7b09c1b7871d54ca6eaaf8a70f4ddbc4da1314",
-        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+        "version": "539704bb8a4a6bc23f60fc91ccc9bac225caffa54128fd9e2278e4794f6358c8",
+        "signature": "cbcd5dfa6e8ffdef2ef4e4a180358daf7200dec486c781349197a766ea53b296"
       },
       "../src/like/like.router.ts": {
-        "version": "7eae90e611788a22d2f6b7d5ba04d4a65edfec6451d242f5059385bf3d3925c0",
+        "version": "783737c29bc66730ecf90dbaba5904d4872d1ed7403e3d5dbde909350e0a04c6",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
       },
       "../src/app/index.ts": {
@@ -844,10 +848,6 @@
       "../src/like/like.middleware.ts": {
         "version": "603381008ddbdbfa9ba701183cb5bb3db6871afc212dd0c5ed38e324b69cf0e4",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
-      },
-      "../src/like/like.service.ts": {
-        "version": "b61b023c0e7d0699c4ec56de28b982be78016786579b90e0f60a12c6d92d8714",
-        "signature": "36057bb7ad07e18a8496e954217869234f1c2c4c21b2772179c5ef0458a90457"
       },
       "../src/tag/tag.middleware.ts": {
         "version": "fa3b54a7cdaea9898a47e60c69304e641b87b612f062d08f40607e6e41c30206",
@@ -2027,12 +2027,18 @@
         "../src/auth/auth.middleware.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../src/like/like.service.ts": [
+        "../src/app/database/mysql.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../src/like/like.controller.ts": [
         "../node_modules/@types/express/index.d.ts",
+        "../src/like/like.service.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
       "../src/like/like.router.ts": [
         "../node_modules/@types/express/index.d.ts",
+        "../src/auth/auth.middleware.ts",
         "../src/like/like.controller.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
@@ -2061,10 +2067,6 @@
       ],
       "../src/like/like.middleware.ts": [
         "../node_modules/@types/express/index.d.ts",
-        "../node_modules/@types/node/util.d.ts"
-      ],
-      "../src/like/like.service.ts": [
-        "../src/app/database/mysql.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
       "../src/tag/tag.middleware.ts": [
@@ -3136,16 +3138,20 @@
       "../src/comment/comment.router.ts": [
         "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts"
       ],
+      "../src/like/like.service.ts": [
+        "../node_modules/@types/mysql/lib/protocol/packets/rowdatapacket.d.ts",
+        "../node_modules/@types/mysql/lib/protocol/packets/okpacket.d.ts",
+        "../node_modules/@types/mysql/lib/protocol/packets/resultsetheader.d.ts"
+      ],
+      "../src/like/like.controller.ts": [
+        "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts",
+        "../node_modules/@types/express/index.d.ts"
+      ],
       "../src/like/like.router.ts": [
         "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts"
       ],
       "../src/app/index.ts": [
         "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts"
-      ],
-      "../src/like/like.service.ts": [
-        "../node_modules/@types/mysql/lib/protocol/packets/rowdatapacket.d.ts",
-        "../node_modules/@types/mysql/lib/protocol/packets/okpacket.d.ts",
-        "../node_modules/@types/mysql/lib/protocol/packets/resultsetheader.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -3354,13 +3360,13 @@
       "../src/comment/comment.service.ts",
       "../src/comment/comment.controller.ts",
       "../src/comment/comment.router.ts",
+      "../src/like/like.service.ts",
+      "../src/like/like.controller.ts",
       "../src/app/index.ts",
       "../src/main.ts",
       "../src/comment/comment.middleware.ts",
       "../src/like/like.middleware.ts",
-      "../src/like/like.service.ts",
       "../src/tag/tag.middleware.ts",
-      "../src/like/like.controller.ts",
       "../src/like/like.router.ts"
     ]
   },
