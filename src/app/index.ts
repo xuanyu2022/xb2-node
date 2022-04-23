@@ -7,6 +7,7 @@ import fileRouter from '../file/file.router';
 import tagRouter from '../tag/tag.router';
 import avatarRouter from '../avatar/avatar.router';
 import commentRouter from '../comment/comment.router';
+import likeRouter from '../like/like.router';
 //创建应用
 
 const app = express();
@@ -22,6 +23,7 @@ app.use(
   tagRouter,
   commentRouter,
   avatarRouter,
+  likeRouter,
   );
 
 //默认异常处理器
