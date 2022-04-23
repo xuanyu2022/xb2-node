@@ -790,11 +790,11 @@
         "signature": "f56b6491cfca65542186d6b0c6700583afeabad419df0fc566235770bfd654e6"
       },
       "../src/avatar/avatar.middleware.ts": {
-        "version": "d3c3aa90a7405e2a3fb16c3b6c1028131af063197cf030a59574f4df7d46ae97",
-        "signature": "3b1c11cf27dca45002d02ef656d3ac9a27f72a1dd53f59299f6a4e6acec975d6"
+        "version": "2e4c384288d14a6a9daea539ec2c4d7adc1604c642df4259dbb1e431212687f3",
+        "signature": "86929aba2b828656bb348b9c940196769b368be7eb4c745e1e6e79730100bd23"
       },
       "../src/avatar/avatar.router.ts": {
-        "version": "66997a01c3673977f3bb01332134c97827986591233ae5730def6f1c622cd535",
+        "version": "3e8af06981ea6acb978c455fdc44a4a4d89596a6bef4f430ee5a88e7aa79d6f2",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
       },
       "../src/comment/comment.model.ts": {
@@ -1965,6 +1965,8 @@
         "../node_modules/@types/express/index.d.ts",
         "../src/file/file.middleware.ts",
         "../node_modules/@types/multer/index.d.ts",
+        "../node_modules/jimp/types/ts3.1/index.d.ts",
+        "../node_modules/@types/node/path.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
       "../src/avatar/avatar.router.ts": [
