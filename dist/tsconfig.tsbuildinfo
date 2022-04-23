@@ -785,8 +785,16 @@
         "version": "9e5646262b738041c8eab672ec90c19c2fd5d55fe7fa10fa2260795e5e1d3531",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
       },
+      "../src/avatar/avatar.model.ts": {
+        "version": "174f626c9b640b2a6722fdf2bf5adbe425cf2205ff550ca07a7f61345658b30b",
+        "signature": "5503157ea77b21353b4e9adc7e1a2703afc6c4b1174338e6e3804609ad061e5a"
+      },
+      "../src/avatar/avatar.service.ts": {
+        "version": "bc4f2611ee44220ae263e93990e7153a45677f328c00e18604db69ac3a4fde0e",
+        "signature": "790177e38e677bd1921b451f818e64af19425657290490560812c8ff4096cb06"
+      },
       "../src/avatar/avatar.controller.ts": {
-        "version": "232ba228f457047efaaf17d5ba62434a698f40fa89d3066898b296f57b6f859f",
+        "version": "186620f5d3f031f8f67040289e73e00fd82a8a0672253b7276029d058960f8e0",
         "signature": "f56b6491cfca65542186d6b0c6700583afeabad419df0fc566235770bfd654e6"
       },
       "../src/avatar/avatar.middleware.ts": {
@@ -819,10 +827,6 @@
       },
       "../src/main.ts": {
         "version": "942826d0703640ebf89d5142c0cb55994437efa8f51b5e3c7b8272e4943191e0",
-        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
-      },
-      "../src/avatar/avatar.service.ts": {
-        "version": "cab91de4d12156f3222a11b6da5080de2749db9d243706ad50064e08bc99caa8",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
       },
       "../src/comment/comment.middleware.ts": {
@@ -1957,8 +1961,18 @@
         "../src/tag/tag.controller.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../src/avatar/avatar.model.ts": [
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../src/avatar/avatar.service.ts": [
+        "../src/app/database/mysql.ts",
+        "../src/avatar/avatar.model.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../src/avatar/avatar.controller.ts": [
         "../node_modules/@types/express/index.d.ts",
+        "../node_modules/@types/lodash/index.d.ts",
+        "../src/avatar/avatar.service.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
       "../src/avatar/avatar.middleware.ts": [
@@ -2010,10 +2024,6 @@
       "../src/main.ts": [
         "../src/app/index.ts",
         "../src/app/app.config.ts",
-        "../src/app/database/mysql.ts",
-        "../node_modules/@types/node/util.d.ts"
-      ],
-      "../src/avatar/avatar.service.ts": [
         "../src/app/database/mysql.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
@@ -3060,6 +3070,12 @@
       "../src/tag/tag.router.ts": [
         "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts"
       ],
+      "../src/avatar/avatar.service.ts": [
+        "../node_modules/@types/mysql/lib/protocol/packets/rowdatapacket.d.ts",
+        "../node_modules/@types/mysql/lib/protocol/packets/okpacket.d.ts",
+        "../node_modules/@types/mysql/lib/protocol/packets/resultsetheader.d.ts",
+        "../src/avatar/avatar.model.ts"
+      ],
       "../src/avatar/avatar.controller.ts": [
         "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts",
         "../node_modules/@types/express/index.d.ts"
@@ -3285,7 +3301,9 @@
       "../src/file/file.router.ts",
       "../src/tag/tag.controller.ts",
       "../src/tag/tag.router.ts",
+      "../src/avatar/avatar.service.ts",
       "../src/avatar/avatar.controller.ts",
+      "../src/avatar/avatar.middleware.ts",
       "../src/avatar/avatar.router.ts",
       "../src/comment/comment.model.ts",
       "../src/comment/comment.service.ts",
@@ -3293,10 +3311,9 @@
       "../src/comment/comment.router.ts",
       "../src/app/index.ts",
       "../src/main.ts",
-      "../src/avatar/avatar.service.ts",
       "../src/comment/comment.middleware.ts",
       "../src/tag/tag.middleware.ts",
-      "../src/avatar/avatar.middleware.ts"
+      "../src/avatar/avatar.model.ts"
     ]
   },
   "version": "3.8.3"
