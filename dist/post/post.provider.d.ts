@@ -7,4 +7,5 @@ export declare const sqlFragment: {
     leftJoinTags: string;
     tags: string;
     totalLikes: string;
+    innerJoinUserLikePost: string;
 };

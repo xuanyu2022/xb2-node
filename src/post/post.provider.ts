@@ -90,5 +90,11 @@ tags:`
     
     ) as totallikes  
  `,
+  innerJoinUserLikePost:`
+        INNER JOIN user_like_post
+           ON user_like_post.postId = post.Id
+  `,
+
+
 
 };

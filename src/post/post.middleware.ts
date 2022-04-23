@@ -63,6 +63,14 @@ export const filter= async (
     };
   }
 
+  if(user&& action== 'liked' && !tag){
+    request.filter={
+      name:'userLiked',
+      sql: 'user_like_post.userId = ?',
+      param:`${user}`,
+    };
+  }
+
   next();
 };
 

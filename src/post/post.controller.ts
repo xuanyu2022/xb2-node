@@ -4,7 +4,7 @@ import { connection } from '../app/database/mysql';
 import { TagModel } from '../tag/tag.model';
 import { getTagByName,createTag } from '../tag/tag.service';
 //接口处理器参数需要的类型
-import { getPosts, createPost, updatePost, deletePost, createPostTag, postHasTag,deletePostTag, } from './post.service';
+import { getPosts, createPost, updatePost, deletePost, createPostTag, postHasTag,deletePostTag, getPostsTotalCount, } from './post.service';
 
 
 /**
@@ -18,6 +18,19 @@ export const index = async (
   next: NextFunction,
 ) => {
 
+  
+  try {
+    // 统计内容数量
+    const totalCount = await getPostsTotalCount({ filter:
+    request.filter });
+    // 设置响应头部
+    response.header('X-Total-Count', totalCount);
+    } catch (error) {
+    next(error);
+    }
+
+
+  
   //如果执行异常, 就会执行catch区块里的东西.
   //next(error)指的是把遇到的异常情况交给 异常处理器 处理
   try {
