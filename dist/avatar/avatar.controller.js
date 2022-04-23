@@ -4,6 +4,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const lodash_1 = __importDefault(require("lodash"));
+const path_1 = __importDefault(require("path"));
+const fs_1 = __importDefault(require("fs"));
 const avatar_service_1 = require("./avatar.service");
 exports.store = async (request, response, next) => {
     const { id: userId } = request.user;
@@ -12,6 +14,34 @@ exports.store = async (request, response, next) => {
     try {
         const data = await avatar_service_1.createAvatar(avatar);
         response.status(201).send(data);
+    }
+    catch (error) {
+        next(error);
+    }
+};
+exports.serve = async (request, response, next) => {
+    const { userId } = request.params;
+    try {
+        const avatar = await avatar_service_1.findAvatarByUserId(parseInt(userId, 10));
+        if (!avatar) {
+            throw new Error('FILE_NOT_FOUND');
+        }
+        const { size } = request.query;
+        let filename = avatar.filename;
+        let root = path_1.default.join('uploads', 'avatar');
+        let resized = 'resized';
+        if (size) {
+            const imageSize = ['large', 'medium', 'small'];
+            if (!imageSize.some(item => item == size)) {
+                throw new Error('FILE_NOT_FOUND');
+            }
+            const fileExist = fs_1.default.existsSync(path_1.default.join(root, resized, `${filename}-${size}`));
+            if (!fileExist) {
+                filename = `${filename}-${size}`;
+                root = path_1.default.join(root, resized);
+            }
+        }
+        response.sendFile(filename, { root, headers: { 'content-type': avatar.mimetype } });
     }
     catch (error) {
         next(error);
