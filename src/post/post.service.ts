@@ -164,3 +164,34 @@ export const getPostsTotalCount = async (options:
   // 提供结果
   return data[0].total;
   };
+
+
+  /** 
+   * 按ID 查询内容
+  */
+  export const getPostById= async (postId:number) =>{
+      const statement =`
+          SELECT 
+              post.id
+              post.title
+              post.content
+              ${sqlFragment.user}
+              ${sqlFragment.totalComments}
+              ${sqlFragment.file}
+              ${sqlFragment.tags}
+              ${sqlFragment.totalLikes}
+          FROM post
+            ${sqlFragment.leftJoinUser}
+            ${sqlFragment.leftJoinOneFile}
+            ${sqlFragment.leftJoinTags}
+          WHERE postId = ?
+      `
+      const [data] = await connection.promise().query(statement,postId);
+
+        if(!data[0].id) {
+          throw new Error('NOT_FOUND');
+        }
+
+      return data[0];
+   
+  };
