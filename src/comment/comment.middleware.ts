@@ -15,7 +15,7 @@ export const filter= async (
           name:'dafault',
           sql:'comment.parentId IS NULL'
         }
-
+        //内容的评论列表
         if(post && !user && !action ){
 
             request.filter ={
@@ -24,6 +24,8 @@ export const filter= async (
               param:`${post}`,
             }
         }
+
+      //用户的评论列表
         if(user && action=='published' &&!post){
 
           request.filter ={
@@ -32,6 +34,15 @@ export const filter= async (
             param:`${user}`,
           }
       }
+
+      if(user && action=='replied' &&!post){
+
+        request.filter ={
+          name:'userReplied',
+          sql:'comment.parentId IS NOT NULL AND comment.userId=?',
+          param:`${user}`,
+        }
+    }
   
         
       next();
