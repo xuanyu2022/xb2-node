@@ -1,6 +1,7 @@
 import express from 'express';
 import * as commentController from './comment.controller';
 import { authGuard,accessControl  } from '../auth/auth.middleware';
+import { filter } from './comment.middleware';
 const router = express.Router();
 /**
 * 导出路由
@@ -28,3 +29,6 @@ router.patch('/comments/:commentId', authGuard, accessControl({ possession: true
 * 删除评论
 */
 router.delete('/comments/:commentId', authGuard, accessControl({ possession: true }), commentController.destroy,);
+
+/**评论列表 */
+router.get('/comments',filter,commentController.index);

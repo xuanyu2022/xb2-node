@@ -4,7 +4,7 @@ import { sqlFragment } from './post.provider';
 
 
 /** * 获取内容列表  */
-export interface GetPostOptionFilter {
+export interface GetPostsOptionsFilter {
   name:string;
   sql?:string;
   //占位符的值
@@ -17,7 +17,7 @@ export interface GetPostOptionsPagination{
 
 interface GetPostOptions  {
   sort?:string;
-  filter?:GetPostOptionFilter;
+  filter?:GetPostsOptionsFilter;
   pagination?:GetPostOptionsPagination;
 }
 export const getPosts = async (options: GetPostOptions) => {

@@ -8,6 +8,8 @@ const router = express.Router();
 router.get('/posts', sort, filter, paginate, PostController.index);
 /**单个内容 */
 router.get('/posts/:postId',PostController.show);
+
+
 export default router;
 //创建内容                                存储内容
 router.post('/posts', authGuard, PostController.store);

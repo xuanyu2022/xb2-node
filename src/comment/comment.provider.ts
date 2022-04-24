@@ -29,7 +29,7 @@ export const sqlFragment= {
   post:`
       JSON_OBJECT(
         'id', post.id,
-        'title',post.title,
+        'title',post.title
       ) as post
   `,
 

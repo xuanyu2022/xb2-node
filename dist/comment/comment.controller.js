@@ -69,4 +69,13 @@ exports.destroy = async (request, response, next) => {
         next(error);
     }
 };
+exports.index = async (request, response, next) => {
+    try {
+        const comments = await comment_service_1.getComments({ filter: request.filter });
+        response.send(comments);
+    }
+    catch (error) {
+        next(error);
+    }
+};
 //# sourceMappingURL=comment.controller.js.map

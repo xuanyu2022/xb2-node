@@ -1,6 +1,7 @@
 import { connection } from '../app/database/mysql';
+import { GetPostsOptionsFilter } from '../post/post.service';
 import { CommentModel } from './comment.model';
-
+import {  sqlFragment} from './comment.provider';
 export const createComment = async (comment: CommentModel) => {
   // 准备查询
   const statement = `
@@ -63,4 +64,41 @@ export const deleteComment = async (commentId: number) => {
   const [data] = await connection.promise().query(statement, commentId);
   // 提供数据
   return data;
+  };
+
+
+  /** 
+   * 获取评论列表
+  */
+  interface getCommentsOptions{
+    filter?: GetPostsOptionsFilter;
+  }
+
+  export const getComments= async (options:getCommentsOptions) =>{
+
+      const { filter } = options
+
+  let params: Array<any>=[];
+    if(filter.param){
+      params = [filter.param,...params]
+    }
+  const statement =`
+    SELECT 
+        comment.id,
+        comment.content,
+        ${sqlFragment.user},
+        ${sqlFragment.post}
+    FROM comment
+        ${sqlFragment.leftJoinPost}
+        ${sqlFragment.leftJoinUser}
+    WHERE
+         ${filter.sql}
+    GROUP BY comment.id 
+    ORDER BY comment.id DESC
+  `;
+
+  const [data] = await connection.promise().query(statement,params);
+
+  return data;
+   
   };
