@@ -822,7 +822,7 @@
         "signature": "fce3caa4799d9f16e1fc7b79e42707c7889018e6133921aaf80af75b23110d73"
       },
       "../src/comment/comment.middleware.ts": {
-        "version": "deb609299d2fd77475048ca019a40f7dcc28bc607fbed45e256b1922d2c9e74d",
+        "version": "37ad0047532e711e441e58fc00204a05f76aa23c1aa53c4a4cdd058a5742f5be",
         "signature": "12befd4dd08ecd988572228a66055cbf44c7bdcd403ad66d7cf825816a9fbecc"
       },
       "../src/comment/comment.router.ts": {
