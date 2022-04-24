@@ -87,7 +87,8 @@ export const deleteComment = async (commentId: number) => {
         comment.id,
         comment.content,
         ${sqlFragment.user},
-        ${sqlFragment.post}
+        ${sqlFragment.post},
+        ${filter.name == 'userReplied'? `${sqlFragment.repliedComments}`:''}
     FROM comment
         ${sqlFragment.leftJoinPost}
         ${sqlFragment.leftJoinUser}

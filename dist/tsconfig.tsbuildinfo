@@ -810,11 +810,11 @@
         "signature": "a710a6e14e50680e5b5d0de7865ac67151aee47ed36823fc6d73ec06330aeb51"
       },
       "../src/comment/comment.provider.ts": {
-        "version": "943bca7449a0eb720977e5ff6edb487086b93a8b05a5e0fdadeef0109924a069",
-        "signature": "92c786251668a19b81ae0c1f8e6c096047ed8e1eeb052baf1567e345bdae377f"
+        "version": "3cf96d5cb95b4ae59e4d4252dba47f0b0f0ee9cc899be670544910609c38c800",
+        "signature": "77ad5d7623823fe5c80bad36245b812445fd4cb9bcc7a919bffc4033b3491edc"
       },
       "../src/comment/comment.service.ts": {
-        "version": "e18da8713c81a6ed2b48ebf80a027f3883ae9640159f9350d5894fa0e2d9d750",
+        "version": "f31e04c9dbd559ebb620c3617a34cd0a15373291c3be9ff703c00419b10f098b",
         "signature": "21126eb6a3bd34449dbc9892a517b9ab45e35296a10056bc41d1b098711d1b14"
       },
       "../src/comment/comment.controller.ts": {
@@ -822,7 +822,7 @@
         "signature": "fce3caa4799d9f16e1fc7b79e42707c7889018e6133921aaf80af75b23110d73"
       },
       "../src/comment/comment.middleware.ts": {
-        "version": "78ad726a4798542abe464649d9cbc3db998f8a7ee7cd99388277aa18a6f9dd5c",
+        "version": "dc2893922edcac5927c34fb99c62b6003511335740324f8bdec094fba1739cdb",
         "signature": "12befd4dd08ecd988572228a66055cbf44c7bdcd403ad66d7cf825816a9fbecc"
       },
       "../src/comment/comment.router.ts": {
@@ -3372,9 +3372,9 @@
       "../src/avatar/avatar.middleware.ts",
       "../src/avatar/avatar.router.ts",
       "../src/comment/comment.model.ts",
-      "../src/comment/comment.provider.ts",
       "../src/comment/comment.service.ts",
       "../src/comment/comment.controller.ts",
+      "../src/comment/comment.middleware.ts",
       "../src/comment/comment.router.ts",
       "../src/like/like.service.ts",
       "../src/like/like.controller.ts",
@@ -3383,7 +3383,7 @@
       "../src/main.ts",
       "../src/like/like.middleware.ts",
       "../src/tag/tag.middleware.ts",
-      "../src/comment/comment.middleware.ts"
+      "../src/comment/comment.provider.ts"
     ]
   },
   "version": "3.8.3"
