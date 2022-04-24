@@ -845,6 +845,10 @@
         "version": "e7b8f28ed58bd1d2a6395e6daea1d15ae712c7c22fe229b41ae8ee8f14db1aee",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
       },
+      "../src/comment/comment.provider.ts": {
+        "version": "557b9bc9147a13b04444918b5de9db6138b64ad1799120966140b7dad123adea",
+        "signature": "92c786251668a19b81ae0c1f8e6c096047ed8e1eeb052baf1567e345bdae377f"
+      },
       "../src/like/like.middleware.ts": {
         "version": "603381008ddbdbfa9ba701183cb5bb3db6871afc212dd0c5ed38e324b69cf0e4",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
@@ -2065,6 +2069,9 @@
         "../node_modules/@types/express/index.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../src/comment/comment.provider.ts": [
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../src/like/like.middleware.ts": [
         "../node_modules/@types/express/index.d.ts",
         "../node_modules/@types/node/util.d.ts"
@@ -3268,6 +3275,7 @@
       "../src/app/database/mysql.ts",
       "../src/post/post.model.ts",
       "../src/post/post.provider.ts",
+      "../src/post/post.service.ts",
       "../types/express.d.ts",
       "../node_modules/@types/range-parser/index.d.ts",
       "../node_modules/@types/qs/index.d.ts",
@@ -3367,7 +3375,7 @@
       "../src/comment/comment.middleware.ts",
       "../src/like/like.middleware.ts",
       "../src/tag/tag.middleware.ts",
-      "../src/post/post.service.ts"
+      "../src/comment/comment.provider.ts"
     ]
   },
   "version": "3.8.3"
