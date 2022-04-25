@@ -4,4 +4,5 @@ export declare const sqlFragment: {
     leftJoinPost: string;
     post: string;
     repliedComments: string;
+    totalReplies: string;
 };

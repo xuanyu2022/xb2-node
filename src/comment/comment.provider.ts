@@ -46,4 +46,13 @@ repliedComments:`
                   comment.parentId = repliedComment.id
         )as repliedComments
 `,
+
+totalReplies:`
+        (SELECT 
+            COUNT(DISTINCT reply.id)
+        FROM comment reply
+        WHERE 
+            reply.parentId = comment.id
+          )AS totalReplies
+`,
 }

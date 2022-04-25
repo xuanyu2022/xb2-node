@@ -810,11 +810,11 @@
         "signature": "a710a6e14e50680e5b5d0de7865ac67151aee47ed36823fc6d73ec06330aeb51"
       },
       "../src/comment/comment.provider.ts": {
-        "version": "3cf96d5cb95b4ae59e4d4252dba47f0b0f0ee9cc899be670544910609c38c800",
-        "signature": "77ad5d7623823fe5c80bad36245b812445fd4cb9bcc7a919bffc4033b3491edc"
+        "version": "392837712865794d656e0d603202e3d3182a5c1240047665236ab2055607fc6f",
+        "signature": "e4476ab96bef4e4b5171b06d237a6cc1d9891c8d940d94a945d63519991e8d92"
       },
       "../src/comment/comment.service.ts": {
-        "version": "f31e04c9dbd559ebb620c3617a34cd0a15373291c3be9ff703c00419b10f098b",
+        "version": "0c0304690a467990f5b18c53c956c5deb59dfaff7f9dc4c6c89cacd695d49c49",
         "signature": "21126eb6a3bd34449dbc9892a517b9ab45e35296a10056bc41d1b098711d1b14"
       },
       "../src/comment/comment.controller.ts": {
@@ -3372,7 +3372,7 @@
       "../src/avatar/avatar.middleware.ts",
       "../src/avatar/avatar.router.ts",
       "../src/comment/comment.model.ts",
-      "../src/comment/comment.service.ts",
+      "../src/comment/comment.provider.ts",
       "../src/comment/comment.controller.ts",
       "../src/comment/comment.middleware.ts",
       "../src/comment/comment.router.ts",
@@ -3383,7 +3383,7 @@
       "../src/main.ts",
       "../src/like/like.middleware.ts",
       "../src/tag/tag.middleware.ts",
-      "../src/comment/comment.provider.ts"
+      "../src/comment/comment.service.ts"
     ]
   },
   "version": "3.8.3"
