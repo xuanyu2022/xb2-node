@@ -814,19 +814,19 @@
         "signature": "e4476ab96bef4e4b5171b06d237a6cc1d9891c8d940d94a945d63519991e8d92"
       },
       "../src/comment/comment.service.ts": {
-        "version": "4069d737473b7406edf618cfc6114637539e1d990cb794208e70106da0e8b644",
-        "signature": "bcbb1bd1c16fe57326df2f9fe18dad132187e04208403123f39fb2098084969c"
+        "version": "e0a2aeda4f1ba878201ba3218c84b79f5b6fa772ca4b327c5f65f7496b54c4bd",
+        "signature": "fbfb00bb330d8b5105bb25e07539299bddb408bd17da00978dfd226805f5f8ae"
       },
       "../src/comment/comment.controller.ts": {
-        "version": "7be588f254f7462324b36f72f1a2ca245526f0032548165d2824bd017dc602bd",
-        "signature": "fce3caa4799d9f16e1fc7b79e42707c7889018e6133921aaf80af75b23110d73"
+        "version": "6e5c0440908eed03bccbdf49391be88a60fa2db6c022e08b5e4816a4d680b70e",
+        "signature": "71f31c8d7c923da50ebbbc5c425dad1e6717278e2f0d5eaba31e8fb783a116c0"
       },
       "../src/comment/comment.middleware.ts": {
         "version": "dc2893922edcac5927c34fb99c62b6003511335740324f8bdec094fba1739cdb",
         "signature": "12befd4dd08ecd988572228a66055cbf44c7bdcd403ad66d7cf825816a9fbecc"
       },
       "../src/comment/comment.router.ts": {
-        "version": "94f83400ee81fa4d20bb429b8e3025318a2a8d4a6f4a6b4d3adcaaaf6fca6298",
+        "version": "afdab0f7ef896d7eeaa91438eab5974c3e5a51ab05218f6f86cd0d29de483569",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
       },
       "../src/like/like.service.ts": {
@@ -3375,7 +3375,7 @@
       "../src/avatar/avatar.router.ts",
       "../src/comment/comment.model.ts",
       "../src/comment/comment.provider.ts",
-      "../src/comment/comment.service.ts",
+      "../src/comment/comment.controller.ts",
       "../src/comment/comment.middleware.ts",
       "../src/comment/comment.router.ts",
       "../src/like/like.service.ts",
@@ -3385,7 +3385,7 @@
       "../src/main.ts",
       "../src/like/like.middleware.ts",
       "../src/tag/tag.middleware.ts",
-      "../src/comment/comment.controller.ts"
+      "../src/comment/comment.service.ts"
     ]
   },
   "version": "3.8.3"
