@@ -71,7 +71,13 @@ exports.destroy = async (request, response, next) => {
 };
 exports.index = async (request, response, next) => {
     try {
-        const comments = await comment_service_1.getComments({ filter: request.filter });
+        const totalCount = await comment_service_1.getCommentsTotalCount({ filter: request.filter });
+        response.header('X-Total-Count', totalCount);
+    }
+    catch (error) {
+    }
+    try {
+        const comments = await comment_service_1.getComments({ filter: request.filter, pagination: request.pagination, });
         response.send(comments);
     }
     catch (error) {

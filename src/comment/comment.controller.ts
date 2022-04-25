@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { createComment,isReplyComment,updateComment,deleteComment, getComments } from './comment.service';
+import { createComment,isReplyComment,updateComment,deleteComment, getComments,getCommentsTotalCount } from './comment.service';
 
 /**
 * 发表评论
@@ -125,8 +125,16 @@ export const destroy = async (
     response:Response,
     next:NextFunction,
   ) =>{
+
+    try {
+         const totalCount =await  getCommentsTotalCount({ filter:request.filter });
+        response.header('X-Total-Count',totalCount);
+    } catch (error) {
+      
+    }
    try {
-        const comments = await getComments({filter:request.filter});
+        const comments = await getComments({filter:request.filter,pagination:request.pagination,});
+
         response.send(comments);
    } catch (error) {
      next(error)

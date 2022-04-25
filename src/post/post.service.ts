@@ -10,7 +10,7 @@ export interface GetPostsOptionsFilter {
   //占位符的值
   param?: string;
 }
-export interface GetPostOptionsPagination{
+export interface GetPostsOptionsPagination{
   limit:number;
   offset:number;
 }
@@ -18,7 +18,7 @@ export interface GetPostOptionsPagination{
 interface GetPostOptions  {
   sort?:string;
   filter?:GetPostsOptionsFilter;
-  pagination?:GetPostOptionsPagination;
+  pagination?:GetPostsOptionsPagination;
 }
 
 export const getPosts = async (options: GetPostOptions) => {
