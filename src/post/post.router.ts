@@ -2,10 +2,12 @@ import express from 'express';
 import * as PostController from './post.controller';
 import {sort,filter, paginate } from './post.middleware';
 import {authGuard, accessControl} from '../auth/auth.middleware';
+import { POSTS_PER_PAGE } from '../app/app.config';
 const router = express.Router();
 
+
 //内容列表               
-router.get('/posts', sort, filter, paginate,PostController.index);
+router.get('/posts', sort, filter, paginate(POSTS_PER_PAGE),PostController.index);
 /**单个内容 */
 router.get('/posts/:postId',PostController.show);
 

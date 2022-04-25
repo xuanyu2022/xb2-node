@@ -438,8 +438,8 @@
         "signature": "143d557fabdd0500b45024279771bcfb19fdac0ff1720b4d16f174ed3f9167b5"
       },
       "../src/app/app.config.ts": {
-        "version": "8cd1a8f1eb9699c6fa5891b8efff1567edd941de7ac16d8b82441776126001dd",
-        "signature": "efddf5bd762dc36c81baaac556e4fffa4b11203f124e7b708e4ea82fde949966"
+        "version": "f898132a2cbcfd01d151ed068459f9ee323e33601a2432f168a4221a00a238b7",
+        "signature": "c2a2121ee7a63b0e6b9b7e3bae9cec10624f8e9b3456d13811786658849297ab"
       },
       "../src/app/database/mysql.ts": {
         "version": "461c5b4c15a9151530db2b238c0d50a484cdbb66aa88d580fa9317986957e95c",
@@ -558,8 +558,8 @@
         "signature": "ba75363d032beaddd4fb797b528cbc5a4a9c9777ea0c7f2ef11a7cc1cfe0d4dd"
       },
       "../src/post/post.middleware.ts": {
-        "version": "2ad2391725862edcce4a3fc4adc8d57c7fd301ad94fa743502ed70a90d27dd73",
-        "signature": "634e912f531697ce92560017356a628451e7dbc360be7a15c2d3761e312e1eb0"
+        "version": "3cb3eac15d6d11309d2a5aa859943599f078c24a0dca844682000a43da9c7399",
+        "signature": "bd0606f3dff111f15dc34a8a1ae00bf03295c08094c28d658abc30c40793b342"
       },
       "../node_modules/@types/jsonwebtoken/index.d.ts": {
         "version": "7004e0c2506befcaec001f50b48f395b3bde384bc49c9f0900372e0b02cf9deb",
@@ -586,7 +586,7 @@
         "signature": "825fbc1e20dd377637db0b710389460da5ba4e80b426216dae99c8d803b9bf1b"
       },
       "../src/post/post.router.ts": {
-        "version": "be6cfe3ae2e67de1ea289a843ef28acba433b8600cefbf8963020d6c318b3d68",
+        "version": "c02df5c2635f2f40506dfc45f7a55c3a7bbdbc9e68774f39521d28cdf1425542",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
       },
       "../src/app/app.middleware.ts": {
@@ -1688,7 +1688,6 @@
       ],
       "../src/post/post.middleware.ts": [
         "../node_modules/@types/express/index.d.ts",
-        "../src/app/app.config.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
       "../node_modules/@types/jsonwebtoken/index.d.ts": [
@@ -1728,6 +1727,7 @@
         "../src/post/post.controller.ts",
         "../src/post/post.middleware.ts",
         "../src/auth/auth.middleware.ts",
+        "../src/app/app.config.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
       "../src/app/app.middleware.ts": [
@@ -3283,6 +3283,7 @@
       "../src/app/database/mysql.ts",
       "../src/post/post.model.ts",
       "../src/post/post.provider.ts",
+      "../src/post/post.service.ts",
       "../types/express.d.ts",
       "../node_modules/@types/range-parser/index.d.ts",
       "../node_modules/@types/qs/index.d.ts",
@@ -3308,14 +3309,12 @@
       "../src/tag/tag.model.ts",
       "../src/tag/tag.service.ts",
       "../src/post/post.controller.ts",
-      "../src/post/post.middleware.ts",
       "../node_modules/@types/jsonwebtoken/index.d.ts",
       "../src/user/user.model.ts",
       "../src/user/user.service.ts",
       "../node_modules/@types/bcryptjs/index.d.ts",
       "../src/auth/auth.service.ts",
       "../src/auth/auth.middleware.ts",
-      "../src/post/post.router.ts",
       "../src/app/app.middleware.ts",
       "../src/auth/auth.controller.ts",
       "../src/auth/auth.router.ts",
@@ -3383,7 +3382,8 @@
       "../src/main.ts",
       "../src/like/like.middleware.ts",
       "../src/tag/tag.middleware.ts",
-      "../src/post/post.service.ts"
+      "../src/post/post.middleware.ts",
+      "../src/post/post.router.ts"
     ]
   },
   "version": "3.8.3"

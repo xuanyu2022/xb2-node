@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { POSTS_PER_PAGE } from '../app/app.config';
+
 /** 排序方式  */
 export const sort= async (
   request:Request,
@@ -75,16 +75,20 @@ export const filter= async (
 };
 
 
-/** 内容分页*/
-export const paginate= async (
-  request:Request,
-  response:Response,
-  next:NextFunction,
-) =>{
- const {page=1} = request.query;
- const limit = parseInt(POSTS_PER_PAGE,10) || 30;
- const offset = limit * ( parseInt(`${page}`,10)- 1 );
- request.pagination = {limit,offset}; 
- next();
-};
 
+  
+/** 内容分页*/
+export const paginate= (itemsPerPage:number) =>{
+  return async (request:Request, response:Response,next:
+    
+    NextFunction) =>{
+    //当前页码
+   const {page=1} = request.query;
+  //每页数量
+   const limit = itemsPerPage || 30;
+   //计算出偏移量
+   const offset = limit * ( parseInt(`${page}`,10)- 1 );
+   //设置请求中的分页
+   request.pagination = {limit,offset}; 
+   next();
+  };};
