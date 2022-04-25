@@ -21,7 +21,8 @@ exports.getPosts = async (options) => {
                       ${post_provider_1.sqlFragment.leftJoinUser} 
                       ${post_provider_1.sqlFragment.leftJoinOneFile}
                       ${post_provider_1.sqlFragment.leftJoinTags}
-                      ${filter.name = 'userLiked' ? post_provider_1.sqlFragment.innerJoinUserLikePost : ''}
+                      ${filter.name == 'userLiked' ? post_provider_1.sqlFragment.innerJoinUserLikePost : ''}
+                      
                       WHERE ${filter.sql}
                       GROUP BY post.id
                       ORDER BY ${sort}

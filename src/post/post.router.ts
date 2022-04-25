@@ -5,7 +5,7 @@ import {authGuard, accessControl} from '../auth/auth.middleware';
 const router = express.Router();
 
 //内容列表               
-router.get('/posts', sort, filter, paginate, PostController.index);
+router.get('/posts', sort, filter, paginate,PostController.index);
 /**单个内容 */
 router.get('/posts/:postId',PostController.show);
 

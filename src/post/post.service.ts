@@ -20,6 +20,7 @@ interface GetPostOptions  {
   filter?:GetPostsOptionsFilter;
   pagination?:GetPostOptionsPagination;
 }
+
 export const getPosts = async (options: GetPostOptions) => {
   const {sort, filter,pagination:{limit,offset},} =options;
   //SQL参数,params是给查询里的占位符准备的,可以把limit和offset放入
@@ -41,15 +42,17 @@ export const getPosts = async (options: GetPostOptions) => {
                       ${sqlFragment.leftJoinUser} 
                       ${sqlFragment.leftJoinOneFile}
                       ${sqlFragment.leftJoinTags}
-                      ${filter.name = 'userLiked' ? sqlFragment.innerJoinUserLikePost:''}
+                      ${filter.name == 'userLiked' ? sqlFragment.innerJoinUserLikePost:''}
+                      
                       WHERE ${filter.sql}
                       GROUP BY post.id
                       ORDER BY ${sort}
                       LIMIT ?
                       OFFSET ?
      `;
+   
   const [data] = await connection.promise().query(statement,params);
-
+  
   return data;
 };
 
@@ -140,7 +143,7 @@ export const deletePostTag = async (postId:number,tagId:number) => {
 
 };
 /**
-* 统计内容数量
+* 23 定义  统计内容数量  的功能
 */
 export const getPostsTotalCount = async (options:
   GetPostOptions) => { 
@@ -158,13 +161,13 @@ export const getPostsTotalCount = async (options:
   ${filter.name == 'userLiked' ? sqlFragment.innerJoinUserLikePost : ''}
   WHERE ${filter.sql}
   `;
+  
   // 执行查询
   const [data] = await connection.promise().query(statement,
   params);
   // 提供结果
   return data[0].total;
   };
-
 
   /** 
    * 按ID 查询内容

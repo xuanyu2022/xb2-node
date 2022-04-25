@@ -450,11 +450,11 @@
         "signature": "b052e6fe7bad6bfc4c1b47a3fe023aa6aa9ac54f597cb8d61925b859fc7c9e2b"
       },
       "../src/post/post.provider.ts": {
-        "version": "26b93e187912ab747ca608ae7b2d52bcbd6b24f3810ef0e0569ef430849c76ae",
+        "version": "89736952025bf06f31c74e56fb2b50816dc4b1a1d535de11c900429e99639069",
         "signature": "d30f43d5cec49effb38ee6d5ec30c7e668c2e588e369071c5b561b1074fd8ac9"
       },
       "../src/post/post.service.ts": {
-        "version": "9aebce384976ee9f97e96c55e4360e726b559595136a76e5175759a6a58048c1",
+        "version": "578943ba286314e94a7b84bd38a6ab2a36342693c359894717e183411bb87230",
         "signature": "853bdbb1a032903a92226dd31bd6f42b7a98e3c23d9379cb13870e31c810c2a6"
       },
       "../types/express.d.ts": {
@@ -586,7 +586,7 @@
         "signature": "825fbc1e20dd377637db0b710389460da5ba4e80b426216dae99c8d803b9bf1b"
       },
       "../src/post/post.router.ts": {
-        "version": "c947ba90ea703c57b99f118a038649e892ee5937dde0d192ba7c7a1855492e1e",
+        "version": "be6cfe3ae2e67de1ea289a843ef28acba433b8600cefbf8963020d6c318b3d68",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
       },
       "../src/app/app.middleware.ts": {
@@ -3283,7 +3283,6 @@
       "../src/app/database/mysql.ts",
       "../src/post/post.model.ts",
       "../src/post/post.provider.ts",
-      "../src/post/post.service.ts",
       "../types/express.d.ts",
       "../node_modules/@types/range-parser/index.d.ts",
       "../node_modules/@types/qs/index.d.ts",
@@ -3373,6 +3372,7 @@
       "../src/avatar/avatar.router.ts",
       "../src/comment/comment.model.ts",
       "../src/comment/comment.provider.ts",
+      "../src/comment/comment.service.ts",
       "../src/comment/comment.controller.ts",
       "../src/comment/comment.middleware.ts",
       "../src/comment/comment.router.ts",
@@ -3383,7 +3383,7 @@
       "../src/main.ts",
       "../src/like/like.middleware.ts",
       "../src/tag/tag.middleware.ts",
-      "../src/comment/comment.service.ts"
+      "../src/post/post.service.ts"
     ]
   },
   "version": "3.8.3"

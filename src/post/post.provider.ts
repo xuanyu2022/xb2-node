@@ -88,7 +88,7 @@ tags:`
     FROM user_like_post
     WHERE user_like_post.postId = post.id
     
-    ) as totallikes  
+    ) as totalLikes  
  `,
   innerJoinUserLikePost:`
         INNER JOIN user_like_post
