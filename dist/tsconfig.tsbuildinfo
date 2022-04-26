@@ -570,8 +570,8 @@
         "signature": "c0c4f6e95c87e2adb92ab955bf7156bfa015433ec41ebfe889c40ceedcdfdc6a"
       },
       "../src/user/user.service.ts": {
-        "version": "8b70ea08db89d414949ebd51c50a9482c67b807682348f0c0e7882a7d992bab4",
-        "signature": "58d45ba00f54f7e420164206c768303e1d5416cd4f90776daa560057c84d734b"
+        "version": "5bc7e2b13361b3e1085a449c21c0f58428cc6c2c06cfffec48811fccb67b9f79",
+        "signature": "698d7a495fdfeda013888ad7b46c163695a49a828f9ea66a10d7352ab14c24d5"
       },
       "../node_modules/@types/bcryptjs/index.d.ts": {
         "version": "9dfe431ab1485e17a6055e186c49da9d23af74b965f2e99f8acc6c958778608f",
@@ -602,15 +602,15 @@
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
       },
       "../src/user/user.controller.ts": {
-        "version": "9bc5d55d3c53dbc5c93d0781a3ecc09e550d49f04b45d642277c9dad6d0ec75a",
-        "signature": "bd8f4f7c02535512ed18d87fa429a970aa9e82daa3849067dcbcf8e867bd2cc6"
+        "version": "a35f002dc4c98540dd22276d9a3b707055ffb11d6bc7d8b73f54cf0db9613640",
+        "signature": "d10df27a2856cdce2622da77a375bf853f4d499c6c1ea6c284e6041d99f148a6"
       },
       "../src/user/user.middleware.ts": {
         "version": "82d9bc8cc5d345a70ed7977ce47be050756c99017844aa98e9dced81ef8ff4f6",
         "signature": "dd97eef3f85cdce05c3d918672de96801d85994ecf48cecef805231815ba45f2"
       },
       "../src/user/user.router.ts": {
-        "version": "a3abc8ec703a9f75d936c7ae87b12f3f9e4b59341296dcedb4c3e8022e7cfbe0",
+        "version": "a74f5002057f245648f134a463c9d36c94ceecf1986b4aef8f249ea9ad6db7b8",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
       },
       "../node_modules/@jimp/core/types/jimp.d.ts": {
@@ -1747,7 +1747,7 @@
       ],
       "../src/user/user.controller.ts": [
         "../node_modules/@types/express/index.d.ts",
-        "../src/user/user.model.ts",
+        "../node_modules/@types/lodash/index.d.ts",
         "../src/user/user.service.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
@@ -1762,6 +1762,7 @@
         "../node_modules/@types/express/index.d.ts",
         "../src/user/user.controller.ts",
         "../src/user/user.middleware.ts",
+        "../src/auth/auth.middleware.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
       "../node_modules/@jimp/core/types/jimp.d.ts": [
@@ -3315,11 +3316,11 @@
       "../src/post/post.middleware.ts",
       "../node_modules/@types/jsonwebtoken/index.d.ts",
       "../src/user/user.model.ts",
-      "../src/user/user.service.ts",
       "../node_modules/@types/bcryptjs/index.d.ts",
       "../src/auth/auth.service.ts",
       "../src/auth/auth.middleware.ts",
       "../src/post/post.router.ts",
+      "../src/app/app.middleware.ts",
       "../src/auth/auth.controller.ts",
       "../src/auth/auth.router.ts",
       "../src/user/user.controller.ts",
@@ -3386,7 +3387,7 @@
       "../src/main.ts",
       "../src/like/like.middleware.ts",
       "../src/tag/tag.middleware.ts",
-      "../src/app/app.middleware.ts"
+      "../src/user/user.service.ts"
     ]
   },
   "version": "3.8.3"

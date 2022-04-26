@@ -1,6 +1,7 @@
 import {Request,Response,NextFunction} from 'express';
-import {UserModel} from './user.model';
+import _ from 'lodash';
 import * as userService from './user.service';
+
 
 export const store = async (
   request:Request,
@@ -41,4 +42,25 @@ try {
 } catch (error) {
   next(error);
 }
+};
+
+
+/** 
+ * 更新用户
+*/
+export const update= async (
+  request:Request,
+  response:Response,
+  next:NextFunction,
+) =>{
+ const{id} = request.user;
+
+ const userData = _.pick(request.body.update,['name','password']);
+
+ try {
+   const data = await userService.updateUser(id,userData);
+   response.send(data);
+ } catch (error) {
+   next(error);
+ }
 };

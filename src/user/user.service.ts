@@ -25,7 +25,6 @@ export const getUser= (condition:string) => {
   return async (param:string | number, options: GetUserOptions = {},
     ) => {
       const { password } = options;
-   
       //sql
       const statement =`
       SELECT 
@@ -53,3 +52,21 @@ export const getUserByName = getUser('user.name');
  * 按ID获取用户
  */
 export const getUserById   = getUser('user.id');
+
+
+/** 
+ * 更新用户数据
+*/
+export const updateUser= async (userId:number,userData:UserModel) =>{
+ 
+  const statement = `
+    UPDATE user
+    SET?
+    WHERE user.id = ?
+  `;
+  
+  //sql 参数
+  const params = [userData,userId];
+  const [data] = await connection.promise().query(statement,params);
+    return data;
+};
