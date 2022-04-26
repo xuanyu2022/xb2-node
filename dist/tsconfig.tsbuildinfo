@@ -841,12 +841,24 @@
         "version": "783737c29bc66730ecf90dbaba5904d4872d1ed7403e3d5dbde909350e0a04c6",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
       },
+      "../src/app/app.router.ts": {
+        "version": "426b1ec61e28494c854e42c741fcc01b30335eaff5338b984e5c1b4f181e4739",
+        "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
+      },
       "../src/app/index.ts": {
-        "version": "ffeb6e760eb3e2df66fd2aeeaa9fa9ecc17d8c718e9e439e512188d500b7b00a",
+        "version": "42715e18ae726b04f0850c7f4739c1bee78d9c0cdcd5c008be8ceca3ef64415b",
         "signature": "629a4ade941bd431c195407a5afd3602c6461fdcc0f65735b7e4a68f8d5d3d51"
       },
       "../src/main.ts": {
         "version": "942826d0703640ebf89d5142c0cb55994437efa8f51b5e3c7b8272e4943191e0",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "../src/app/playground/demo.ts": {
+        "version": "f9bf5802703b274613850f3a5f400547ccc62a9d9a1ddcdd7243d2a652c315a4",
+        "signature": "7ee4fdf0e928a926d02d758d1fe8ede928fad6319f3356e01c5d317662783805"
+      },
+      "../src/app/app.test.ts": {
+        "version": "822395cc00bd15b36c111455126e00f532fb2516243b621866ca2e7b46720f74",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
       },
       "../src/like/like.middleware.ts": {
@@ -876,6 +888,10 @@
       "../node_modules/@types/babel__core/index.d.ts": {
         "version": "5426e62886b7be7806312d31a00e8f7dccd6fe63ba9bbefe99ee2eab29cc48a3",
         "signature": "5426e62886b7be7806312d31a00e8f7dccd6fe63ba9bbefe99ee2eab29cc48a3"
+      },
+      "../node_modules/@types/cookiejar/index.d.ts": {
+        "version": "8d48b8f8a377ade8dd1f000625bc276eea067f2529cc9cafdf082d17142107d6",
+        "signature": "8d48b8f8a377ade8dd1f000625bc276eea067f2529cc9cafdf082d17142107d6"
       },
       "../node_modules/@types/graceful-fs/index.d.ts": {
         "version": "3ebae8c00411116a66fca65b08228ea0cf0b72724701f9b854442100aab55aba",
@@ -936,6 +952,14 @@
       "../node_modules/@types/stack-utils/index.d.ts": {
         "version": "41422586881bcd739b4e62d9b91cd29909f8572aa3e3cdf316b7c50f14708d49",
         "signature": "41422586881bcd739b4e62d9b91cd29909f8572aa3e3cdf316b7c50f14708d49"
+      },
+      "../node_modules/@types/superagent/index.d.ts": {
+        "version": "a2b48f166cb6c8ea62718b50addea0f2af9b22313ab814d56864a86238742f97",
+        "signature": "a2b48f166cb6c8ea62718b50addea0f2af9b22313ab814d56864a86238742f97"
+      },
+      "../node_modules/@types/supertest/index.d.ts": {
+        "version": "570b7eeb7fbe76c13a700d4c99a71d4307e17178c2c7f3bcc3c4d5115be4be6d",
+        "signature": "570b7eeb7fbe76c13a700d4c99a71d4307e17178c2c7f3bcc3c4d5115be4be6d"
       },
       "../node_modules/@types/yargs-parser/index.d.ts": {
         "version": "70e9a18da08294f75bf23e46c7d69e67634c0765d355887b9b41f0d959e1426e",
@@ -2148,6 +2172,10 @@
         "../src/like/like.controller.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../src/app/app.router.ts": [
+        "../node_modules/@types/express/index.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../src/app/index.ts": [
         "../node_modules/@types/express/index.d.ts",
         "../src/post/post.router.ts",
@@ -2159,12 +2187,20 @@
         "../src/avatar/avatar.router.ts",
         "../src/comment/comment.router.ts",
         "../src/like/like.router.ts",
+        "../src/app/app.router.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
       "../src/main.ts": [
         "../src/app/index.ts",
         "../src/app/app.config.ts",
         "../src/app/database/mysql.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../src/app/playground/demo.ts": [
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../src/app/app.test.ts": [
+        "../src/app/playground/demo.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
       "../src/like/like.middleware.ts": [
@@ -2195,6 +2231,9 @@
         "../node_modules/@types/babel__template/index.d.ts",
         "../node_modules/@types/babel__traverse/ts4.1/index.d.ts",
         "../node_modules/@babel/types/lib/index.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@types/cookiejar/index.d.ts": [
         "../node_modules/@types/node/util.d.ts"
       ],
       "../node_modules/@types/graceful-fs/index.d.ts": [
@@ -2256,6 +2295,18 @@
         "../node_modules/@types/node/util.d.ts"
       ],
       "../node_modules/@types/stack-utils/index.d.ts": [
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@types/superagent/index.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/cookiejar/index.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@types/supertest/index.d.ts": [
+        "../node_modules/@types/superagent/index.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
       "../node_modules/@types/yargs-parser/index.d.ts": [
@@ -3347,6 +3398,9 @@
       "../src/like/like.router.ts": [
         "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts"
       ],
+      "../src/app/app.router.ts": [
+        "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts"
+      ],
       "../src/app/index.ts": [
         "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts"
       ],
@@ -3366,6 +3420,9 @@
         "../node_modules/@types/babel__generator/index.d.ts",
         "../node_modules/@types/babel__template/index.d.ts",
         "../node_modules/@types/babel__traverse/index.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@types/cookiejar/index.d.ts": [
         "../node_modules/@types/node/util.d.ts"
       ],
       "../node_modules/@types/graceful-fs/index.d.ts": [
@@ -3425,6 +3482,18 @@
         "../node_modules/@types/node/util.d.ts"
       ],
       "../node_modules/@types/stack-utils/index.d.ts": [
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@types/superagent/index.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/cookiejar/index.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@types/supertest/index.d.ts": [
+        "../node_modules/@types/superagent/index.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
       "../node_modules/@types/yargs-parser/index.d.ts": [
@@ -3577,6 +3646,7 @@
       "../src/post/post.middleware.ts",
       "../node_modules/@types/jsonwebtoken/index.d.ts",
       "../src/user/user.model.ts",
+      "../src/user/user.service.ts",
       "../node_modules/@types/bcryptjs/index.d.ts",
       "../src/auth/auth.service.ts",
       "../src/auth/auth.middleware.ts",
@@ -3644,8 +3714,10 @@
       "../src/like/like.service.ts",
       "../src/like/like.controller.ts",
       "../src/like/like.router.ts",
-      "../src/app/index.ts",
+      "../src/app/app.router.ts",
       "../src/main.ts",
+      "../src/app/playground/demo.ts",
+      "../src/app/app.test.ts",
       "../src/like/like.middleware.ts",
       "../src/tag/tag.middleware.ts",
       "../node_modules/@babel/types/lib/index.d.ts",
@@ -3685,6 +3757,7 @@
           }
         ]
       ],
+      "../node_modules/@types/cookiejar/index.d.ts",
       "../node_modules/@types/graceful-fs/index.d.ts",
       "../node_modules/@types/istanbul-lib-coverage/index.d.ts",
       "../node_modules/@types/istanbul-lib-report/index.d.ts",
@@ -3700,9 +3773,11 @@
       "../node_modules/@types/normalize-package-data/index.d.ts",
       "../node_modules/@types/prettier/index.d.ts",
       "../node_modules/@types/stack-utils/index.d.ts",
+      "../node_modules/@types/superagent/index.d.ts",
+      "../node_modules/@types/supertest/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/user/user.service.ts"
+      "../src/app/index.ts"
     ]
   },
   "version": "3.8.3"
