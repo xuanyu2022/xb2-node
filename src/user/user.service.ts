@@ -18,7 +18,7 @@ interface GetUserOptions{
 };
 
 /**
- * 查找用户
+ * 获取 用户
  */
 export const getUser= (condition:string) => {
 
@@ -42,7 +42,7 @@ export const getUser= (condition:string) => {
   
     const [data]= await connection.promise().query(statement,param);
     console.log(data[0]);
-    return data[0];
+    return data[0].id ?  data[0] : null ;
   }; 
 }
 /**

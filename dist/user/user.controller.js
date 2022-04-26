@@ -19,4 +19,17 @@ exports.store = async (request, response, next) => {
     }
     ;
 };
+exports.show = async (request, response, next) => {
+    const { userId } = request.params;
+    try {
+        const user = await userService.getUserById(parseInt(userId, 10));
+        if (!user) {
+            return next(new Error('USER_NOT_FOUND'));
+        }
+        response.send(user);
+    }
+    catch (error) {
+        next(error);
+    }
+};
 //# sourceMappingURL=user.controller.js.map

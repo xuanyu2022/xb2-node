@@ -66,6 +66,14 @@ exports.defaultErrorHandler = (error, request, response, next) => {
             statusCode = 404;
             message = '没找到~~~';
             break;
+        case 'USER_NOT_FOUND':
+            statusCode = 404;
+            message = '没有找到用户';
+            break;
+        case '':
+            statusCode = 400;
+            message = '';
+            break;
         case '':
             statusCode = 400;
             message = '';

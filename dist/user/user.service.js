@@ -27,7 +27,7 @@ exports.getUser = (condition) => {
     `;
         const [data] = await mysql_1.connection.promise().query(statement, param);
         console.log(data[0]);
-        return data[0];
+        return data[0].id ? data[0] : null;
     };
 };
 exports.getUserByName = exports.getUser('user.name');

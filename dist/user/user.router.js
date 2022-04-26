@@ -16,4 +16,5 @@ const user_middleware_1 = require("./user.middleware");
 const router = express_1.default.Router();
 exports.default = router;
 router.post('/users', user_middleware_1.validateUserData, user_middleware_1.hashpassword, userController.store);
+router.get('/user/:userId', userController.show);
 //# sourceMappingURL=user.router.js.map

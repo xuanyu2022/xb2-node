@@ -18,3 +18,27 @@ export const store = async (
   };
 
 };
+
+
+
+/** 
+ * 用户账户
+*/
+export const show= async (
+  request:Request,
+  response:Response,
+  next:NextFunction,
+) =>{
+ const { userId } = request.params;
+ 
+try {
+  const user = await userService.getUserById(parseInt(userId,10));
+  if(!user){
+    return next(new Error('USER_NOT_FOUND'));
+  }
+  response.send(user);
+   
+} catch (error) {
+  next(error);
+}
+};
