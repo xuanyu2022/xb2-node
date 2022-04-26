@@ -570,8 +570,8 @@
         "signature": "c0c4f6e95c87e2adb92ab955bf7156bfa015433ec41ebfe889c40ceedcdfdc6a"
       },
       "../src/user/user.service.ts": {
-        "version": "e8e7813830fda1a39e4657665acc44a5dc6cb1d9f755315a0bbfc0429f3733ea",
-        "signature": "698d7a495fdfeda013888ad7b46c163695a49a828f9ea66a10d7352ab14c24d5"
+        "version": "443de23216b9eebbde93c7e9b6b24b8e729adeec06e43c5f6991ce143a46f5ff",
+        "signature": "a6d11d2dc0f999efda181725761193c5e4a005089e657a52828ed3eb4035b032"
       },
       "../node_modules/@types/bcryptjs/index.d.ts": {
         "version": "9dfe431ab1485e17a6055e186c49da9d23af74b965f2e99f8acc6c958778608f",
@@ -879,6 +879,10 @@
       },
       "../src/tag/tag.middleware.ts": {
         "version": "fa3b54a7cdaea9898a47e60c69304e641b87b612f062d08f40607e6e41c30206",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "../src/user/user.test.ts": {
+        "version": "619e1baf46488cc37a29c533559862fe82ce1e2905af1ad14728ccaee009ee48",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
       },
       "../node_modules/@babel/types/lib/index.d.ts": {
@@ -2231,6 +2235,16 @@
       ],
       "../src/tag/tag.middleware.ts": [
         "../node_modules/@types/express/index.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../src/user/user.test.ts": [
+        "../node_modules/@types/supertest/index.d.ts",
+        "../node_modules/@types/bcryptjs/index.d.ts",
+        "../src/app/index.ts",
+        "../src/app/database/mysql.ts",
+        "../src/auth/auth.service.ts",
+        "../src/user/user.service.ts",
+        "../src/user/user.model.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
       "../node_modules/@babel/types/lib/index.d.ts": [
@@ -3663,7 +3677,6 @@
       "../src/post/post.middleware.ts",
       "../node_modules/@types/jsonwebtoken/index.d.ts",
       "../src/user/user.model.ts",
-      "../src/user/user.service.ts",
       "../node_modules/@types/bcryptjs/index.d.ts",
       "../src/auth/auth.service.ts",
       "../src/auth/auth.middleware.ts",
@@ -3738,8 +3751,10 @@
       "../node_modules/@types/cookiejar/index.d.ts",
       "../node_modules/@types/superagent/index.d.ts",
       "../node_modules/@types/supertest/index.d.ts",
+      "../src/app/app.test.ts",
       "../src/like/like.middleware.ts",
       "../src/tag/tag.middleware.ts",
+      "../src/user/user.test.ts",
       "../node_modules/@babel/types/lib/index.d.ts",
       "../node_modules/@types/babel__generator/index.d.ts",
       "../node_modules/@babel/parser/typings/babel-parser.d.ts",
@@ -3763,7 +3778,7 @@
       "../node_modules/@types/stack-utils/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/app/app.test.ts"
+      "../src/user/user.service.ts"
     ]
   },
   "version": "3.8.3"
