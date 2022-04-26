@@ -70,3 +70,4 @@ export const updateUser= async (userId:number,userData:UserModel) =>{
   const [data] = await connection.promise().query(statement,params);
     return data;
 };
+
