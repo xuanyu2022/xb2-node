@@ -12,6 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const userService = __importStar(require("./user.service"));
 const bcryptjs_1 = __importDefault(require("bcryptjs"));
+const lodash_1 = __importDefault(require("lodash"));
 exports.validateUserData = async (request, response, next) => {
     console.log('验证用户数据');
     const { name, password } = request.body;
@@ -27,6 +28,37 @@ exports.validateUserData = async (request, response, next) => {
 exports.hashpassword = async (request, Response, next) => {
     const { password } = request.body;
     request.body.password = await bcryptjs_1.default.hash(password, 10);
+    next();
+};
+exports.validateUpdateUserData = async (request, response, next) => {
+    const { validate, update } = request.body;
+    const { id: userId } = request.user;
+    try {
+        if (!lodash_1.default.has(validate, 'password')) {
+            return next(new Error('PASSWORD_IS_REQUIRED'));
+        }
+        const user = await userService.getUserById(userId, { password: true });
+        const matched = await bcryptjs_1.default.compare(validate.password, user.password);
+        if (!matched) {
+            return next(new Error('PASSWORD_DOES_NOT_MATCH'));
+        }
+        if (update.name) {
+            const user = await userService.getUserByName(update.name);
+            if (user) {
+                return next(new Error('USER_ALREADY_EXIST'));
+            }
+        }
+        if (update.password) {
+            const matched = await bcryptjs_1.default.compare(update.password, user.password);
+            if (matched) {
+                return next(new Error('PASSWORD_IS_THE_SAME'));
+            }
+            request.body.update.password = await bcryptjs_1.default.hash(update.password, 10);
+        }
+    }
+    catch (error) {
+        return next(error);
+    }
     next();
 };
 //# sourceMappingURL=user.middleware.js.map

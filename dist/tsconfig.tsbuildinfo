@@ -590,7 +590,7 @@
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
       },
       "../src/app/app.middleware.ts": {
-        "version": "ef03609763099c5dad4cd9a96457d468fff3e7793a59a00b1fb8c581180add62",
+        "version": "16d35bac8098f126c553d41b2614ed856b6e0d620f63fb0f94f7cc58ef6ebd06",
         "signature": "5c1bd11274d9d2803893c03bdf54785e6b649ff47cef39e6979e1fb2c73f4832"
       },
       "../src/auth/auth.controller.ts": {
@@ -606,8 +606,8 @@
         "signature": "bd8f4f7c02535512ed18d87fa429a970aa9e82daa3849067dcbcf8e867bd2cc6"
       },
       "../src/user/user.middleware.ts": {
-        "version": "19490c2ccb07c41cea6e6143b5feee41e4e3b22df4dae920a953d6cd78794793",
-        "signature": "8663892c27e039fc1fbd011d498bbc706756945eca3f317f6b6354cf1ca78be9"
+        "version": "82d9bc8cc5d345a70ed7977ce47be050756c99017844aa98e9dced81ef8ff4f6",
+        "signature": "dd97eef3f85cdce05c3d918672de96801d85994ecf48cecef805231815ba45f2"
       },
       "../src/user/user.router.ts": {
         "version": "a3abc8ec703a9f75d936c7ae87b12f3f9e4b59341296dcedb4c3e8022e7cfbe0",
@@ -1755,6 +1755,7 @@
         "../node_modules/@types/express/index.d.ts",
         "../src/user/user.service.ts",
         "../node_modules/@types/bcryptjs/index.d.ts",
+        "../node_modules/@types/lodash/index.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
       "../src/user/user.router.ts": [
@@ -3319,11 +3320,11 @@
       "../src/auth/auth.service.ts",
       "../src/auth/auth.middleware.ts",
       "../src/post/post.router.ts",
-      "../src/app/app.middleware.ts",
       "../src/auth/auth.controller.ts",
       "../src/auth/auth.router.ts",
       "../src/user/user.controller.ts",
       "../src/user/user.middleware.ts",
+      "../src/user/user.router.ts",
       "../node_modules/@jimp/core/types/jimp.d.ts",
       "../node_modules/@jimp/core/types/etc.d.ts",
       "../node_modules/@jimp/core/types/functions.d.ts",
@@ -3385,7 +3386,7 @@
       "../src/main.ts",
       "../src/like/like.middleware.ts",
       "../src/tag/tag.middleware.ts",
-      "../src/user/user.router.ts"
+      "../src/app/app.middleware.ts"
     ]
   },
   "version": "3.8.3"
