@@ -1,7 +1,7 @@
 import express from 'express';
 import * as PostController from './post.controller';
 import {sort,filter, paginate } from './post.middleware';
-import {authGuard, accessControl} from '../auth/auth.middleware';
+import {authGuard, accessControl, currentUser} from '../auth/auth.middleware';
 import { POSTS_PER_PAGE } from '../app/app.config';
 const router = express.Router();
 
@@ -14,7 +14,7 @@ router.get('/posts/:postId',PostController.show);
 
 export default router;
 //创建内容                                存储内容
-router.post('/posts', authGuard, PostController.store);
+router.post('/posts',currentUser,authGuard, PostController.store);
 //更新内容              
 router.patch('/posts/:postId',authGuard, accessControl({possession:true}), PostController.update);
 

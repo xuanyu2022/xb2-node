@@ -19,7 +19,7 @@ const router = express_1.default.Router();
 router.get('/posts', post_middleware_1.sort, post_middleware_1.filter, post_middleware_1.paginate(app_config_1.POSTS_PER_PAGE), PostController.index);
 router.get('/posts/:postId', PostController.show);
 exports.default = router;
-router.post('/posts', auth_middleware_1.authGuard, PostController.store);
+router.post('/posts', auth_middleware_1.currentUser, auth_middleware_1.authGuard, PostController.store);
 router.patch('/posts/:postId', auth_middleware_1.authGuard, auth_middleware_1.accessControl({ possession: true }), PostController.update);
 router.delete('/posts/:postId', auth_middleware_1.authGuard, auth_middleware_1.accessControl({ possession: true }), PostController.destroy);
 router.post('/posts/:postId/tag', auth_middleware_1.authGuard, auth_middleware_1.accessControl({ possession: true }), PostController.storePostTag);

@@ -9,9 +9,20 @@ import avatarRouter from '../avatar/avatar.router';
 import commentRouter from '../comment/comment.router';
 import likeRouter from '../like/like.router';
 import appRouter from './app.router';
-//创建应用
 
+import { currentUser } from '../auth/auth.middleware';
+
+
+
+//创建应用
 const app = express();
+
+
+/**
+* 当前用户
+*/
+//全局使用currentUser中间件
+app.use(currentUser);
 
 // 处理json
 app.use(express.json());
