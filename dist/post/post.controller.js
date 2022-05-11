@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const lodash_1 = __importDefault(require("lodash"));
 const tag_service_1 = require("../tag/tag.service");
+const file_service_1 = require("../file/file.service");
 const post_service_1 = require("./post.service");
 exports.index = async (request, response, next) => {
     try {
@@ -18,6 +19,7 @@ exports.index = async (request, response, next) => {
         const posts = await post_service_1.getPosts({ sort: request.sort,
             filter: request.filter,
             pagination: request.pagination,
+            currentUser: request.user,
         });
         response.send(posts);
     }
@@ -50,12 +52,17 @@ exports.update = async (request, response, next) => {
 exports.destroy = async (request, response, next) => {
     const { postId } = request.params;
     try {
+        const files = await file_service_1.getPostFiles(parseInt(postId, 10));
+        if (files.length) {
+            await file_service_1.deletePostFiles(files);
+        }
         const data = await post_service_1.deletePost(parseInt(postId, 10));
         response.send(data);
     }
     catch (error) {
         next(error);
     }
+    ;
 };
 exports.storePostTag = async (request, response, next) => {
     const { postId } = request.params;
@@ -108,7 +115,7 @@ exports.destroyPostTag = async (request, response, next) => {
 exports.show = async (request, response, next) => {
     const { postId } = request.params;
     try {
-        const post = await post_service_1.getPostById(parseInt(postId, 10));
+        const post = await post_service_1.getPostById(parseInt(postId, 10), { currentUser: request.user, });
         response.send(post);
     }
     catch (error) {

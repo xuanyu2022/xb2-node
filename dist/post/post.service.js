@@ -3,11 +3,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const mysql_1 = require("../app/database/mysql");
 const post_provider_1 = require("./post.provider");
 exports.getPosts = async (options) => {
-    const { sort, filter, pagination: { limit, offset }, } = options;
+    const { sort, filter, pagination: { limit, offset }, currentUser, } = options;
     let params = [limit, offset];
     if (filter.param) {
         params = [filter.param, ...params];
     }
+    const { id: userId } = currentUser;
     const statement = `SELECT 
                             post.id,
                             post.title,
@@ -16,10 +17,15 @@ exports.getPosts = async (options) => {
                            ${post_provider_1.sqlFragment.totalComments},
                            ${post_provider_1.sqlFragment.file},
                            ${post_provider_1.sqlFragment.tags},
-                           ${post_provider_1.sqlFragment.totalLikes}
+                           ${post_provider_1.sqlFragment.totalLikes},
+                           (SELECT COUNT(user_like_post.postId)
+                            FROM user_like_post
+                            WHERE user_like_post.postId = post.id
+                                && user_like_post.userId = ${userId}
+                            ) AS liked
                        FROM post
                       ${post_provider_1.sqlFragment.leftJoinUser} 
-                      ${post_provider_1.sqlFragment.leftJoinOneFile}
+                      ${post_provider_1.sqlFragment.innerJoinOneFile}
                       ${post_provider_1.sqlFragment.leftJoinTags}
                       ${filter.name == 'userLiked' ? post_provider_1.sqlFragment.innerJoinUserLikePost : ''}
                       
@@ -29,6 +35,8 @@ exports.getPosts = async (options) => {
                       LIMIT ?
                       OFFSET ?
      `;
+    console.log('getpost');
+    console.log(statement);
     const [data] = await mysql_1.connection.promise().query(statement, params);
     return data;
 };
@@ -89,15 +97,18 @@ exports.getPostsTotalCount = async (options) => {
   COUNT(DISTINCT post.id) AS total
   FROM post
   ${post_provider_1.sqlFragment.leftJoinUser}
-  ${post_provider_1.sqlFragment.leftJoinOneFile}
+  ${post_provider_1.sqlFragment.innerJoinOneFile}
   ${post_provider_1.sqlFragment.leftJoinTags}
   ${filter.name == 'userLiked' ? post_provider_1.sqlFragment.innerJoinUserLikePost : ''}
   WHERE ${filter.sql}
   `;
+    console.log('getpostTotalCount');
+    console.log(statement);
     const [data] = await mysql_1.connection.promise().query(statement, params);
     return data[0].total;
 };
-exports.getPostById = async (postId) => {
+exports.getPostById = async (postId, options = {}) => {
+    const { currentUser: { id: userId }, } = options;
     const statement = `
           SELECT 
               post.id,
@@ -107,7 +118,15 @@ exports.getPostById = async (postId) => {
               ${post_provider_1.sqlFragment.totalComments},
               ${post_provider_1.sqlFragment.file},
               ${post_provider_1.sqlFragment.tags},
-              ${post_provider_1.sqlFragment.totalLikes}
+              ${post_provider_1.sqlFragment.totalLikes},
+              (
+                SELECT COUNT(user_like_post.postId)
+                FROM user_like_post
+                WHERE
+                user_like_post.postId = post.id
+                && user_like_post.userId = ${userId}
+                ) AS liked
+
           FROM post
             ${post_provider_1.sqlFragment.leftJoinUser}
             ${post_provider_1.sqlFragment.leftJoinOneFile}

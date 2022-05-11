@@ -1,4 +1,5 @@
 import { connection } from '../app/database/mysql';
+import { TokenPayload } from '../auth/auth.interface';
 import { PostModel } from './post.model';
 import { sqlFragment } from './post.provider';
 
@@ -19,16 +20,19 @@ interface GetPostOptions  {
   sort?:string;
   filter?:GetPostsOptionsFilter;
   pagination?:GetPostsOptionsPagination;
+  currentUser?:TokenPayload;
 }
 
 export const getPosts = async (options: GetPostOptions) => {
-  const {sort, filter,pagination:{limit,offset},} =options;
+  const {sort, filter,pagination:{limit,offset},currentUser,} =options;
   //SQL参数,params是给查询里的占位符准备的,可以把limit和offset放入
   let params:Array<any>=[limit,offset];
   //设置sql参数
   if (filter.param){
     params = [filter.param, ...params];
   }
+  const {id:userId} = currentUser;
+
   const statement = `SELECT 
                             post.id,
                             post.title,
@@ -37,10 +41,15 @@ export const getPosts = async (options: GetPostOptions) => {
                            ${sqlFragment.totalComments},
                            ${sqlFragment.file},
                            ${sqlFragment.tags},
-                           ${sqlFragment.totalLikes}
+                           ${sqlFragment.totalLikes},
+                           (SELECT COUNT(user_like_post.postId)
+                            FROM user_like_post
+                            WHERE user_like_post.postId = post.id
+                                && user_like_post.userId = ${userId}
+                            ) AS liked
                        FROM post
                       ${sqlFragment.leftJoinUser} 
-                      ${sqlFragment.leftJoinOneFile}
+                      ${sqlFragment.innerJoinOneFile}
                       ${sqlFragment.leftJoinTags}
                       ${filter.name == 'userLiked' ? sqlFragment.innerJoinUserLikePost:''}
                       
@@ -50,7 +59,8 @@ export const getPosts = async (options: GetPostOptions) => {
                       LIMIT ?
                       OFFSET ?
      `;
-   
+     console.log('getpost');
+     console.log(statement);
   const [data] = await connection.promise().query(statement,params);
   
   return data;
@@ -156,12 +166,13 @@ export const getPostsTotalCount = async (options:
   COUNT(DISTINCT post.id) AS total
   FROM post
   ${sqlFragment.leftJoinUser}
-  ${sqlFragment.leftJoinOneFile}
+  ${sqlFragment.innerJoinOneFile}
   ${sqlFragment.leftJoinTags}
   ${filter.name == 'userLiked' ? sqlFragment.innerJoinUserLikePost : ''}
   WHERE ${filter.sql}
   `;
-  
+  console.log('getpostTotalCount');
+  console.log(statement);
   // 执行查询
   const [data] = await connection.promise().query(statement,
   params);
@@ -169,11 +180,19 @@ export const getPostsTotalCount = async (options:
   return data[0].total;
   };
 
+
+
+  export interface GetPostByIdOptions {
+    currentUser?: TokenPayload;
+    }
   /** 
    * 按ID 查询内容
   */
-  export const getPostById= async (postId:number) =>{
-      const statement =`
+  export const getPostById= async (postId:number,options: GetPostByIdOptions = {},) =>{
+      
+    const {currentUser: { id: userId },} = options;
+    
+    const statement =`
           SELECT 
               post.id,
               post.title,
@@ -182,7 +201,15 @@ export const getPostsTotalCount = async (options:
               ${sqlFragment.totalComments},
               ${sqlFragment.file},
               ${sqlFragment.tags},
-              ${sqlFragment.totalLikes}
+              ${sqlFragment.totalLikes},
+              (
+                SELECT COUNT(user_like_post.postId)
+                FROM user_like_post
+                WHERE
+                user_like_post.postId = post.id
+                && user_like_post.userId = ${userId}
+                ) AS liked
+
           FROM post
             ${sqlFragment.leftJoinUser}
             ${sqlFragment.leftJoinOneFile}

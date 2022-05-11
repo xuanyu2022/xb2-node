@@ -1,8 +1,10 @@
 import { Request, Response, NextFunction } from 'express';
 import _ from 'lodash';
 import { connection } from '../app/database/mysql';
+import { currentUser } from '../auth/auth.middleware';
 import { TagModel } from '../tag/tag.model';
 import { getTagByName,createTag } from '../tag/tag.service';
+import { deletePostFiles,getPostFiles } from '../file/file.service';
 //接口处理器参数需要的类型
 import { 
   getPosts, 
@@ -38,9 +40,6 @@ export const index = async (
     } catch (error) {
     next(error);
     }
-
-
-  
   //如果执行异常, 就会执行catch区块里的东西.
   //next(error)指的是把遇到的异常情况交给 异常处理器 处理
   try {
@@ -48,6 +47,7 @@ export const index = async (
       { sort:request.sort,
         filter:request.filter,
         pagination:request.pagination,
+        currentUser:request.user,
       });
     response.send(posts);
   } catch (error) {
@@ -101,11 +101,22 @@ export const destroy = async (
   const {postId}=request.params;
 
   try{
+   
+    const files = await getPostFiles(parseInt(postId, 10));
+       if (files.length) {
+      await deletePostFiles(files);
+      }
+
+      
     const data = await deletePost(parseInt(postId,10));
     response.send(data);
   }catch(error){
     next(error);
-  }
+  };
+  
+
+
+  
 };
 
 /**
@@ -193,7 +204,7 @@ export const show= async (
  const { postId } = request.params;
 
  try {
-       const post = await getPostById(parseInt(postId,10))  ;
+       const post = await getPostById(parseInt(postId,10),{currentUser:request.user,})  ;
 
       response.send(post);
  } catch (error) {

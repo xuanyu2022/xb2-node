@@ -2,7 +2,7 @@ import path from 'path';
 import Jimp from 'jimp';
 import {connection} from '../app/database/mysql';
 import { FileModel } from './file.model';
-
+import fs from 'fs';
 //** 存储文件信息*/
 
 export const createFile= async (
@@ -61,3 +61,64 @@ image:Jimp,file:Express.Multer.File
     }
     
 };
+
+
+/**
+* 找出内容文件
+*/
+export const getPostFiles = async (postId: number) => {
+  const statement = `
+  SELECT
+    file.filename
+  FROM
+   file
+  WHERE
+     postId = ?
+  `;
+  // 执行查询
+  const [data] = await connection.promise().query(statement,
+  postId);
+  // 提供数据
+  return data as any;
+  };
+
+
+
+  /**
+* 删除内容文件
+*/
+export const deletePostFiles = async (files: Array<FileModel>) =>
+{
+const uploads = 'uploads';
+const resized = [uploads, 'resized'];
+    files.map(file => {
+      const filesToDelete = [
+              [uploads, file.filename],
+              [...resized, `${file.filename}-thumbnail`],
+              [...resized, `${file.filename}-medium`],
+              [...resized, `${file.filename}-large`],
+            ];
+
+
+
+      filesToDelete.map(item => {
+            const filePath = path.join(...item);
+      
+           fs.stat(filePath, (error, stats) => {
+               if (stats) {
+                   fs.unlink(filePath, error => {
+                        if (error) throw error;
+                  });
+               }
+           });
+
+      });
+
+
+
+
+    });
+};
+
+const uploads='uploads';
+const n1name='n1name';

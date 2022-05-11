@@ -16,16 +16,16 @@ export default router;
 //创建内容                                存储内容
 router.post('/posts',currentUser,authGuard, PostController.store);
 //更新内容              
-router.patch('/posts/:postId',authGuard, accessControl({possession:true}), PostController.update);
+router.patch('/posts/:postId',currentUser,authGuard, accessControl({possession:true}), PostController.update);
 
 //**删除内容 */
 
-router.delete('/posts/:postId',authGuard, accessControl({possession:true}), PostController.destroy);
+router.delete('/posts/:postId',currentUser,authGuard, accessControl({possession:true}), PostController.destroy);
 
 /**添加内容标签 */
-router.post('/posts/:postId/tag',authGuard,accessControl({possession:true}), PostController.storePostTag,);
+router.post('/posts/:postId/tag',currentUser,authGuard,accessControl({possession:true}), PostController.storePostTag,);
 /** 移除内容标签 */
 
-router.delete('/posts/:postId/tag',authGuard,accessControl({possession:true}), PostController.destroyPostTag);
+router.delete('/posts/:postId/tag',currentUser,authGuard,accessControl({possession:true}), PostController.destroyPostTag);
 
 

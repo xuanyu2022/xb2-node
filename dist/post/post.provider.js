@@ -34,6 +34,19 @@ exports.sqlFragment = {
   LIMIT 1
   ) AS file ON post.id = file.postId
   `,
+    innerJoinOneFile: `
+  INNER JOIN LATERAL (
+      SELECT *
+      FROM file
+       WHERE file.postId = post.id
+        ORDER BY file.id DESC
+        LIMIT 1
+  ) AS file ON post.id = file.postId
+  `,
+    innerJoinFile: `
+  INNER JOIN file
+  ON file.postId = post.id
+  `,
     file: `
   CAST(
      IF (
