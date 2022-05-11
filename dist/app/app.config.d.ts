@@ -3,3 +3,4 @@ export declare const MYSQL_HOST: string, MYSQL_PORT: string, MYSQL_PASSWORD: str
 export declare let PRIVATE_KEY: string, PUBLIC_KEY: string;
 export declare const POSTS_PER_PAGE: number;
 export declare const COMMENTS_PER_PAGE: number;
+export declare const ALLOW_ORIGIN: string;

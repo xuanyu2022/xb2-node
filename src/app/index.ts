@@ -9,7 +9,8 @@ import avatarRouter from '../avatar/avatar.router';
 import commentRouter from '../comment/comment.router';
 import likeRouter from '../like/like.router';
 import appRouter from './app.router';
-
+import { ALLOW_ORIGIN } from './app.config';
+import cors from 'cors';
 import { currentUser } from '../auth/auth.middleware';
 
 
@@ -42,7 +43,19 @@ app.use(
 
 //默认异常处理器
 app.use(defaultErrorHandler);
+
+
 /**
+* 跨域资源共享
+*/
+app.use(
+  cors({
+  origin: ALLOW_ORIGIN,
+  exposedHeaders: 'X-Total-Count',
+  }),
+  );
+
+  /**
  * 导出应用
  */
 

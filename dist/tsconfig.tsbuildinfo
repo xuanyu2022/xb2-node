@@ -438,8 +438,8 @@
         "signature": "143d557fabdd0500b45024279771bcfb19fdac0ff1720b4d16f174ed3f9167b5"
       },
       "../src/app/app.config.ts": {
-        "version": "f1112fa45d03f529946c5f1bac16d52ece40677ff98299baa8ece667f7dba211",
-        "signature": "243ad97fa9acb98b6a83cdb98a04edd6e5add6d0c8d670cf4e6cf384f9addc82"
+        "version": "a61ecc0f04a120f5fca2c6c9ee2cc87e0517e91d165a978e44986f5d1114d7b9",
+        "signature": "66e5055193603c5c4e3c67a93ac0d787b0c9a1d48cbb4a90aa6159b14d84374e"
       },
       "../src/app/database/mysql.ts": {
         "version": "461c5b4c15a9151530db2b238c0d50a484cdbb66aa88d580fa9317986957e95c",
@@ -845,8 +845,12 @@
         "version": "426b1ec61e28494c854e42c741fcc01b30335eaff5338b984e5c1b4f181e4739",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6"
       },
+      "../node_modules/@types/cors/index.d.ts": {
+        "version": "a68969f643e0cb091046a9437b64cb1880a081fc07c70a4717b0edef2a38bc85",
+        "signature": "a68969f643e0cb091046a9437b64cb1880a081fc07c70a4717b0edef2a38bc85"
+      },
       "../src/app/index.ts": {
-        "version": "1b31a96cc4cc2370e44675e72098c1b52af384e32624782c96e1a37fc6b6a7b0",
+        "version": "8a4e2551a10b820bc6c720dd8e9d226da408ad6ec42b7b113fb621ecc6436dbd",
         "signature": "629a4ade941bd431c195407a5afd3602c6461fdcc0f65735b7e4a68f8d5d3d51"
       },
       "../src/main.ts": {
@@ -862,8 +866,8 @@
         "signature": "4e6f2b8eee79d35dcb9e45c64534ca19267038b8a95fce07432419071be5b7bf"
       },
       "../node_modules/@types/superagent/index.d.ts": {
-        "version": "4f046903895f045252a2f0909947884c519ba57a96f96e42851ba83b69160190",
-        "signature": "4f046903895f045252a2f0909947884c519ba57a96f96e42851ba83b69160190"
+        "version": "a2b48f166cb6c8ea62718b50addea0f2af9b22313ab814d56864a86238742f97",
+        "signature": "a2b48f166cb6c8ea62718b50addea0f2af9b22313ab814d56864a86238742f97"
       },
       "../node_modules/@types/supertest/index.d.ts": {
         "version": "16cb9bf49c72bdf7a86e2593e56c699296e35770a44b4f513177224451272790",
@@ -2188,6 +2192,10 @@
         "../node_modules/@types/express/index.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../node_modules/@types/cors/index.d.ts": [
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../src/app/index.ts": [
         "../node_modules/@types/express/index.d.ts",
         "../src/post/post.router.ts",
@@ -2200,6 +2208,8 @@
         "../src/comment/comment.router.ts",
         "../src/like/like.router.ts",
         "../src/app/app.router.ts",
+        "../src/app/app.config.ts",
+        "../node_modules/@types/cors/index.d.ts",
         "../src/auth/auth.middleware.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
@@ -3434,6 +3444,10 @@
       "../src/app/app.router.ts": [
         "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts"
       ],
+      "../node_modules/@types/cors/index.d.ts": [
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../src/app/index.ts": [
         "../node_modules/@types/express-serve-static-core/ts4.0/index.d.ts"
       ],
@@ -3659,7 +3673,6 @@
       "../node_modules/@types/node/globals.global.d.ts",
       "../node_modules/@types/node/index.d.ts",
       "../node_modules/dotenv/types/index.d.ts",
-      "../src/app/app.config.ts",
       "../src/app/database/mysql.ts",
       "../src/post/post.model.ts",
       "../src/post/post.provider.ts",
@@ -3730,6 +3743,7 @@
       "../node_modules/@jimp/plugins/index.d.ts",
       "../node_modules/jimp/types/ts3.1/index.d.ts",
       "../src/file/file.model.ts",
+      "../src/file/file.service.ts",
       "../src/post/post.controller.ts",
       "../src/post/post.middleware.ts",
       "../src/post/post.router.ts",
@@ -3760,6 +3774,7 @@
       "../src/like/like.controller.ts",
       "../src/like/like.router.ts",
       "../src/app/app.router.ts",
+      "../node_modules/@types/cors/index.d.ts",
       "../src/app/index.ts",
       "../src/main.ts",
       "../src/app/playground/demo.ts",
@@ -3793,7 +3808,7 @@
       "../node_modules/@types/stack-utils/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/file/file.service.ts"
+      "../src/app/app.config.ts"
     ]
   },
   "version": "3.8.3"

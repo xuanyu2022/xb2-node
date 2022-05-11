@@ -13,4 +13,5 @@ exports.PRIVATE_KEY = Buffer.from(exports.PRIVATE_KEY, 'base64').toString();
 exports.PUBLIC_KEY = Buffer.from(exports.PUBLIC_KEY, 'base64').toString();
 exports.POSTS_PER_PAGE = parseInt(process.env['POSTS_PER_PAGE'], 10);
 exports.COMMENTS_PER_PAGE = parseInt(process.env['COMMENTS_PER_PAGE'], 10);
+exports.ALLOW_ORIGIN = process.env.ALLOW_ORIGIN;
 //# sourceMappingURL=app.config.js.map

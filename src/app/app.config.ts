@@ -32,3 +32,11 @@ export const POSTS_PER_PAGE = parseInt(process.env['POSTS_PER_PAGE'],10);
  */
 export const COMMENTS_PER_PAGE = parseInt(process.env['COMMENTS_PER_PAGE'],10);
 
+
+
+
+
+/**
+* CORS
+*/
+export const ALLOW_ORIGIN = process.env.ALLOW_ORIGIN;
